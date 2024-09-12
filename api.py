@@ -1,8 +1,5 @@
-import requests, pprint
+import requests
 from bs4 import BeautifulSoup
-
-barcodes = ["8801128900201", "085246500576", "0082184090442", "5000267024400", "5029704111442", "5010106113127", "5010196092142"]
-
 
 def getProduct1(code):
     """
@@ -38,7 +35,7 @@ def getProduct2(code):
 
 def getProductName(code):
     """
-    getProductName function find name of barcode by crawling web
+    getProductName function find name of barcode by running getProduct1 and 2 functions
 
     @param code: barcode 13-digit number
     @return: name of barcode's product return but if they did't find barcode then return None
@@ -49,6 +46,9 @@ def getProductName(code):
     if name != None: return name
     name = None
 
+
+# barcode list for test inputs
+barcodes = ["8801128900201", "085246500576", "0082184090442", "5000267024400", "5029704111442", "5010106113127", "5010196092142"]
 
 # here is just a test code
 for code in barcodes:
