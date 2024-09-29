@@ -63,10 +63,10 @@ def getProductName(code):
     """
     name = getProduct1(code)
     if name != None: return "from1: "+name
-
+    '''
     name = getProduct2(code)
     if name != None: return "from2: "+name
-
+    '''
     name = getProduct3(code)
     if name != None: return "from3: "+name
 
