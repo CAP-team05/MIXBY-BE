@@ -62,20 +62,12 @@ def getProductName(code):
     @return: name of barcode's product return but if they did't find barcode then return None
     """
     name = getProduct1(code)
-    if name != None: return "from1: "+name
+    if name != None: return name
     '''
     name = getProduct2(code)
-    if name != None: return "from2: "+name
+    if name != None: return name
     '''
     name = getProduct3(code)
-    if name != None: return "from3: "+name
+    if name != None: return name
 
     return None
-
-
-# barcode list for test inputs
-barcodes = ["8801128900201", "0085246500576", "0082184090442", "5000267024400", "5029704111442", "5010106113127", "5010196092142"]
-
-# here is just a test code
-for code in barcodes:
-    print(getProductName(code))
