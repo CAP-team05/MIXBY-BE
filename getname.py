@@ -40,12 +40,12 @@ def getProduct3(code):
     @param code: barcode 13-digit number
     @return: name of barcode's product return but if they did't find barcode then return None
     """
-    url = "https://www.google.com/search?q=product+"+code
+    url = "https://www.google.com/search?q=product+"+code+"+only+english"
     response = requests.get(url)
     html = response.text
     soup = BeautifulSoup(html, 'html.parser')
     name = str(soup.select('h3')).split('>')[2].split('<')[0]
-
+    
     splits = ['-','|']
     for s in splits:
         try:
@@ -61,13 +61,14 @@ def getProductName(code):
     @param code: barcode 13-digit number
     @return: name of barcode's product return but if they did't find barcode then return None
     """
-    name = getProduct1(code)
+    name = getProduct3(code)
     if name != None: return name
     '''
     name = getProduct2(code)
     if name != None: return name
-    '''
-    name = getProduct3(code)
+    
+    name = getProduct1(code)
     if name != None: return name
+    '''
 
     return None
