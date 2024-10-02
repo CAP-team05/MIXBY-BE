@@ -1,4 +1,4 @@
-import requests, pprint
+import requests
 from bs4 import BeautifulSoup
 
 def strip_name(name):
@@ -25,8 +25,7 @@ def get_nutracheck(name):
         else: i=1
         res = int(res[i].split('calories')[0].strip(' '))
         res = int(res)#*3.3814
-    except:
-        res = -1
+    except: res = -1
     return int(res)
 
 def get_eatthismuch(name):
@@ -50,7 +49,6 @@ def get_eatthismuch(name):
             cal = cal*100/num
         else: cal = -1
     except: cal = -1
-
     return int(cal)
 
 def get_fatsecret(name):
@@ -74,7 +72,6 @@ def get_fatsecret(name):
             cal = cal*100/num
         else: cal = -1
     except: cal = -1
-
     return int(cal)
 
 def get_calorieking(name):
@@ -98,9 +95,7 @@ def get_calorieking(name):
             cal = cal*100/num
         else: cal = -1
     except: cal = -1
-
     return int(cal)
-
 
 def getcalorie(name):
     name = str(name)
