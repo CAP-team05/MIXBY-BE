@@ -2,9 +2,6 @@ import requests, pprint
 from bs4 import BeautifulSoup
 import getname
 
-codes = ["0085246500576", "0082184090442", "5000267024400", "5029704111442", "5010106113127", "5010196092142", "0080244009236"]
-#codes = ["0085246500576", "0082184090442", "5000267024400"]
-
 def strip_name(name):
     x = name.find('(')
     if x != -1: name = name[0:x]
@@ -123,11 +120,3 @@ def get_calorie(name):
                 n += 1
             #print(x,n)
     return int(avg)
-
-
-for code in codes:
-    name = getname.getProductName(code)
-    cal = get_calorie(name)
-    print()
-    print(name, cal)
-    print()
