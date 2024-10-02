@@ -1,5 +1,24 @@
 [
     {
+        "name": "ABC",
+        "technique": "플로팅",
+        "base": "",
+        "ingredients": [
+            "디사론노 15ml",
+            "베일리스 15ml",
+            "꼬냑 15ml"
+        ]
+    },
+    {
+        "name": "B&B",
+        "technique": "플로팅",
+        "base": "브랜디",
+        "ingredients": [
+            "브랜디 30ml",
+            "베네딕틴 30ml"
+        ]
+    },
+    {
         "name": "21세기",
         "technique": "쉐이킹",
         "base": "데낄라",
@@ -4998,7 +5017,7 @@
         ]
     },
     {
-        "name": "A Spirits In The Dark",
+        "name": "어 스피릿츠 인 더 다크 (A Spirits In The Dark)",
         "technique": "쉐이킹",
         "base": "위스키",
         "ingredients": [
@@ -5011,17 +5030,7 @@
         ]
     },
     {
-        "name": "ABC",
-        "technique": "플로팅",
-        "base": "",
-        "ingredients": [
-            "디사론노 15ml",
-            "베일리스 15ml",
-            "꼬냑 15ml"
-        ]
-    },
-    {
-        "name": "Ace of spade",
+        "name": "에이스 오브 스페이드 (Ace of spade)",
         "technique": "쉐이킹",
         "base": "",
         "ingredients": [
@@ -5034,7 +5043,7 @@
         ]
     },
     {
-        "name": "Affinity",
+        "name": "어피니티 (Affinity)",
         "technique": "스터",
         "base": "위스키",
         "ingredients": [
@@ -5045,7 +5054,7 @@
         ]
     },
     {
-        "name": "Alabazam",
+        "name": "알라바잠 (Alabazam)",
         "technique": "쉐이킹",
         "base": "꼬냑 or 브랜디",
         "ingredients": [
@@ -5057,7 +5066,7 @@
         ]
     },
     {
-        "name": "Amber Load",
+        "name": "앰버 로드 (Amber Load)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5070,7 +5079,7 @@
         ]
     },
     {
-        "name": "Applicious Quencher",
+        "name": "애플리셔스 퀸쳐 (Applicious Quencher)",
         "technique": "빌드",
         "base": "애플퍼커",
         "ingredients": [
@@ -5081,7 +5090,7 @@
         ]
     },
     {
-        "name": "Aquadisiac",
+        "name": "아쿠아디지악 (Aquadisiac)",
         "technique": "쉐이킹",
         "base": "럼",
         "ingredients": [
@@ -5092,7 +5101,7 @@
         ]
     },
     {
-        "name": "Army&Navy",
+        "name": "아미 앤 네이비 (Army&Navy)",
         "technique": "쉐이킹",
         "base": "진",
         "ingredients": [
@@ -5103,7 +5112,7 @@
         ]
     },
     {
-        "name": "Autumn Leaves",
+        "name": "어텀 리브즈 (Autumn Leaves)",
         "technique": "빌드",
         "base": "위스키",
         "ingredients": [
@@ -5124,16 +5133,7 @@
         ]
     },
     {
-        "name": "B&B",
-        "technique": "플로팅",
-        "base": "브랜디",
-        "ingredients": [
-            "브랜디 30ml",
-            "베네딕틴 30ml"
-        ]
-    },
-    {
-        "name": "BeachComber(큰 파도)",
+        "name": "비치 코머 (BeachComber)",
         "technique": "쉐이킹",
         "base": "럼",
         "ingredients": [
@@ -5144,7 +5144,7 @@
         ]
     },
     {
-        "name": "Bed of Rose",
+        "name": "베드 오브 로즈 (Bed of Rose)",
         "technique": "쉐이킹",
         "base": "예거마이스터",
         "ingredients": [
@@ -5155,7 +5155,7 @@
         ]
     },
     {
-        "name": "Bizzy Izzy",
+        "name": "비지 이지 (Bizzy Izzy)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5169,7 +5169,7 @@
         ]
     },
     {
-        "name": "Blackthorn",
+        "name": "블랙쏜 (Blackthorn)",
         "technique": "스터",
         "base": "진",
         "ingredients": [
@@ -5180,7 +5180,7 @@
         ]
     },
     {
-        "name": "Bosom Caresser",
+        "name": "보솜 커레서 (Bosom Caresser)",
         "technique": "쉐이킹",
         "base": "브랜디",
         "ingredients": [
@@ -5191,7 +5191,7 @@
         ]
     },
     {
-        "name": "Chatham",
+        "name": "채텀 (Chatham)",
         "technique": "쉐이킹",
         "base": "진",
         "ingredients": [
@@ -5201,7 +5201,7 @@
         ]
     },
     {
-        "name": "chrysanthemum(국화)",
+        "name": "국화 (chrysanthemum)",
         "technique": "스터",
         "base": "리큐르",
         "ingredients": [
@@ -5212,7 +5212,7 @@
         ]
     },
     {
-        "name": "Cloudy Sky",
+        "name": "클라우드 스카이 (Cloudy Sky)",
         "technique": "빌드",
         "base": "진",
         "ingredients": [
@@ -5222,7 +5222,7 @@
         ]
     },
     {
-        "name": "Columba(콜룸바)",
+        "name": "콜룸바 (Columba)",
         "technique": "빌드",
         "base": "캄파리",
         "ingredients": [
@@ -5231,7 +5231,7 @@
         ]
     },
     {
-        "name": "Cypriot 브랜디 사워",
+        "name": "브랜디 사워 (Cypriot)",
         "technique": "빌드",
         "base": "브랜디",
         "ingredients": [
@@ -5241,7 +5241,7 @@
         ]
     },
     {
-        "name": "Deauville",
+        "name": "도빌 (Deauville)",
         "technique": "쉐이킹",
         "base": "브랜디",
         "ingredients": [
@@ -5252,7 +5252,7 @@
         ]
     },
     {
-        "name": "Dr.Melfi's Medicine",
+        "name": "닥터 멜피스 메디슨 (Dr.Melfi's Medicine)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5265,7 +5265,7 @@
         ]
     },
     {
-        "name": "El Floridita",
+        "name": "엘 플로리디타 (El Floridita)",
         "technique": "쉐이킹",
         "base": "럼",
         "ingredients": [
@@ -5276,7 +5276,7 @@
         ]
     },
     {
-        "name": "Feodora Cobbler",
+        "name": "페오도라 코블러 (Feodora Cobbler)",
         "technique": "빌드",
         "base": "혼합",
         "ingredients": [
@@ -5287,7 +5287,7 @@
         ]
     },
     {
-        "name": "Fifth Avenue",
+        "name": "피프스 애비뉴 (Fifth Avenue)",
         "technique": "플로팅",
         "base": "",
         "ingredients": [
@@ -5297,7 +5297,7 @@
         ]
     },
     {
-        "name": "Foghorn",
+        "name": "포그혼 (Foghorn)",
         "technique": "빌드",
         "base": "진",
         "ingredients": [
@@ -5308,7 +5308,7 @@
         ]
     },
     {
-        "name": "Kretchma(크렛 치마)",
+        "name": "크렛치마 (Kretchma)",
         "technique": "쉐이킹",
         "base": "보드카",
         "ingredients": [
@@ -5319,7 +5319,7 @@
         ]
     },
     {
-        "name": "Mr. bodi hai",
+        "name": "미스터 보디 하이 (Mr. bodi hai)",
         "technique": "쉐이킹",
         "base": "럼",
         "ingredients": [
@@ -5333,7 +5333,7 @@
         ]
     },
     {
-        "name": "Nice(by Antibes)",
+        "name": "나이스 (Nice)",
         "technique": "쉐이킹",
         "base": "진",
         "ingredients": [
@@ -5344,7 +5344,7 @@
         ]
     },
     {
-        "name": "Old pal",
+        "name": "올드 팔 (Old pal)",
         "technique": "쉐이킹",
         "base": "위스키",
         "ingredients": [
@@ -5355,7 +5355,7 @@
         ]
     },
     {
-        "name": "Otto's Grotto",
+        "name": "오또스 그로또 (Otto's Grotto)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5367,7 +5367,7 @@
         ]
     },
     {
-        "name": "P.S. I love you",
+        "name": "P.S. 아이러브유 (P.S. I love you)",
         "technique": "쉐이킹",
         "base": "다크럼",
         "ingredients": [
@@ -5379,7 +5379,7 @@
         ]
     },
     {
-        "name": "Pain in the ass",
+        "name": "패인 이스 더 애스 (Pain in the ass)",
         "technique": "쉐이킹",
         "base": "오버프루프 럼",
         "ingredients": [
@@ -5392,7 +5392,7 @@
         ]
     },
     {
-        "name": "Pan Am",
+        "name": "팬 암 (Pan Am)",
         "technique": "쉐이킹",
         "base": "럼",
         "ingredients": [
@@ -5406,7 +5406,7 @@
         ]
     },
     {
-        "name": "Park avenue",
+        "name": "파크 애비뉴 (Park avenue)",
         "technique": "쉐이킹",
         "base": "진",
         "ingredients": [
@@ -5417,7 +5417,7 @@
         ]
     },
     {
-        "name": "Pompier(소방관)",
+        "name": "폼피에르 (Pompier)",
         "technique": "빌드",
         "base": "리큐르",
         "ingredients": [
@@ -5427,7 +5427,7 @@
         ]
     },
     {
-        "name": "Presbyterian",
+        "name": "프레스비터리언 (Presbyterian)",
         "technique": "빌드",
         "base": "위스키",
         "ingredients": [
@@ -5437,7 +5437,7 @@
         ]
     },
     {
-        "name": "Something Tropical",
+        "name": "썸띵 트로피컬 (Something Tropical)",
         "technique": "쉐이킹",
         "base": "다크럼",
         "ingredients": [
@@ -5451,7 +5451,7 @@
         ]
     },
     {
-        "name": "Suburban",
+        "name": "서버번 (Suburban)",
         "technique": "스터",
         "base": "혼합",
         "ingredients": [
@@ -5463,7 +5463,7 @@
         ]
     },
     {
-        "name": "The Rug",
+        "name": "더 러그 (The Rug)",
         "technique": "스터",
         "base": "버번",
         "ingredients": [
@@ -5473,7 +5473,7 @@
         ]
     },
     {
-        "name": "Tinto de Verano",
+        "name": "틴토 드 베라노 (Tinto de Verano)",
         "technique": "빌드",
         "base": "와인",
         "ingredients": [
@@ -5482,7 +5482,7 @@
         ]
     },
     {
-        "name": "Toasted Almond",
+        "name": "토스티드 아몬드 (Toasted Almond)",
         "technique": "쉐이킹",
         "base": "리큐르",
         "ingredients": [
@@ -5492,7 +5492,7 @@
         ]
     },
     {
-        "name": "Ward Eight",
+        "name": "워드에이트 (Ward Eight)",
         "technique": "쉐이킹",
         "base": "위스키",
         "ingredients": [
@@ -5503,7 +5503,7 @@
         ]
     },
     {
-        "name": "White Witch",
+        "name": "화이트 위치 (White Witch)",
         "technique": "쉐이킹",
         "base": "오버프루프 럼",
         "ingredients": [
@@ -5547,7 +5547,7 @@
         ]
     },
     {
-        "name": "Yena",
+        "name": "예나 (Yena)",
         "technique": "스터",
         "base": "혼합",
         "ingredients": [
@@ -5560,7 +5560,7 @@
         ]
     },
     {
-        "name": "Young Man",
+        "name": "영 맨 (Young Man)",
         "technique": "스터",
         "base": "브랜디",
         "ingredients": [
@@ -5571,7 +5571,7 @@
         ]
     },
     {
-        "name": "Zoom",
+        "name": "줌 (Zoon)",
         "technique": "쉐이킹",
         "base": "꼬냑 or 브랜디",
         "ingredients": [
