@@ -41,6 +41,8 @@ def searchnameENG(code):
         for p in ['-','|']:
             if p in name:
                 name = name.split(p)[0]
+                if '.' in name:
+                    name = name.split('.')[-1]
         name = name.strip(' ')
     except:
         name = None
