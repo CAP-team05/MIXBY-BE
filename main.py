@@ -1,13 +1,30 @@
 import getcalories
-import getname
-import getcode
+import getinfo
+import json
 
-#codes = ["0085246500576", "0082184090442", "5000267024400", "5029704111442", "5010106113127", "5010196092142", "0080244009236"]
-codes = getcode.getcode('links.txt')
+urls = getinfo.geturls('links.txt')
+drinks = []
 
-for code in codes:
-    name = getname.getProductName(code)
-    cal = getcalories.get_calorie(name)
-    print()
-    print(name, cal)
-    print()
+for url in urls[0:2]:
+    code = getinfo.getcode(url)
+    nameKOR = getinfo.getnameKOR(url)
+    nameENG = getinfo.getnameENG(code)
+    kcal = getcalories.getcalorie(nameENG)
+
+    if kcal != -1:
+        amount = int(nameKOR.split('(')[-1].split(')')[0].strip('ml').strip('ML').replace(',',''))
+        kcal = int(kcal*amount/100)
+
+    drink = {}
+    drink['code'] = code
+    drink['kor name'] = nameKOR
+    drink['eng name'] = nameENG
+    drink['total kcal'] = str(kcal)+" kcal"
+    drinks.append(drink)
+
+    print(".")
+
+with open('drinks.json', 'w') as f:
+    json.dump(drinks, f, indent=4, ensure_ascii = False)
+
+print('\nfile successfully created!\n')

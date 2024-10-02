@@ -1,10 +1,10 @@
 import requests, pprint
 from bs4 import BeautifulSoup
-import getname
 
 def strip_name(name):
-    x = name.find('(')
-    if x != -1: name = name[0:x]
+    if '(' in name:
+        x = name.find('(')
+        if x != -1: name = name[0:x]
     name = name.strip(' ')
     name = name.replace(" ","+")
     name = name.replace("\'","")
@@ -102,7 +102,8 @@ def get_calorieking(name):
     return int(cal)
 
 
-def get_calorie(name):
+def getcalorie(name):
+    name = str(name)
     a = get_nutracheck(name)
     b = get_eatthismuch(name)
     c = get_fatsecret(name)
@@ -111,12 +112,13 @@ def get_calorie(name):
     total = 4
     cals =  [a, b, c, d]
     cnt = total - cals.count(-1)
-    avg = sum(cals)/cnt
-    n = 0
-    for i in cals:
-        if i != -1:
-            x = i/avg*100
-            if 90.0 <= x and x <= 110.0:
-                n += 1
-            #print(x,n)
-    return int(avg)
+    if cnt == 0: return -1
+    else:
+        avg = sum(cals)/cnt
+        n = 0
+        for i in cals:
+            if i != -1:
+                x = i/avg*100
+                if 90.0 <= x and x <= 110.0:
+                    n += 1
+        return int(avg)
