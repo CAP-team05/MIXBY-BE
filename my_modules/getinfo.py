@@ -20,6 +20,7 @@ def getbrand(url):
     brand = line.split(']')[0].strip('[]')
     return brand
 
+
 def getnameKOR(url):
     response = requests.get(url)
     html = response.text
@@ -28,6 +29,17 @@ def getnameKOR(url):
     if ']' in line:
         line = line.split(']')[1]
     name = line.split(':')[0].strip(' ')
+
+    size = name.split('(')[-1]
+    name = name.replace(size, '')
+
+    for _ in (0, name.count('(')):
+        name = name.replace('(', '')
+        name = name.replace(')', '')
+        
+    size = size.replace(',', '')
+    name = name + '(' + size
+
     return name
 
 def searchnameENG(code):
