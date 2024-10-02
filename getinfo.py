@@ -30,7 +30,7 @@ def getnameKOR(url):
     name = line.split(':')[0].strip(' ')
     return name
 
-def getnameENG(code):
+def searchnameENG(code):
     url = "https://www.google.com/search?q=product+"+code
     response = requests.get(url)
     html = response.text

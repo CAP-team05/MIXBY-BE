@@ -8,7 +8,7 @@ drinks = []
 for url in urls[0:2]:
     code = getinfo.getcode(url)
     nameKOR = getinfo.getnameKOR(url)
-    nameENG = getinfo.getnameENG(code)
+    nameENG = getinfo.searchnameENG(code)
     kcal = getcalories.getcalorie(nameENG)
 
     if kcal != -1:
