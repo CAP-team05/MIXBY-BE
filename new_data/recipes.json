@@ -1,5 +1,16 @@
 [
     {
+        "name": "21세기",
+        "technique": "쉐이킹",
+        "base": "데낄라",
+        "ingredients": [
+            "데낄라 블랑코 60ml",
+            "카카오 화이트 23ml",
+            "레몬즙 23ml",
+            "아가베 시럽 1티스푼"
+        ]
+    },
+    {
         "name": "ABC",
         "technique": "플로팅",
         "base": "",
@@ -19,14 +30,85 @@
         ]
     },
     {
-        "name": "21세기",
-        "technique": "쉐이킹",
-        "base": "데낄라",
+        "name": "Baileys Strawberry Milk",
+        "technique": "블렌딩",
+        "base": "혼합",
         "ingredients": [
-            "데낄라 블랑코 60ml",
-            "카카오 화이트 23ml",
-            "레몬즙 23ml",
-            "아가베 시럽 1티스푼"
+            "딸기 8알",
+            "얼음가득",
+            "베일리스 30ml",
+            "트리플섹 22.5ml",
+            "보드카 30ml",
+            "우유 필업 후 블렌딩"
+        ]
+    },
+    {
+        "name": "Mr. bodi hai",
+        "technique": "쉐이킹",
+        "base": "럼",
+        "ingredients": [
+            "럼 45ml",
+            "커피 리큐르 7.5ml",
+            "바나나 리큐르 7.5ml",
+            "파인애플 주스 45ml",
+            "레몬즙 22.5ml",
+            "오르쟈 시럽 15ml",
+            "앙고스투라 비터 1대쉬"
+        ]
+    },
+    {
+        "name": "Nice",
+        "technique": "쉐이킹",
+        "base": "진",
+        "ingredients": [
+            "진 60ml",
+            "베네딕틴 30ml",
+            "자몽주스 60ml",
+            "쉐이킹 후 탄산수 필업"
+        ]
+    },
+    {
+        "name": "P.S. I love you",
+        "technique": "쉐이킹",
+        "base": "다크럼",
+        "ingredients": [
+            "다크럼 15ml",
+            "아마레또 30ml",
+            "베일리스 45ml",
+            "깔루아 30ml",
+            "우유 30ml"
+        ]
+    },
+    {
+        "name": "X썬라이즈",
+        "technique": "쉐이킹",
+        "base": "X레이티드",
+        "ingredients": [
+            "X레이티드 60ml",
+            "데낄라 블랑코 30ml",
+            "오렌지 주스 60ml"
+        ]
+    },
+    {
+        "name": "X온더비치",
+        "technique": "빌드",
+        "base": "X레이티드",
+        "ingredients": [
+            "X레이티드 30ml",
+            "피치트리 30ml",
+            "파인애플 주스 30ml",
+            "탄산수 60ml",
+            "시럽 10ml"
+        ]
+    },
+    {
+        "name": "XYZ",
+        "technique": "쉐이킹",
+        "base": "럼",
+        "ingredients": [
+            "화이트 럼 30ml",
+            "코앵트로 15ml",
+            "레몬즙 15ml"
         ]
     },
     {
@@ -5319,31 +5401,6 @@
         ]
     },
     {
-        "name": "미스터 보디 하이 (Mr. bodi hai)",
-        "technique": "쉐이킹",
-        "base": "럼",
-        "ingredients": [
-            "럼 45ml",
-            "커피 리큐르 7.5ml",
-            "바나나 리큐르 7.5ml",
-            "파인애플 주스 45ml",
-            "레몬즙 22.5ml",
-            "오르쟈 시럽 15ml",
-            "앙고스투라 비터 1대쉬"
-        ]
-    },
-    {
-        "name": "나이스 (Nice)",
-        "technique": "쉐이킹",
-        "base": "진",
-        "ingredients": [
-            "진 60ml",
-            "베네딕틴 30ml",
-            "자몽주스 60ml",
-            "쉐이킹 후 탄산수 필업"
-        ]
-    },
-    {
         "name": "올드 팔 (Old pal)",
         "technique": "쉐이킹",
         "base": "위스키",
@@ -5355,7 +5412,7 @@
         ]
     },
     {
-        "name": "오또스 그로또 (Otto's Grotto)",
+        "name": "Otto's Grotto",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5364,18 +5421,6 @@
             "커피 리큐르 22.5ml",
             "바닐라 리큐르 22.5ml",
             "쉐이킹 후 휘핑크림 취향껏"
-        ]
-    },
-    {
-        "name": "P.S. 아이러브유 (P.S. I love you)",
-        "technique": "쉐이킹",
-        "base": "다크럼",
-        "ingredients": [
-            "다크럼 15ml",
-            "아마레또 30ml",
-            "베일리스 45ml",
-            "깔루아 30ml",
-            "우유 30ml"
         ]
     },
     {
@@ -5515,38 +5560,6 @@
         ]
     },
     {
-        "name": "X썬라이즈",
-        "technique": "쉐이킹",
-        "base": "X레이티드",
-        "ingredients": [
-            "X레이티드 60ml",
-            "데낄라 블랑코 30ml",
-            "오렌지 주스 60ml"
-        ]
-    },
-    {
-        "name": "X온더비치",
-        "technique": "빌드",
-        "base": "X레이티드",
-        "ingredients": [
-            "X레이티드 30ml",
-            "피치트리 30ml",
-            "파인애플 주스 30ml",
-            "탄산수 60ml",
-            "시럽 10ml"
-        ]
-    },
-    {
-        "name": "XYZ",
-        "technique": "쉐이킹",
-        "base": "럼",
-        "ingredients": [
-            "화이트 럼 30ml",
-            "코앵트로 15ml",
-            "레몬즙 15ml"
-        ]
-    },
-    {
         "name": "예나 (Yena)",
         "technique": "스터",
         "base": "혼합",
@@ -5583,7 +5596,7 @@
         ]
     },
     {
-        "name": "오아시스 선라이즈",
+        "name": "오아시스 선라이즈 (Oasis Sunrise)",
         "technique": "빌드 or 쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5597,7 +5610,7 @@
         ]
     },
     {
-        "name": "루비",
+        "name": "루비 (Ruby)",
         "technique": "스터",
         "base": "보드카",
         "ingredients": [
@@ -5607,7 +5620,7 @@
         ]
     },
     {
-        "name": "브램블",
+        "name": "브램블 (Bramble)",
         "technique": "쉐이킹",
         "base": "진",
         "ingredients": [
@@ -5618,7 +5631,7 @@
         ]
     },
     {
-        "name": "콥스리바이버 No.2",
+        "name": "콥스리바이버 No.2 (Corpse Reviver No.2)",
         "technique": "스터",
         "base": "혼합",
         "ingredients": [
@@ -5630,7 +5643,7 @@
         ]
     },
     {
-        "name": "사제락",
+        "name": "사제락 (Sazerac)",
         "technique": "스터(가니쉬 레몬필)",
         "base": "혼합",
         "ingredients": [
@@ -5643,7 +5656,7 @@
         ]
     },
     {
-        "name": "뷰카레",
+        "name": "뷰카레 (Vieux Carre)",
         "technique": "스터",
         "base": "혼합",
         "ingredients": [
@@ -5657,7 +5670,7 @@
         ]
     },
     {
-        "name": "오후의 죽음",
+        "name": "오후의 죽음 (Death in the Afternoon)",
         "technique": "빌드",
         "base": "압생트",
         "ingredients": [
@@ -5666,7 +5679,7 @@
         ]
     },
     {
-        "name": "비치 워터",
+        "name": "비치 워터 (Beach Water)",
         "technique": "빌드",
         "base": "혼합",
         "ingredients": [
@@ -5677,7 +5690,7 @@
         ]
     },
     {
-        "name": "버블검 베어",
+        "name": "버블검 베어 (Bubblegum Bear)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5689,7 +5702,7 @@
         ]
     },
     {
-        "name": "별이 빛나는 밤에",
+        "name": "별이 빛나는 밤에 (Starry Night)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5701,20 +5714,7 @@
         ]
     },
     {
-        "name": "베일리스 스트로베리 밀크",
-        "technique": "블렌딩",
-        "base": "혼합",
-        "ingredients": [
-            "딸기 8알",
-            "얼음가득",
-            "베일리스 30ml",
-            "트리플섹 22.5ml",
-            "보드카 30ml",
-            "우유 필업 후 블렌딩"
-        ]
-    },
-    {
-        "name": "스카이 블루",
+        "name": "스카이 블루 (Sky Blue)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5728,7 +5728,7 @@
         ]
     },
     {
-        "name": "노르망디 플라워",
+        "name": "노르망디 플라워 (Normandy Flower)",
         "technique": "빌드",
         "base": "깔바도스",
         "ingredients": [
@@ -5740,7 +5740,7 @@
         ]
     },
     {
-        "name": "블로우 잡",
+        "name": "블로우 잡 (Blowjob)",
         "technique": "플로팅",
         "base": "리큐르",
         "ingredients": [
@@ -5750,7 +5750,7 @@
         ]
     },
     {
-        "name": "버터스카치 화이트 러시안",
+        "name": "버터스카치 화이트 러시안 (Butterscotch White Russian)",
         "technique": "빌드",
         "base": "혼합",
         "ingredients": [
@@ -5761,7 +5761,7 @@
         ]
     },
     {
-        "name": "도쿄 아이스티2",
+        "name": "도쿄 아이스티2 (Tokyo Icetea 2)",
         "technique": "빌드",
         "base": "혼합",
         "ingredients": [
@@ -5775,7 +5775,7 @@
         ]
     },
     {
-        "name": "비키니 마티니2",
+        "name": "비키니 마티니2 (Bikini Martini 2)",
         "technique": "쉐이킹",
         "base": "혼합",
         "ingredients": [
@@ -5786,7 +5786,7 @@
         ]
     },
     {
-        "name": "시칠리안 키스",
+        "name": "시칠리안 키스 (Sicilian Kiss)",
         "technique": "빌드",
         "base": "리큐르",
         "ingredients": [
@@ -5795,7 +5795,7 @@
         ]
     },
     {
-        "name": "들꽃",
+        "name": "들꽃 (Wild Flower)",
         "technique": "스터",
         "base": "혼합",
         "ingredients": [
@@ -5806,7 +5806,7 @@
         ]
     },
     {
-        "name": "퀵 퍽",
+        "name": "퀵 퍽 (Quick Perk)",
         "technique": "플로팅",
         "base": "리큐르",
         "ingredients": [
