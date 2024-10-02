@@ -6,7 +6,7 @@ lines = csv.reader(f)
 
 recipes = []
 bases = []
-
+num = 0
 for line in lines:    
     i = line[1]
     i = i.split(',')
@@ -14,7 +14,10 @@ for line in lines:
     for x in i:
         ings.append(x.strip(' '))
 
+    num += 1
+    
     recipe = {}
+    recipe['code'] = num
     recipe['name'] = line[0]
     recipe['technique'] = line[2]
     recipe['base'] = line[3]
