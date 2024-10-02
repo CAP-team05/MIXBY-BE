@@ -1,7 +1,7 @@
 import json, csv
 
 lines = []
-f = open('old_data\\recipes.csv', 'rt', encoding='UTF8')
+f = open('origin_data\\recipes.csv', 'rt', encoding='UTF8')
 lines = csv.reader(f)
 
 recipes = []

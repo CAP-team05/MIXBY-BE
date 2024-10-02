@@ -1,6 +1,6 @@
 import my_modules.getinfo, json
 
-urls = my_modules.getinfo.geturls('old_data\\links.txt')
+urls = my_modules.getinfo.geturls('origin_data\\links.txt')
 drinks = []
 
 drinks = []
