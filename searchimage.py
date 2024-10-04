@@ -1,13 +1,9 @@
-import my_modules.getinfo
-import os, glob
+import glob, pytesseract
 
-urls = my_modules.getinfo.geturls("old_data/urls.txt")
+# tesseract 가 윈도우 지원이 깔끔해서 윈도우로 해야할듯???
 
 cnt = 0
 fs = glob.glob('images_merged/*_merged.jpg')
-for url in urls:
-    code = my_modules.getinfo.getcode(url)
-    f = glob.glob('images_merged/{}_merged.jpg'.format(code))
-    #print(f)
-
-print('merged images found {} out of {}'.format(len(fs), len(urls)))
+for f in fs[:5]:
+    text = pytesseract.image_to_string(f, lang='kor+eng')
+    print(text)
