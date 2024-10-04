@@ -52,19 +52,19 @@ def liquorclasses(bb):
     liq = []
     gui = []
     for b in bb:
-        if '진' in b and '진' != b:
+        if '진' in b:
             gin.append(b)
-        elif '럼' in b and '럼' != b:
+        elif '럼' in b:
             rum.append(b)
-        elif '테킬라' in b and '테킬라' != b:
+        elif '테킬라' in b:
             teq.append(b)
-        elif '위스키' in b and '위스키' != b:
+        elif '위스키' in b:
             whi.append(b)
-        elif '보드카' in b and '보드카' != b:
+        elif '보드카' in b:
             vod.append(b)
-        elif '브랜디' in b and '브랜디' != b:
+        elif '브랜디' in b:
             bra.append(b)
-        elif '리큐르' in b and '리큐르' != b:
+        elif '리큐르' in b:
             liq.append(b)
         else:
             gui.append(b)
