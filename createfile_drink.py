@@ -1,7 +1,6 @@
 import my_modules.getinfo, json
 
-urls = my_modules.getinfo.geturls('origin_data\\links.txt')
-drinks = []
+urls = my_modules.getinfo.geturls('origin_data/urls.txt')
 
 drinks = []
 
@@ -17,8 +16,6 @@ for url in urls:
     drink['name'] = name
     drink['volume'] = volume
     drinks.append(drink)
-
-    print(len(code))
 
 with open('new_data\\drinks.json', 'w', encoding='utf-8') as f:
     json.dump(drinks, f, ensure_ascii = False, indent=4)

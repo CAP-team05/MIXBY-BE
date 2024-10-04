@@ -37,6 +37,31 @@ def getnameKOR(url):
     name = name + '(' + size
     return name
 
+def getimageurl(url):
+    response = requests.get(url)
+    html = response.text
+    spl = html.split('src=')
+    links = []
+    for i in range(5, len(spl)):
+        n = spl[i].split('\"')[1]
+        links.append(n)
+    
+    return links
+
+def getpageurl(code):
+    full_code = code
+    num = []
+    for _ in range(0,6):
+        num.append(code[:2])
+        code = code[2:]
+    num.append(code[0])
+
+    url = 'https://red.lotteon.com/goodsdetail?view=type1-raw&model=itemdetail%2FLM'
+    for n in num:
+        url = url+'%2F'+n
+    url = url+'%2FDSCRP_LM'+full_code
+    return url
+    
 def searchnameENG(code):
     url = "https://www.google.com/search?q=product+"+code
     response = requests.get(url)

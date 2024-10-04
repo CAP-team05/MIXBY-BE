@@ -1,7 +1,7 @@
 import json, csv
 
 lines = []
-f = open('origin_data\\recipes.csv', 'rt', encoding='UTF8')
+f = open('old_data/recipes.csv', 'rt', encoding='UTF8')
 lines = csv.reader(f)
 
 recipes = []
@@ -80,10 +80,10 @@ def liquorclasses(bb):
 
     return base
 
-with open('new_data\\recipes.json', 'w', encoding='utf-8') as f:
+with open('new_data/recipes.json', 'w', encoding='utf-8') as f:
     json.dump(recipes, f, ensure_ascii = False, indent=4)
 
-with open('new_data\\bases.json', 'w', encoding='utf-8') as f:
+with open('new_data/bases.json', 'w', encoding='utf-8') as f:
     json.dump(liquorclasses(bb), f, ensure_ascii = False, indent=4)
 
 print('\nfile successfully created!\n')
