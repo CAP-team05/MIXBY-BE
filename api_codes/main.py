@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template
 
 import json
-import get_from_json
+import getinfo
 
 app = Flask(__name__)
 
@@ -13,13 +13,13 @@ def start():  # 함수의 이름은 중복만 되지 않으면 됨
 @app.route('/drink')
 def drinks():
     return app.response_class(
-        response=json.dumps(get_from_json.getalldrinks(), indent=4),
+        response=json.dumps(getinfo.getalldrinks(), indent=4),
         mimetype='application/json'
     )
 # search drinks including <code> at name or code
 @app.route('/drink/<code>')
 def drink(code):
-    info = get_from_json.getdrink(code)
+    info = getinfo.getdrink(code)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
@@ -29,13 +29,13 @@ def drink(code):
 @app.route('/recipe')
 def recipes():
     return app.response_class(
-        response=json.dumps(get_from_json.getallrecipes(), indent=4),
+        response=json.dumps(getinfo.getallrecipes(), indent=4),
         mimetype='application/json'
     )
 # search recipes including <code> at name or code
 @app.route('/recipe/<code>')
 def recipe(code):
-    info = get_from_json.getrecipe(code)
+    info = getinfo.getrecipe(code)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
