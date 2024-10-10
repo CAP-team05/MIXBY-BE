@@ -1,6 +1,6 @@
 import json
 
-with open('data/drinks.json', 'r', encoding='UTF-8') as json_read :
+with open('backend_codes/new_data/drinks.json', 'r', encoding='UTF-8') as json_read :
     json_str = json.load(json_read)
 
 
