@@ -321,7 +321,7 @@
     border: 1px solid #c6c6c6;
     box-sizing: border-box;
     height: 30px;
-    margin-bottom: -15px; /* 사각형 사이의 간격을 5px로 설정 */
+    margin-bottom: -15px; /* 사각형 사이의 간격을 -15px로 설정 */
 }
 
 
@@ -354,7 +354,7 @@
     width: 100%;
     position: relative;
     height: 18px;
-    margin-bottom: 20px; /* 사각형 사이의 간격을 15px로 설정 */
+    margin-bottom: 20px; /* 사각형 사이의 간격을 20px로 설정 */
     }
 
 .frame-button {
