@@ -1,0 +1,385 @@
+/* 아이폰 화면 전체 스타일 */
+.iphone {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 아이폰 스타일 (사각형) */
+.iphone .div {
+    background-color: #ffffff; /* 배경색 */
+    border: 1px solid; /* 테두리 */
+    border-radius: 40px; /* 둥근 모서리 */
+    border-color: #9d9d9d; /* 테두리 색상 */
+    width: 390px; /* 너비 */
+    height: 844px; /* 높이 */
+    position: relative; /* 자식 요소의 절대 위치에 대해 기준 설정 */
+}
+
+/* 첫 번째 텍스트 (소주의 신 님, 오늘 한잔 어떠세요) */
+.iphone .p {
+    position: absolute; /* 절대 위치 */
+    top: 130px; /* y 위치 */
+    left: 24px; /* x 위치 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-weight: 400; /* 두께 */
+    color: #000000; /* 색상 */
+    font-size: 23px; /* 폰트 크기 */
+    letter-spacing: 0; /* 글자 간격 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 텍스트의 첫 부분 (소주의 신 님) */
+.iphone .user {
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-weight: 400; /* 두께 */
+    color: #000000; /* 색상 */
+    font-size: 23px; /* 폰트 크기 */
+}
+
+/* 텍스트의 두 번째 부분 (오늘 한잔 어떠세요) */
+.iphone .span {
+    font-size: 32px; /* 폰트 크기 */
+}
+
+/* 앱 이름 (MIXBY) 텍스트 */
+.iphone .app_name {
+    position: absolute; /* 절대 위치 */
+    top: 20px; /* y 위치 */
+    left: 24px; /* x 위치 */
+    font-family: 'Black Han Sans'; /* 폰트 설정 */
+    font-weight: 400; /* 두께 */
+    color: #000000; /* 색상 */
+    font-size: 62px; /* 폰트 크기 */
+    letter-spacing: 0; /* 글자 간격 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 설정 아이콘 (기어 아이콘) */
+.iphone .ios-icon-settings {
+    position: absolute; /* 절대 위치 */
+    font-size: 25px; /* 아이콘 크기 */
+    color: #000000; /* 아이콘 색상 */
+    top: 30px; /* y 위치 */
+    left: 330px; /* x 위치 */
+}
+
+/* 테킬라 선라이즈 이미지 */
+.iphone .element1 {
+    width: 236px; /* 이미지 너비 */
+    height: 266px; /* 이미지 높이 */
+    border-radius: 20px; /* 둥근 모서리 */
+    background: lightgray; /* 배경 색상 */
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
+    flex-shrink: 0; /* 축소 방지 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 이미지의 y 위치 */
+    left: 30px; /* 이미지의 x 위치 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 김렛 이미지 */
+.iphone .element2 {
+    width: 236px; /* 이미지 너비 */
+    height: 266px; /* 이미지 높이 */
+    border-radius: 20px; /* 둥근 모서리 */
+    background: lightgray; /* 배경 색상 */
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
+    flex-shrink: 0; /* 축소 방지 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 이미지의 y 위치 */
+    left: 300px; /* 이미지의 x 위치 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 골드 러쉬 */
+.iphone .element3 {
+    width: 236px; /* 이미지 너비 */
+    height: 266px; /* 이미지 높이 */
+    border-radius: 20px; /* 둥근 모서리 */
+    background: lightgray; /* 배경 색상 */
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
+    flex-shrink: 0; /* 축소 방지 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 이미지의 y 위치 */
+    left: 570px; /* 이미지의 x 위치 */
+    object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 95% 일치 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape1 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 20px 20px 0px 0px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 도형의 y 위치 조정 */
+    left: 30px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형 안의 텍스트 (95% 일치) */
+.shape1-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 데낄라 선라이즈 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape2 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 0px 0px 20px 20px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 496px; /* 도형의 y 위치 조정 */
+    left: 30px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형2 안의 텍스트 (데낄라 선라이즈) */
+.shape2-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+}
+
+/* 84% 일치 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape3 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 20px 20px 0px 0px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 도형의 y 위치 조정 */
+    left: 300px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형3 안의 텍스트 (84% 일치) */
+.shape3-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 김렛 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape4 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 0px 0px 20px 20px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 496px; /* 도형의 y 위치 조정 */
+    left: 300px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형4 안의 텍스트 (김렛) */
+.shape4-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+}
+
+/* 97% 일치 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape5 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 20px 20px 0px 0px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 260px; /* 도형의 y 위치 조정 */
+    left: 570px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형5 안의 텍스트 (95% 일치) */
+.shape5-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 골드 러쉬 텍스트를 감싸는 도형 (직사각형) */
+.iphone .shape6 {
+    width: 236px; /* 도형 너비 */
+    height: 30px; /* 도형 높이 */
+    flex-shrink: 0; /* 축소 방지 */
+    border-radius: 0px 0px 20px 20px; /* 둥근 모서리 */
+    background: #ffffff3d; /* 배경 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 496px; /* 도형의 y 위치 조정 */
+    left: 570px; /* 도형의 x 위치 조정 */
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 도형6 안의 텍스트 (데낄라 선라이즈) */
+.shape6-text {
+    color: #000; /* 텍스트 색상 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    font-style: normal; /* 폰트 스타일 */
+    font-weight: 400; /* 폰트 두께 */
+}
+
+/* 도전과제 텍스트 스타일 */
+.challenge {
+    width: 100px;
+    top: 570px;
+    left: -90px;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Gmarket Sans TTF';
+    color: #000;
+    text-align: left;
+    display: inline-block;
+}
+
+.progress {
+    width: 20%;
+    position: absolute; /* 절대 위치 */
+    border-radius: 20px; /* 둥근 모서리 */
+    background-color: #e0e0e0; /* 배경색 (진행도 바의 배경) */
+    height: 6px; /* 전체 높이 */
+    top: 595px; /* 상단 위치 */
+    left: 160px; /* 왼쪽 위치 */
+}
+
+.progress-bar {
+    height: 100%; /* 전체 높이 */
+    border-radius: 20px; /* 둥근 모서리 */
+    background-color: #a1f360; /* 진행도 바 색상 */
+    transition: width 0.3s; /* 너비 변화에 부드러운 애니메이션 추가 */
+}
+
+/* 진행도 텍스트 스타일 */
+.progress-text {
+    position: absolute; /* 절대 위치 */
+    top: -10px; /* 상단 위치 */
+    left: 110px; /* 수평 중앙 정렬 */
+    transform: translateX(-50%); /* 중앙 정렬 조정 */
+    font-family: "Abel", sans-serif; /* 폰트 설정 */
+    font-size: 16px; /* 폰트 크기 */
+    color: #000; /* 텍스트 색상 */
+    font-weight: 400; /* 두께 */
+}
+
+/* 최근 해금한 레시피 텍스트 */
+.recent-recipe {
+    position: relative; /* 상대 위치 */
+    font-size: 21px; /* 폰트 크기 */
+    font-family: 'Gmarket Sans TTF'; /* 폰트 설정 */
+    top: 620px; /* 텍스트의 y 위치 조정 */
+    left: 30px; /* 텍스트의 x 위치 조정 */
+    color: #000; /* 텍스트 색상 */
+    text-align: left; /* 왼쪽 정렬 */
+    display: inline-block; /* 인라인 블록으로 설정 */
+}
+
+/* 사각형 스타일 */
+.rectangle-div {
+    width: 85%;
+    top: 630px;
+    left: 30px;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #c6c6c6;
+    box-sizing: border-box;
+    height: 30px;
+    margin-bottom: -15px; /* 사각형 사이의 간격을 5px로 설정 */
+}
+
+
+.add {
+    width: 100px;
+    top: 619px;
+    left: 65px;
+    position: relative;
+    font-size: 18px;
+    font-family: 'Gmarket Sans TTF';
+    color: #000;
+    text-align: left;
+    display: inline-block;
+}
+
+/* 아이콘 관련 스타일 */
+.icon {
+    position: absolute;
+    top: 522px;
+    left: 40px;
+    border-radius: 6px;
+    border: 2px solid #424242;
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    
+    }
+
+    .ios-icon-36-placeholder {
+    width: 100%;
+    position: relative;
+    height: 18px;
+    margin-bottom: 20px; /* 사각형 사이의 간격을 15px로 설정 */
+    }
+
+.frame-button {
+    width: 30%; /* 버튼의 폭 */
+    top: 800px;
+    left: 125px;
+    position: relative;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25); /* 그림자 */
+    border-radius: 30px; /* 둥근 모서리 */
+    background-color: #f1ca7e; /* 버튼 배경색 */
+    border-bottom: 1px solid #898989; /* 하단 테두리 */
+    box-sizing: border-box;
+    height: 15px; /* 버튼 높이 */
+    overflow: hidden;
+    cursor: pointer; /* 클릭할 수 있는 모양으로 변경 */
+}
+
+.frame-button::before {
+    content: ""; /* 빈 내용 추가 */
+    width: 10%; /* 버튼 안의 작은 요소 크기 */
+    height: 4px; /* 높이 설정 */
+    background-color: #000; /* 색상 */
+    position: absolute;
+    top: 50%; /* 수직 가운데 정렬 */
+    left: 50%; /* 수평 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데로 이동 */
+    border-radius: 40px; /* 둥근 모서리 */
+}
