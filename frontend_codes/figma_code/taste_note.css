@@ -1,1 +1,67 @@
+/* 아이폰 화면 전체 스타일 */
+.iphone {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
 
+/* 아이폰 스타일 (사각형) */
+.iphone .div {
+    background-color: #ffffff; /* 배경색 */
+    border: 1px solid; /* 테두리 */
+    border-radius: 40px; /* 둥근 모서리 */
+    border-color: #9d9d9d; /* 테두리 색상 */
+    width: 390px; /* 너비 */
+    height: 844px; /* 높이 */
+    position: relative; /* 자식 요소의 절대 위치에 대해 기준 설정 */
+}
+
+/* 추가된 레이아웃 스타일 */
+.layout {
+    display: flex;
+    width: 340px; /* 원하는 너비로 조정 가능 */
+    height: 500px; /* 원하는 높이로 조정 가능 */
+    position: absolute; /* 위치 조정을 위한 속성 추가 */
+    top: 150px; /* y 위치 */
+    left: 24px; /* x 위치 */
+    padding: 32px 0px 32px 0px; /* 패딩 - 위쪽과 아래쪽을 균등하게 설정 */
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #F1CA7E; /* 배경색 */
+}
+
+/* 앱 이름 (MIXBY) 텍스트 */
+.iphone .app_name {
+    position: absolute; /* 절대 위치 */
+    top: 20px; /* y 위치 */
+    left: 24px; /* x 위치 */
+    font-family: 'Black Han Sans', sans-serif; /* 폰트 설정 */
+    font-weight: 400; /* 두께 */
+    color: #000000; /* 색상 */
+    font-size: 62px; /* 폰트 크기 */
+    letter-spacing: 0; /* 글자 간격 */
+    line-height: normal; /* 줄 간격 */
+}
+
+/* 설정 아이콘 */
+.ios-icon-settings {
+    font-size: 25px; /* 아이콘 크기 */
+    color: #000; /* 아이콘 색상 */
+    position: absolute; /* 절대 위치 */
+    top: 30px; /* y 위치 */
+    left: 330px; /* x 위치 */
+}
+
+/* 도형 (사각형) 스타일 */
+.frame-shape {
+    width: 24px; /* 너비 */
+    height: 4px; /* 높이 */
+    flex-shrink: 0; /* 축소되지 않도록 설정 */
+    border-radius: 40px; /* 둥근 모서리 */
+    background: #000; /* 배경색 */
+    top: 20px; /* y 위치 */
+}
