@@ -1,0 +1,34 @@
+Android Studio로 Flutter 제작시에
+
+pubspec.yaml <----이 파일에서
+
+name: flutter_apps
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:                                    <------설정 해줘야함
+                                                    ㄴ (아래는 이미지 넣을려면 저런식으로 하나씩 이미지를 다 넣고 해야됨)
+    - assets/image/image1.png
+    - assets/image/image2.png
+    - assets/image/image3.png
+    - assets/image/tequila_sunrise.png
+    - assets/image/gimlet.png
+    - assets/image/gold_rush.png
