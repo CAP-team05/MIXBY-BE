@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'drink_bar.dart'; // 기존 코드에서 이 파일을 import
+import 'menu.dart'; // 추가한 menu.dart 파일 import
 
 void main() {
   runApp(const MyApp());
@@ -29,11 +31,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool _isVisible = true;
+  bool _isDialogVisible = false; // 대화 박스 표시 여부
+  String _currentDialogue = ""; // 현재 대화 내용
+  List<String> _dialogue = [ // 대화 내용 리스트
+    "안녕하세요!",
+    "오늘은 어떤 술이 드시고 싶으신가요?",
+    "오늘 날씨와 가장 잘 어울리는 술을 제가 추천해드릴게요!",
+  ];
+  int _dialogueIndex = 0; // 현재 대화 인덱스
 
   @override
   void initState() {
     super.initState();
-    // 깜빡임 애니메이션
     _startBlinkAnimation();
   }
 
@@ -42,31 +51,63 @@ class _MyHomePageState extends State<MyHomePage> {
       setState(() {
         _isVisible = !_isVisible;
       });
-      _startBlinkAnimation(); // 재귀적으로 호출
+      _startBlinkAnimation();
     });
   }
 
+  void _toggleDialog() {
+    if (_dialogueIndex < _dialogue.length) {
+      setState(() {
+        _currentDialogue = ""; // 이전 대화 내용 초기화
+        _isDialogVisible = true; // 대화 박스 표시
+      });
+
+      // 한 글자씩 나타내는 애니메이션
+      String dialogue = _dialogue[_dialogueIndex];
+      int dialogueLength = dialogue.length;
+
+      for (int i = 0; i < dialogueLength; i++) {
+        Future.delayed(Duration(milliseconds: 100 * i), () {
+          setState(() {
+            // 한 글자씩 추가하되, 줄바꿈 문자를 처리
+            if (dialogue[i] == '\n') {
+              _currentDialogue += '\n'; // 줄바꿈 처리
+            } else {
+              _currentDialogue += dialogue[i]; // 문자를 추가
+            }
+          });
+
+          // 마지막 글자가 추가되면 다음 대화로 이동
+          if (i == dialogueLength - 1) {
+            _dialogueIndex++; // 다음 대화로 이동
+          }
+        });
+      }
+    } else {
+      setState(() {
+        _isDialogVisible = false; // 모든 대화가 끝나면 대화 박스 숨기기
+      });
+    }
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
+    // MediaQuery를 사용하여 화면 너비를 가져옴
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Center(
         child: Container(
-          width: 390,
+          width: screenWidth, // 화면 너비에 맞춤
           height: 844,
-          clipBehavior: Clip.antiAlias,
-          decoration: ShapeDecoration(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 1, color: Color(0xFF9D9D9D)),
-              borderRadius: BorderRadius.circular(40),
-            ),
-          ),
+          color: Colors.white,
           child: Stack(
             children: [
-              // 이미지3 (배경 이미지, 스택의 가장 아래에 위치해야 함)
               Positioned(
                 left: 0,
-                top: 50,
+                top: 0,
                 child: Container(
                   width: 350,
                   height: 200,
@@ -78,13 +119,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              // 이미지1 (전경 이미지)
               Positioned(
                 left: 0,
-                top: 50,
+                top: 0,
                 child: Container(
-                  width: 400,
-                  height: 255,
+                  width: screenWidth,
+                  height: 300,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/image/image1.png'),
@@ -93,357 +133,82 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              // 이미지2 (전경 이미지)
               Positioned(
                 left: 0,
-                top: 200,
-                child: Container(
-                  width: 390,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/image/image2.png'),
-                      fit: BoxFit.fill,
+                top: 150,
+                child: GestureDetector(
+                  onTap: _toggleDialog,
+                  child: Container(
+                    width: screenWidth,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/image/image2.png'),
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),
               ),
-              // 삼각형 버튼 (애니메이션 효과)
               Positioned(
-                right: 30, // 버튼을 오른쪽으로 위치
-                bottom: 560, // 버튼을 아래쪽으로 위치
+                child: DrinkBar(),
+              ),
+              Positioned(
+                left: 0,
+                top: 600,
+                child: Container(
+                  width: 250,
+                  height: 120,
+                  child: Stack(
+                    children: [],
+                  ),
+                ),
+              ),
+              Positioned(
+                right: 30,
+                bottom: 560,
                 child: AnimatedOpacity(
-                  opacity: _isVisible ? 1.0 : 0.0, // 깜빡임 효과
+                  opacity: _isVisible ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 500),
                   child: GestureDetector(
-                    onTap: () {
-                      // 버튼 클릭 시 추가할 기능
-                    },
+                    onTap: _toggleDialog,
                     child: CustomPaint(
-                      size: Size(15, 15), // 버튼 크기를 더욱 작게 설정
+                      size: Size(15, 15),
                       painter: TriangleButtonPainter(),
                     ),
                   ),
                 ),
               ),
-
-
-
-              //화면 밑에 음료 선호도//
-
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal, // 수평 스크롤
-                child: Row(
-                  children: [
-
-                    // 데낄라 선라이즈 카드
-                    // 데킬라 선라이즈 카드
-                    Container(
-                      margin: EdgeInsets.only(right: 10, top: 310, left: 5), // 카드 간 간격 및 위치 조정
-                      width: 236,
-                      height: 266,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3F000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                            spreadRadius: 0,
+              // 대화 박스 추가
+              if (_isDialogVisible)
+                Positioned(
+                  left: 0,
+                  top: 190,
+                  child: Container(
+                    width: screenWidth,
+                    padding: const EdgeInsets.all(16),
+                    color: Colors.transparent,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          _currentDialogue,
+                          style: TextStyle(
+                            fontFamily: 'DungGeunMo', // DungGeunMo 폰트 설정
+                            fontSize: 21, // 폰트 크기 설정
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
-                      ),
-                      child: Stack(
-                        children: [
-                          // 이미지 부분
-                          Container(
-                            width: 236,
-                            height: 266,
-                            decoration: ShapeDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("assets/image/tequila_sunrise.png"), // Tequila Sunrise 이미지
-                                fit: BoxFit.fill,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                          ),
-                          // 상단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            top: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    topRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          // 칵테일 이름
-                          Positioned(
-                            left: 65,
-                            bottom: 5,
-                            child: Text(
-                              '데킬라 선라이즈',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 매칭 퍼센트
-                          Positioned(
-                            left: 87,
-                            top: 5,
-                            child: Text(
-                              '89% 일치',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 하단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                          textAlign: TextAlign.left, // 텍스트 정렬
+                        ),
+                      ],
                     ),
-
-                    // 김렛 카드
-                    Container(
-                      margin: EdgeInsets.only(right: 10, top: 310, left: 5), // 카드 간 간격 및 위치 조정
-                      width: 236,
-                      height: 266,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3F000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                            spreadRadius: 0,
-                          ),
-                        ],
-                      ),
-                      child: Stack(
-                        children: [
-                          // 이미지 부분
-                          Container(
-                            width: 236,
-                            height: 266,
-                            decoration: ShapeDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("assets/image/gimlet.png"), // Gimlet 이미지
-                                fit: BoxFit.fill,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                          ),
-                          // 상단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            top: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    topRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          // 칵테일 이름
-                          Positioned(
-                            left: 100,
-                            bottom: 5,
-                            child: Text(
-                              '김렛',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 매칭 퍼센트
-                          Positioned(
-                            left: 87,
-                            top: 5,
-                            child: Text(
-                              '95% 일치',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 하단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    // 골드러쉬 카드
-                    Container(
-                      margin: EdgeInsets.only(right: 10, top: 310, left: 5), // 카드 간 간격 및 위치 조정
-                      width: 236,
-                      height: 266,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3F000000),
-                            blurRadius: 4,
-                            offset: Offset(0, 4),
-                            spreadRadius: 0,
-                          ),
-                        ],
-                      ),
-                      child: Stack(
-                        children: [
-                          // 이미지 부분
-                          Container(
-                            width: 236,
-                            height: 266,
-                            decoration: ShapeDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("assets/image/gold_rush.png"), // Gold Rush 이미지
-                                fit: BoxFit.fill,
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                          ),
-                          // 상단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            top: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    topRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          // 칵테일 이름
-                          Positioned(
-                            left: 90,
-                            bottom: 5,
-                            child: Text(
-                              '골드러쉬',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 매칭 퍼센트
-                          Positioned(
-                            left: 87,
-                            top: 5,
-                            child: Text(
-                              '92% 일치',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Gmarket Sans TTF',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                          ),
-                          // 하단 배너 (회색 박스) - 이미지 위에 위치하도록 순서 수정
-                          Positioned(
-                            left: 0,
-                            bottom: 0,
-                            child: Container(
-                              width: 236,
-                              height: 30,
-                              decoration: ShapeDecoration(
-                                color: Color(0x7FB5B5B5),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(20),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-
             ],
           ),
         ),
       ),
+      bottomNavigationBar: Menu(),
     );
   }
 }
@@ -451,13 +216,13 @@ class _MyHomePageState extends State<MyHomePage> {
 class TriangleButtonPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.black; // 삼각형 버튼 색상
+    final paint = Paint()..color = Colors.black;
 
     final path = Path()
-      ..moveTo(size.width / 2, size.height) // 꼭짓점 (아래쪽)
-      ..lineTo(size.width, 0) // 오른쪽 꼭짓점
-      ..lineTo(0, 0) // 왼쪽 꼭짓점
-      ..close(); // 삼각형을 완성
+      ..moveTo(size.width / 2, size.height)
+      ..lineTo(size.width, 0)
+      ..lineTo(0, 0)
+      ..close();
 
     canvas.drawPath(path, paint);
   }
