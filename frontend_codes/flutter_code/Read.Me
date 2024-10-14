@@ -1,7 +1,3 @@
-Android Studio로 Flutter 제작시에
-
-pubspec.yaml <----이 파일에서
-
 name: flutter_apps
 description: "A new Flutter project."
 publish_to: 'none'
@@ -15,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  flutter_vector_icons: ^2.0.0 # 필요한 패키지 추가
 
 dev_dependencies:
   flutter_test:
@@ -23,12 +20,19 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Gmarket Sans TTF
+      fonts:
+        - asset: assets/fonts/GmarketSansTTFBold.ttf
+    - family: DungGeunMo
+      fonts:
+        - asset: assets/fonts/DungGeunMo.ttf # DungGeunMo 폰트 추가
 
-  assets:                                    <------설정 해줘야함
-                                                    ㄴ (아래는 이미지 넣을려면 저런식으로 하나씩 이미지를 다 넣고 해야됨)
+  assets:
     - assets/image/image1.png
     - assets/image/image2.png
     - assets/image/image3.png
     - assets/image/tequila_sunrise.png
     - assets/image/gimlet.png
     - assets/image/gold_rush.png
+    - assets/icons/glass.png
