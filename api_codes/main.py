@@ -41,9 +41,9 @@ def recipe(code):
         mimetype='application/json'
     )
 
-@app.route('/yee')
-def yee():
-    return render_template('myimage.html')
+@app.route('/image/<code>')
+def image(code=None):
+    return render_template('images.html', code=code)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2222)  # app 실행

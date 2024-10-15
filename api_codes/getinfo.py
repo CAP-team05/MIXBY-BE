@@ -1,10 +1,10 @@
 from collections import OrderedDict
 import json
 
-with open('backend_codes/new_data/drinks.json', 'r', encoding='UTF-8') as json_read :
+with open('datas/drinks.json', 'r', encoding='UTF-8') as json_read :
     all_drinks = json.load(json_read, object_pairs_hook=OrderedDict)
 
-with open('backend_codes/new_data/recipes.json', 'r', encoding='UTF-8') as json_read :
+with open('datas/recipes.json', 'r', encoding='UTF-8') as json_read :
     all_recipes = json.load(json_read, object_pairs_hook=OrderedDict)
 
 
