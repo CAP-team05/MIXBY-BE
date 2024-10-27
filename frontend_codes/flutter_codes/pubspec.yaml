@@ -1,0 +1,36 @@
+name: flutter_apps
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/image/main_img.png
+    - assets/image/bartender.png
+    - assets/image/moscow_mule.png
+    - assets/image/screw_driver.png
+    - assets/image/margarita.png
+    - assets/image/june_bug.png
+    - assets/image/gin_tonic.png
+    - assets/image/shot.png
+
+  fonts:
+    - family: GyeonggiBatangOTF
+      fonts:
+        - asset: assets/fonts/GyeonggiBatangOTF.otf
