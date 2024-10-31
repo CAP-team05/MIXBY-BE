@@ -1,128 +1,169 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'content.dart'; // content.dart에서 Content 클래스를 가져옵니다.
+import 'content2.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
-  
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class FullWidthBackgroundScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Weather Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: WeatherScreen(),
-    );
-  }
-}
+    // 전체 화면 너비와 높이를 가져옴
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
-class WeatherScreen extends StatefulWidget {
-  @override
-  _WeatherScreenState createState() => _WeatherScreenState();
-}
-
-class _WeatherScreenState extends State<WeatherScreen> {
-  String weatherMessage = "현재 위치의 날씨를 가져오는 중...";
-  final String apiKey = dotenv.env['OPEN_WEATHER_MAP_API_KEY'] ?? ''; // 여기에 OpenWeatherMap API 키를 넣으세요.
-
-  @override
-  void initState() {
-    super.initState();
-    _getCurrentLocationAndWeather();
-  }
-
-  Future<void> _getCurrentLocationAndWeather() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    // 위치 서비스 활성화 여부 확인
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      setState(() {
-        weatherMessage = "위치 서비스가 비활성화되어 있습니다.";
-      });
-      return;
-    }
-
-    // 위치 권한 확인 및 요청
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        setState(() {
-          weatherMessage = "위치 권한이 거부되었습니다.";
-        });
-        return;
-      }
-    }
-
-    if (permission == LocationPermission.deniedForever) {
-      setState(() {
-        weatherMessage = "위치 권한이 영구적으로 거부되었습니다.";
-      });
-      return;
-    }
-
-    // 현재 위치 가져오기
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
-
-    // 날씨 정보 가져오기
-    await _fetchWeather(position.latitude, position.longitude);
-  }
-
-  Future<void> _fetchWeather(double latitude, double longitude) async {
-    final url =
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&units=metric&appid=$apiKey&lang=kr';
-
-    try {
-      final response = await http.get(Uri.parse(url));
-      if (response.statusCode == 200) {
-        final data = json.decode(response.body);
-        final description = data['weather'][0]['description'];
-        final temperature = data['main']['temp'];
-
-        setState(() {
-          weatherMessage =
-          "현재 온도: $temperature°C\n날씨: $description";
-        });
-      } else {
-        setState(() {
-          weatherMessage = "날씨 정보를 가져오지 못했습니다. (${response.statusCode})";
-        });
-      }
-    } catch (e) {
-      setState(() {
-        weatherMessage = "날씨 정보를 가져오는 중 오류가 발생했습니다: $e";
-      });
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('현재 위치 날씨'),
-      ),
-      body: Center(
-        child: Text(
-          weatherMessage,
-          style: TextStyle(fontSize: 20),
-          textAlign: TextAlign.center,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _getCurrentLocationAndWeather,
-        child: Icon(Icons.refresh),
+      body: Stack(
+        children: [
+          // 그라디언트 배경
+          Positioned(
+            left: 0,
+            top: 0,
+            child: Container(
+              width: screenWidth, // 화면의 전체 너비로 설정
+              height: screenHeight, // 화면의 전체 높이로 설정
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment(0.00, -1.00),
+                  end: Alignment(0, 1),
+                  colors: [Color(0xFF32325D), Color(0xFFC4C4C4)],
+                ),
+              ),
+            ),
+          ),
+          // 단색 배경
+          Positioned(
+            left: 0,
+            top: 0,
+            child: Container(
+              width: screenWidth, // 화면의 전체 너비로 설정
+              height: screenHeight, // 화면의 전체 높이로 설정
+              decoration: BoxDecoration(
+                color: Color(0xB232325D),
+              ),
+            ),
+          ),
+          // 이미지 추가
+          Positioned(
+            left: 10,
+            top: 0, // 상단에 고정
+            child: Container(
+              width: 409,
+              height: 409,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/image/main_img.png"), // 로컬 이미지 경로
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+          // 추가된 Container
+          Positioned(
+            left: 16, // 원하는 위치 조정
+            top: 330, // 원하는 위치 조정
+            child: Container(
+              width: 368,
+              height: 85,
+              child: Stack(
+                children: [
+                  // 배경 모양
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      width: 368,
+                      height: 85,
+                      decoration: ShapeDecoration(
+                        color: Color(0xE532325D),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(180),
+                        ),
+                        shadows: [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  // 텍스트 추가
+                  Positioned(
+                    left: 102,
+                    top: 15,
+                    child: SizedBox(
+                      width: 250,
+                      height: 60, // 높이를 늘려서 줄바꿈이 가능하도록 설정
+                      child: Text(
+                        '무더운 날씨, \n이런 칵테일은 어떠세요?',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'GyeonggiBatangOTF',
+                          fontWeight: FontWeight.w400,
+                          height: 1.2, // 줄 간격 조정
+                        ),
+                        textAlign: TextAlign.center, // 텍스트 중앙 정렬
+                      ),
+                    ),
+                  ),
+                  // 원형 배경 추가
+                  Positioned(
+                    left: 7,
+                    top: 5,
+                    child: ClipOval(
+                      child: Container(
+                        width: 75,
+                        height: 75,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF545A7C), // 배경색 설정
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x3F000000),
+                              blurRadius: 4,
+                              offset: Offset(0, 4),
+                              spreadRadius: 0,
+                            ),
+                          ],
+                        ),
+                        child: ClipOval(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/image/bartender.png"), // 로컬 이미지 경로
+                                fit: BoxFit.cover, // 이미지를 잘라서 Container에 맞추기
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Content 위젯 추가
+          Positioned(
+            left: 16, // 위치 조정
+            top: 440, // bartender.png 아래로 위치 조정 (원하는 위치에 맞게 조정)
+            child: Content(), // content.dart에서 가져온 Content 위젯
+          ),
+          // Content2 위젯 추가
+          Positioned(
+            left: 16,
+            top: 650, // Content의 아래로 위치 조정 (Content의 높이에 따라 조정)
+            child: Content2(), // content2.dart에서 가져온 Content2 위젯
+          ),
+        ],
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: FullWidthBackgroundScreen(),
+  ));
 }

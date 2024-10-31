@@ -38,6 +38,7 @@ dependencies:
   geolocator: ^13.0.1
   http: ^1.2.2
   flutter_dotenv: ^5.1.0
+  flutter_vector_icons: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,20 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - .env
+    - assets/image/bartender.png
+    - assets/image/main_img.png
+    - assets/image/margarita.png
+    - assets/image/moscow_mule.png
+    - assets/image/screw_driver.png
+
+  fonts:
+    - family: Gmarket Sans TTF
+      fonts:
+        - asset: assets/fonts/GmarketSansTTFBold.ttf
+
+    - family: DungGeunMo
+      fonts:
+        - asset: assets/fonts/DungGeunMo.ttf # DungGeunMo 폰트 추가
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
