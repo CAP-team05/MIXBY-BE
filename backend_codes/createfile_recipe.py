@@ -1,7 +1,7 @@
 import json, csv
 
 lines = []
-f = open('backend_codes/old_data/recipe.csv', 'rt', encoding='UTF8')
+f = open('old_data/recipes.csv', 'rt', encoding='UTF8')
 lines = csv.reader(f)
 
 recipes = []
@@ -19,8 +19,8 @@ for line in lines:
         if 'or' in ing:
             for _ in range(0, ing.count('or')):
                 ing = ing.split('or')[0].strip(' ')+' or '+ing.split('or')[1].strip(' ')
-        # if '스카치 위스키' in ing and '혼합' != line[3]:
-        #     line[3] = '스카치 위스키'
+        if '스카치 위스키' in ing and '혼합' != line[3]:
+            line[3] = '스카치 위스키'
             
     bs = []
     if 'or' in line[3]:
@@ -40,7 +40,6 @@ for line in lines:
     recipe['ingredients'] = ings
 
     recipes.append(recipe)
-    code += 1
 
 def liquorclasses(bb):
     base = {}
@@ -81,10 +80,10 @@ def liquorclasses(bb):
 
     return base
 
-with open('backend_codes/new_data/recipes.json', 'w', encoding='utf-8') as f:
+with open('new_data/recipes.json', 'w', encoding='utf-8') as f:
     json.dump(recipes, f, ensure_ascii = False, indent=4)
 
-with open('backend_codes/new_data/bases.json', 'w', encoding='utf-8') as f:
+with open('new_data/bases.json', 'w', encoding='utf-8') as f:
     json.dump(liquorclasses(bb), f, ensure_ascii = False, indent=4)
 
 print('\nfile successfully created!\n')
