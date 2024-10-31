@@ -16,14 +16,34 @@ def drinks():
         response=json.dumps(get_drink.getalldrinks(), indent=4),
         mimetype='application/json'
     )
-# search drinks including <code> at name or code
-@app.route('/drink/<code>')
-def drink(code):
-    info = get_drink.getdrink(code)
+
+# search drinks by <code>
+@app.route('/drink/code/<code>')
+def drink_code(code):
+    info = get_drink.search_bycode(code)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
     )
+
+# search drinks by <name>
+@app.route('/drink/name/<name>')
+def drink_name(name):
+    info = get_drink.search_byname(name)
+    return app.response_class(
+        response=json.dumps(info, indent=4),
+        mimetype='application/json'
+    )
+
+# search drinks by <type>
+@app.route('/drink/type/<type>')
+def drink_type(type):
+    info = get_drink.search_bytype(type)
+    return app.response_class(
+        response=json.dumps(info, indent=4),
+        mimetype='application/json'
+    )
+
 
 # show all recipe
 @app.route('/recipe/all')
@@ -37,26 +57,26 @@ def all_recipes():
 def recipe_image(code=None):
     return render_template('image_recipe.html', code=code)
 
-# search recipes by name
+# search recipes by <name>
 @app.route('/recipe/name/<name>')
 def recipe_name(name):
-    info = get_recipe.getrecipe_byname(name)
+    info = get_recipe.search_byname(name)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
     )
-# search recipes by code
+# search recipes by <code>
 @app.route('/recipe/code/<code>')
 def recipe_code(code):
-    info = get_recipe.getrecipe_bycode(code)
+    info = get_recipe.search_bycode(code)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
     )
-# search recipes by ingredients
+# search recipes by <ingredients>
 @app.route('/recipe/ing/<ing>')
 def recipe_ing(ing):
-    info = get_recipe.getrecipe_byings(ing)
+    info = get_recipe.search_byings(ing)
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'

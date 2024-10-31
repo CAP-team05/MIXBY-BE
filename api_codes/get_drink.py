@@ -1,23 +1,29 @@
 from collections import OrderedDict
 import json
 
-with open('datas/drinks.json', 'r', encoding='UTF-8') as json_read :
+with open('api_codes/json_files/drinks.json', 'r', encoding='UTF-8') as json_read :
     all_drinks = json.load(json_read, object_pairs_hook=OrderedDict)
-
 
 def getalldrinks():
     return all_drinks
 
-def getdrink_byname(name):
+def search_byname(keyword):
     temp_list = []
     for j in all_drinks:
-        if name in j["name"] and j not in temp_list: temp_list.append(j)
-    temp_list.insert(0, "Total result : {}".format(len(temp_list)))
+        if keyword in j["name"] and j not in temp_list: temp_list.append(j)
+    temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
     return temp_list
 
-def getdrink_bycode(code):
+def search_bytype(keyword):
     temp_list = []
     for j in all_drinks:
-        if code == j["code"] and j not in temp_list: temp_list.append(j)
-    temp_list.insert(0, "Total result : {}".format(len(temp_list)))
+        if keyword in j["type"] and j not in temp_list: temp_list.append(j)
+    temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
+    return temp_list
+
+def search_bycode(keyword):
+    temp_list = []
+    for j in all_drinks:
+        if keyword == j["code"] and j not in temp_list: temp_list.append(j)
+    temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
     return temp_list
