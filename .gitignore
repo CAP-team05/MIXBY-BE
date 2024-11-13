@@ -2,5 +2,8 @@
 .VS*
 .env
 
-backend_codes/images/
 api_codes/static/drinks/
+api_codes/static/ingredients/
+
+backend_codes/images/
+frontded_codes/
