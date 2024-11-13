@@ -1,3 +1,6 @@
 .DS*
 .VS*
 .env
+
+backend_codes/images/
+api_codes/static/drinks/
