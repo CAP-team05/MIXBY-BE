@@ -2,7 +2,7 @@
     {
         "english_name": "B-52",
         "korean_name": "B-52",
-        "code": 41,
+        "code": 0,
         "base": "커피 리큐르",
         "ingredients": [
             {
@@ -30,7 +30,7 @@
     {
         "english_name": "Jun Bug",
         "korean_name": "준 벅",
-        "code": 42,
+        "code": 0,
         "base": "멜론 리큐르",
         "ingredients": [
             {
@@ -67,7 +67,7 @@
     {
         "english_name": "Alexander",
         "korean_name": "알렉산더",
-        "code": 30,
+        "code": 0,
         "base": "브랜디",
         "ingredients": [
             {
@@ -95,7 +95,7 @@
     {
         "english_name": "Bacardi",
         "korean_name": "바카디",
-        "code": 80,
+        "code": 0,
         "base": "럼",
         "ingredients": [
             {
@@ -122,7 +122,7 @@
     {
         "english_name": "Grasshopper",
         "korean_name": "그래스호퍼",
-        "code": 43,
+        "code": 0,
         "base": "크렘 드 멘트",
         "ingredients": [
             {
@@ -149,7 +149,7 @@
     {
         "english_name": "Apple Martini",
         "korean_name": "애플 마티니",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -176,7 +176,7 @@
     {
         "english_name": "Apricot Cocktail",
         "korean_name": "애프리콧 칵테일",
-        "code": 31,
+        "code": 0,
         "base": "살구 브랜디",
         "ingredients": [
             {
@@ -203,7 +203,7 @@
     {
         "english_name": "Americano",
         "korean_name": "아메리카노",
-        "code": 91,
+        "code": 0,
         "base": "캄파리",
         "ingredients": [
             {
@@ -231,7 +231,7 @@
     {
         "english_name": "Angel Face",
         "korean_name": "엔젤 페이스",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -258,7 +258,7 @@
     {
         "english_name": "Aviation",
         "korean_name": "에비에이션",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -290,7 +290,7 @@
     {
         "english_name": "Between the Sheets",
         "korean_name": "비트윈 더 시츠",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -322,7 +322,7 @@
     {
         "english_name": "Boulevardier",
         "korean_name": "불바디에",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -350,7 +350,7 @@
     {
         "english_name": "Brandy Crusta",
         "korean_name": "브랜디 크러스타",
-        "code": 30,
+        "code": 0,
         "base": "브랜디",
         "ingredients": [
             {
@@ -383,7 +383,7 @@
     {
         "english_name": "Casino",
         "korean_name": "카지노",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -416,7 +416,7 @@
     {
         "english_name": "Clover Club",
         "korean_name": "클로버 클럽",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -449,7 +449,7 @@
     {
         "english_name": "Daiquiri",
         "korean_name": "다이키리",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -476,7 +476,7 @@
     {
         "english_name": "Dry Martini",
         "korean_name": "드라이 마티니",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -499,7 +499,7 @@
     {
         "english_name": "Gin Fizz",
         "korean_name": "진 피즈",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -531,7 +531,7 @@
     {
         "english_name": "Hanky Panky",
         "korean_name": "행키 팽키",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -559,7 +559,7 @@
     {
         "english_name": "John Collins",
         "korean_name": "존 콜린스",
-        "code": 10,
+        "code": 0,
         "base": "진",
         "ingredients": [
             {
@@ -592,7 +592,7 @@
     {
         "english_name": "Last Word",
         "korean_name": "라스트 워드",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -624,7 +624,7 @@
     {
         "english_name": "Manhattan",
         "korean_name": "맨해튼",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -652,7 +652,7 @@
     {
         "english_name": "Martinez",
         "korean_name": "마르티네즈",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -685,7 +685,7 @@
     {
         "english_name": "Mary Pickford",
         "korean_name": "메리 픽퍼드",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -717,7 +717,7 @@
     {
         "english_name": "Monkey Gland",
         "korean_name": "몽키 글랜드",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -749,7 +749,7 @@
     {
         "english_name": "Negroni",
         "korean_name": "네그로니",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -777,7 +777,7 @@
     {
         "english_name": "Old Fashioned",
         "korean_name": "올드 패션드",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -810,7 +810,7 @@
     {
         "english_name": "Paradise",
         "korean_name": "파라다이스",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -837,7 +837,7 @@
     {
         "english_name": "Planter's Punch",
         "korean_name": "플랜터스 펀치",
-        "code": 82,
+        "code": 0,
         "base": "다크 럼",
         "ingredients": [
             {
@@ -869,7 +869,7 @@
     {
         "english_name": "Porto Flip",
         "korean_name": "포르토 플립",
-        "code": 61,
+        "code": 0,
         "base": "포트 와인",
         "ingredients": [
             {
@@ -897,7 +897,7 @@
     {
         "english_name": "Ramos Gin Fizz",
         "korean_name": "라모스 진 피즈",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -950,7 +950,7 @@
     {
         "english_name": "Rusty Nail",
         "korean_name": "러스티 네일",
-        "code": 22,
+        "code": 0,
         "base": "스카치 위스키",
         "ingredients": [
             {
@@ -972,7 +972,7 @@
     {
         "english_name": "Sazerac",
         "korean_name": "사제락",
-        "code": 23,
+        "code": 0,
         "base": "라이 위스키",
         "ingredients": [
             {
@@ -1006,7 +1006,7 @@
     {
         "english_name": "Sidecar",
         "korean_name": "사이드카",
-        "code": 33,
+        "code": 0,
         "base": "코냑",
         "ingredients": [
             {
@@ -1033,7 +1033,7 @@
     {
         "english_name": "Stinger",
         "korean_name": "스팅어",
-        "code": 33,
+        "code": 0,
         "base": "코냑",
         "ingredients": [
             {
@@ -1055,7 +1055,7 @@
     {
         "english_name": "Tuxedo",
         "korean_name": "턱시도",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -1088,7 +1088,7 @@
     {
         "english_name": "Vieux Carré",
         "korean_name": "비에우 카레",
-        "code": 23,
+        "code": 0,
         "base": "라이 위스키",
         "ingredients": [
             {
@@ -1120,7 +1120,7 @@
     {
         "english_name": "Whiskey Sour",
         "korean_name": "위스키 사워",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -1148,7 +1148,7 @@
     {
         "english_name": "White Lady",
         "korean_name": "화이트 레이디",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -1175,7 +1175,7 @@
     {
         "english_name": "Bellini",
         "korean_name": "벨리니",
-        "code": 63,
+        "code": 0,
         "base": "프로세코",
         "ingredients": [
             {
@@ -1197,7 +1197,7 @@
     {
         "english_name": "Black Russian",
         "korean_name": "블랙 러시안",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1218,7 +1218,7 @@
     {
         "english_name": "Bloody Mary",
         "korean_name": "블러디 메리",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1256,7 +1256,7 @@
     {
         "english_name": "Caipirinha",
         "korean_name": "카이피리냐",
-        "code": 4,
+        "code": 0,
         "base": "카샤사",
         "ingredients": [
             {
@@ -1284,7 +1284,7 @@
     {
         "english_name": "Champagne Cocktail",
         "korean_name": "샴페인 칵테일",
-        "code": 64,
+        "code": 0,
         "base": "샴페인",
         "ingredients": [
             {
@@ -1312,7 +1312,7 @@
     {
         "english_name": "Cosmopolitan",
         "korean_name": "코스모폴리탄",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1345,7 +1345,7 @@
     {
         "english_name": "Cuba Libre",
         "korean_name": "쿠바 리브레",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -1372,7 +1372,7 @@
     {
         "english_name": "French 75",
         "korean_name": "프렌치 75",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -1404,7 +1404,7 @@
     {
         "english_name": "French Connection",
         "korean_name": "프렌치 커넥션",
-        "code": 33,
+        "code": 0,
         "base": "코냑",
         "ingredients": [
             {
@@ -1425,7 +1425,7 @@
     {
         "english_name": "Godfather",
         "korean_name": "갓파더",
-        "code": 22,
+        "code": 0,
         "base": "스카치 위스키",
         "ingredients": [
             {
@@ -1446,7 +1446,7 @@
     {
         "english_name": "Godmother",
         "korean_name": "갓마더",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1467,7 +1467,7 @@
     {
         "english_name": "Golden Dream",
         "korean_name": "골든 드림",
-        "code": 44,
+        "code": 0,
         "base": "갈리아노",
         "ingredients": [
             {
@@ -1499,7 +1499,7 @@
     {
         "english_name": "Grasshopper",
         "korean_name": "그라스호퍼",
-        "code": 43,
+        "code": 0,
         "base": "크렘 드 멘트",
         "ingredients": [
             {
@@ -1526,7 +1526,7 @@
     {
         "english_name": "Hemingway Special",
         "korean_name": "헤밍웨이 스페셜",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -1558,7 +1558,7 @@
     {
         "english_name": "Irish Coffee",
         "korean_name": "아이리시 커피",
-        "code": 24,
+        "code": 0,
         "base": "아이리시 위스키",
         "ingredients": [
             {
@@ -1590,7 +1590,7 @@
     {
         "english_name": "Kir",
         "korean_name": "키르",
-        "code": 62,
+        "code": 0,
         "base": "화이트 와인",
         "ingredients": [
             {
@@ -1612,7 +1612,7 @@
     {
         "english_name": "Long Island Iced Tea",
         "korean_name": "롱 아일랜드 아이스 티",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1665,7 +1665,7 @@
     {
         "english_name": "Mai Tai",
         "korean_name": "마이타이",
-        "code": 81,
+        "code": 82,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -1703,7 +1703,7 @@
     {
         "english_name": "Margarita",
         "korean_name": "마가리타",
-        "code": 50,
+        "code": 0,
         "base": "테킬라",
         "ingredients": [
             {
@@ -1731,7 +1731,7 @@
     {
         "english_name": "Mimosa",
         "korean_name": "미모사",
-        "code": 64,
+        "code": 0,
         "base": "샴페인",
         "ingredients": [
             {
@@ -1753,7 +1753,7 @@
     {
         "english_name": "Mojito",
         "korean_name": "모히토",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -1791,7 +1791,7 @@
     {
         "english_name": "Healing",
         "korean_name": "힐링",
-        "code": 1,
+        "code": 0,
         "base": "소주",
         "ingredients": [
             {
@@ -1818,7 +1818,7 @@
     {
         "english_name": "Jindo",
         "korean_name": "진도",
-        "code": 1,
+        "code": 0,
         "base": "소주",
         "ingredients": [
             {
@@ -1845,7 +1845,7 @@
     {
         "english_name": "First Love",
         "korean_name": "풋사랑",
-        "code": 1,
+        "code": 0,
         "base": "소주",
         "ingredients": [
             {
@@ -1872,7 +1872,7 @@
     {
         "english_name": "Geumsan",
         "korean_name": "금산",
-        "code": 1,
+        "code": 0,
         "base": "소주",
         "ingredients": [
             {
@@ -1899,7 +1899,7 @@
     {
         "english_name": "Gochang",
         "korean_name": "고창",
-        "code": 1,
+        "code": 0,
         "base": "소주",
         "ingredients": [
             {
@@ -1926,7 +1926,7 @@
     {
         "english_name": "Moscow Mule",
         "korean_name": "모스코 뮬",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -1954,7 +1954,7 @@
     {
         "english_name": "Piña Colada",
         "korean_name": "피나 콜라다",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -1982,7 +1982,7 @@
     {
         "english_name": "Pisco Sour",
         "korean_name": "피스코 사워",
-        "code": 32,
+        "code": 0,
         "base": "피스코",
         "ingredients": [
             {
@@ -2015,7 +2015,7 @@
     {
         "english_name": "Sea Breeze",
         "korean_name": "시브리즈",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2042,7 +2042,7 @@
     {
         "english_name": "Sex on the Beach",
         "korean_name": "섹스 온 더 비치",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2074,7 +2074,7 @@
     {
         "english_name": "Singapore Sling",
         "korean_name": "싱가포르 슬링",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -2127,7 +2127,7 @@
     {
         "english_name": "Tequila Sunrise",
         "korean_name": "테킬라 선라이즈",
-        "code": 50,
+        "code": 0,
         "base": "테킬라",
         "ingredients": [
             {
@@ -2155,7 +2155,7 @@
     {
         "english_name": "Vesper",
         "korean_name": "베스퍼",
-        "code": 10,
+        "code": 0,
         "base": "진",
         "ingredients": [
             {
@@ -2183,7 +2183,7 @@
     {
         "english_name": "Zombie",
         "korean_name": "좀비",
-        "code": 82,
+        "code": 0,
         "base": "다크 럼",
         "ingredients": [
             {
@@ -2220,7 +2220,7 @@
     {
         "english_name": "Barracuda",
         "korean_name": "바라쿠다",
-        "code": 82,
+        "code": 0,
         "base": "다크 럼",
         "ingredients": [
             {
@@ -2257,7 +2257,7 @@
     {
         "english_name": "Bee's Knees",
         "korean_name": "비스 니즈",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -2284,7 +2284,7 @@
     {
         "english_name": "Bramble",
         "korean_name": "브램블",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -2317,7 +2317,7 @@
     {
         "english_name": "Blue Hawaiian",
         "korean_name": "블루 하와이안",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -2350,7 +2350,7 @@
     {
         "english_name": "Canchanchara",
         "korean_name": "칸차차라",
-        "code": 80,
+        "code": 0,
         "base": "럼",
         "ingredients": [
             {
@@ -2377,7 +2377,7 @@
     {
         "english_name": "Dark 'n' Stormy",
         "korean_name": "다크 앤 스토미",
-        "code": 82,
+        "code": 0,
         "base": "다크 럼",
         "ingredients": [
             {
@@ -2404,7 +2404,7 @@
     {
         "english_name": "Espresso Martini",
         "korean_name": "에스프레소 마티니",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2432,7 +2432,7 @@
     {
         "english_name": "Fernet con Cola",
         "korean_name": "페르난디토",
-        "code": 92,
+        "code": 0,
         "base": "페르넷 브랑카",
         "ingredients": [
             {
@@ -2455,7 +2455,7 @@
     {
         "english_name": "French Martini",
         "korean_name": "프렌치 마티니",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2482,7 +2482,7 @@
     {
         "english_name": "Illegal",
         "korean_name": "일레갈",
-        "code": 51,
+        "code": 0,
         "base": "메스칼",
         "ingredients": [
             {
@@ -2514,7 +2514,7 @@
     {
         "english_name": "Lemon Drop Martini",
         "korean_name": "레몬 드롭 마티니",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2542,7 +2542,7 @@
     {
         "english_name": "Naked and Famous",
         "korean_name": "네이키드 앤 페이머스",
-        "code": 51,
+        "code": 0,
         "base": "메스칼",
         "ingredients": [
             {
@@ -2574,7 +2574,7 @@
     {
         "english_name": "New York",
         "korean_name": "뉴욕",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -2606,7 +2606,7 @@
     {
         "english_name": "New York Sour",
         "korean_name": "뉴욕 사워",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -2638,7 +2638,7 @@
     {
         "english_name": "Old Cuban",
         "korean_name": "올드 큐반",
-        "code": 82,
+        "code": 0,
         "base": "다크 럼",
         "ingredients": [
             {
@@ -2675,7 +2675,7 @@
     {
         "english_name": "Paloma",
         "korean_name": "팔로마",
-        "code": 50,
+        "code": 0,
         "base": "테킬라",
         "ingredients": [
             {
@@ -2707,7 +2707,7 @@
     {
         "english_name": "Paper Plane",
         "korean_name": "페이퍼 플레인",
-        "code": 21,
+        "code": 0,
         "base": "버번 위스키",
         "ingredients": [
             {
@@ -2739,7 +2739,7 @@
     {
         "english_name": "Russian Spring Punch",
         "korean_name": "러시안 스프링 펀치",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2776,7 +2776,7 @@
     {
         "english_name": "Southside",
         "korean_name": "사우스사이드",
-        "code": 11,
+        "code": 0,
         "base": "드라이 진",
         "ingredients": [
             {
@@ -2808,7 +2808,7 @@
     {
         "english_name": "Spritz",
         "korean_name": "스프리츠",
-        "code": 45,
+        "code": 0,
         "base": "아페롤",
         "ingredients": [
             {
@@ -2836,7 +2836,7 @@
     {
         "english_name": "Sweet Dream",
         "korean_name": "스위트 드림",
-        "code": 46,
+        "code": 0,
         "base": "베일리스",
         "ingredients": [
             {
@@ -2863,7 +2863,7 @@
     {
         "english_name": "Tiffany",
         "korean_name": "티파니",
-        "code": 47,
+        "code": 0,
         "base": "블루 큐라소",
         "ingredients": [
             {
@@ -2890,7 +2890,7 @@
     {
         "english_name": "Trevi",
         "korean_name": "트레비",
-        "code": 70,
+        "code": 0,
         "base": "보드카",
         "ingredients": [
             {
@@ -2917,7 +2917,7 @@
     {
         "english_name": "Truth",
         "korean_name": "트루스",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
@@ -2944,7 +2944,7 @@
     {
         "english_name": "Vienna",
         "korean_name": "비엔나",
-        "code": 5,
+        "code": 0,
         "base": "커피",
         "ingredients": [
             {
@@ -2965,7 +2965,7 @@
     {
         "english_name": "Winter Sun",
         "korean_name": "윈터 선",
-        "code": 48,
+        "code": 0,
         "base": "아마레토",
         "ingredients": [
             {
@@ -2991,7 +2991,7 @@
     {
         "english_name": "Yellow Bird",
         "korean_name": "옐로우 버드",
-        "code": 81,
+        "code": 0,
         "base": "화이트 럼",
         "ingredients": [
             {
