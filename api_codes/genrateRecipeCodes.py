@@ -1,46 +1,38 @@
 from collections import OrderedDict
 import json
-
-with open('api_codes/json_files/allBases.json', 'r', encoding='UTF-8') as json_read :
-    all_bases = json.load(json_read, object_pairs_hook=OrderedDict)
+import get_ingredients
 
 
-
-allBases = []
-
-
-
-
-with open('api_codes/json_files/allRecipes.json', 'r', encoding='UTF-8') as json_read :
+with open('api_codes/json_files/recipes.json', 'r', encoding='UTF-8') as json_read :
     all_recipes = json.load(json_read, object_pairs_hook=OrderedDict)
 
 allRecipesList =[]
 cnt = 0
 for recipe in all_recipes:
     tempDict = {}
+    tempList = []
+    code = str(recipe["code"])
 
-    recipe_base = recipe["base"]
-    base_code = 999
-
-    for base in all_bases:
-        if recipe_base in base["types"]:
-            base_code = base["code"] + base["types"].index(recipe_base)
-            cnt += 1
+    for i in recipe["ingredients"]:
+        ingDict = {}
+        c = get_ingredients.getCode(i["name"])
+        ingDict["name"] = i["name"]
+        ingDict["code"] = c
+        ingDict["amount"] = i["amount"]
+        ingDict["unit"] = i["unit"]
+        code = code + c[:2]
+        tempList.append(ingDict)
 
     tempDict["english_name"] = recipe["english_name"]
     tempDict["korean_name"] = recipe["korean_name"]
-    tempDict["code"] = base_code
-    tempDict["base"] = recipe_base
-    tempDict["ingredients"] = recipe["ingredients"]
+    tempDict["code"] = code
+    tempDict["base"] = recipe["base"]
+    tempDict["ingredients"] = tempList
     tempDict["instructions"] = recipe["instructions"]
 
     allRecipesList.append(tempDict)
 
-print(cnt, len(allRecipesList))
-
-
-
-with open('api_codes/json_files/recipes.json', 'w', encoding='utf-8') as f:
+with open('api_codes/json_files/allRecipes.json', 'w', encoding='utf-8') as f:
     json.dump(allRecipesList, f, ensure_ascii = False, indent=4)
 
 
