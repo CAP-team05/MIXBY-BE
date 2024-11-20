@@ -2,21 +2,24 @@
     {
         "english_name": "B-52",
         "korean_name": "B-52",
-        "code": 0,
+        "code": "41BC04EF",
         "base": "커피 리큐르",
         "ingredients": [
             {
                 "name": "커피 리큐르",
+                "code": "BC24",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "아이리시 크림 리큐르",
+                "code": "0424",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 리큐르",
+                "code": "EF21",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -30,31 +33,36 @@
     {
         "english_name": "Jun Bug",
         "korean_name": "준 벅",
-        "code": 0,
+        "code": "42C4A078C126",
         "base": "멜론 리큐르",
         "ingredients": [
             {
                 "name": "멜론 리큐르",
+                "code": "C424",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 리큐르",
+                "code": "A024",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "바나나 리큐르",
+                "code": "7824",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -67,21 +75,24 @@
     {
         "english_name": "Alexander",
         "korean_name": "알렉산더",
-        "code": 0,
+        "code": "30A36DF5",
         "base": "브랜디",
         "ingredients": [
             {
                 "name": "브랜디",
+                "code": "A334",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카카오",
+                "code": "6D24",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "신선한 크림",
+                "code": "F524",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -95,21 +106,24 @@
     {
         "english_name": "Bacardi",
         "korean_name": "바카디",
-        "code": 0,
+        "code": "80B3268C",
         "base": "럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -122,21 +136,24 @@
     {
         "english_name": "Grasshopper",
         "korean_name": "그래스호퍼",
-        "code": 0,
+        "code": "43266DF5",
         "base": "크렘 드 멘트",
         "ingredients": [
             {
                 "name": "크렘 드 멘트",
+                "code": "2624",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카카오",
+                "code": "6D24",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "신선한 크림",
+                "code": "F524",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -149,21 +166,24 @@
     {
         "english_name": "Apple Martini",
         "korean_name": "애플 마티니",
-        "code": 0,
+        "code": "70E7D626",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "애플 리큐르",
+                "code": "D621",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -176,21 +196,24 @@
     {
         "english_name": "Apricot Cocktail",
         "korean_name": "애프리콧 칵테일",
-        "code": 0,
+        "code": "31516826",
         "base": "살구 브랜디",
         "ingredients": [
             {
                 "name": "살구 브랜디",
+                "code": "5123",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -203,21 +226,24 @@
     {
         "english_name": "Americano",
         "korean_name": "아메리카노",
-        "code": 0,
+        "code": "91DC756C",
         "base": "캄파리",
         "ingredients": [
             {
                 "name": "캄파리",
+                "code": "DC46",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -231,21 +257,24 @@
     {
         "english_name": "Angel Face",
         "korean_name": "엔젤 페이스",
-        "code": 0,
+        "code": "11685155",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "살구 브랜디",
+                "code": "5123",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "애플 브랜디",
+                "code": "5523",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -258,26 +287,30 @@
     {
         "english_name": "Aviation",
         "korean_name": "에비에이션",
-        "code": 0,
+        "code": "1168C9622A",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 바이올렛",
+                "code": "2A24",
                 "amount": "5",
                 "unit": "ml"
             }
@@ -290,26 +323,30 @@
     {
         "english_name": "Between the Sheets",
         "korean_name": "비트윈 더 시츠",
-        "code": 0,
+        "code": "81B3507662",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코냑",
+                "code": "5034",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -322,21 +359,24 @@
     {
         "english_name": "Boulevardier",
         "korean_name": "불바디에",
-        "code": 0,
+        "code": "21FCDC75",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "캄파리",
+                "code": "DC46",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -350,26 +390,30 @@
     {
         "english_name": "Brandy Crusta",
         "korean_name": "브랜디 크러스타",
-        "code": 0,
+        "code": "30A362768C",
         "base": "브랜디",
         "ingredients": [
             {
                 "name": "브랜디",
+                "code": "A334",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "5",
                 "unit": "ml"
             }
@@ -383,26 +427,30 @@
     {
         "english_name": "Casino",
         "korean_name": "카지노",
-        "code": 0,
+        "code": "1168C96287",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 비터스",
+                "code": "8716",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -416,26 +464,30 @@
     {
         "english_name": "Clover Club",
         "korean_name": "클로버 클럽",
-        "code": 0,
+        "code": "11680B6202",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라즈베리 시럽",
+                "code": "0B02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
+                "code": "0204",
                 "amount": "1개",
                 "unit": ""
             }
@@ -449,21 +501,24 @@
     {
         "english_name": "Daiquiri",
         "korean_name": "다이키리",
-        "code": 0,
+        "code": "81B3268C",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -476,16 +531,18 @@
     {
         "english_name": "Dry Martini",
         "korean_name": "드라이 마티니",
-        "code": 0,
+        "code": "1168A4",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "드라이 베르무트",
+                "code": "A436",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -499,26 +556,30 @@
     {
         "english_name": "Gin Fizz",
         "korean_name": "진 피즈",
-        "code": 0,
+        "code": "1168628C6C",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -531,21 +592,24 @@
     {
         "english_name": "Hanky Panky",
         "korean_name": "행키 팽키",
-        "code": 0,
+        "code": "11687501",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "페르넷 브랑카",
+                "code": "0136",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -559,26 +623,30 @@
     {
         "english_name": "John Collins",
         "korean_name": "존 콜린스",
-        "code": 0,
+        "code": "10F1628C6C",
         "base": "진",
         "ingredients": [
             {
                 "name": "진",
+                "code": "F103",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -592,26 +660,30 @@
     {
         "english_name": "Last Word",
         "korean_name": "라스트 워드",
-        "code": 0,
+        "code": "1168A5C926",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
+                "code": "A523",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -624,21 +696,24 @@
     {
         "english_name": "Manhattan",
         "korean_name": "맨해튼",
-        "code": 0,
+        "code": "21FC7574",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -652,26 +727,30 @@
     {
         "english_name": "Martinez",
         "korean_name": "마르티네즈",
-        "code": 0,
+        "code": "116875C987",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "5",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 비터스",
+                "code": "8716",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -685,26 +764,30 @@
     {
         "english_name": "Mary Pickford",
         "korean_name": "메리 픽퍼드",
-        "code": 0,
+        "code": "81B3C1C9B6",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -717,26 +800,30 @@
     {
         "english_name": "Monkey Gland",
         "korean_name": "몽키 글랜드",
-        "code": 0,
+        "code": "1168CFB692",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "압생트",
+                "code": "9236",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -749,21 +836,24 @@
     {
         "english_name": "Negroni",
         "korean_name": "네그로니",
-        "code": 0,
+        "code": "1168DC75",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "캄파리",
+                "code": "DC46",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -777,26 +867,30 @@
     {
         "english_name": "Old Fashioned",
         "korean_name": "올드 패션드",
-        "code": 0,
+        "code": "21FC387435",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "1 cube",
                 "unit": ""
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "물",
+                "code": "3504",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -810,21 +904,24 @@
     {
         "english_name": "Paradise",
         "korean_name": "파라다이스",
-        "code": 0,
+        "code": "116851CF",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "살구 브랜디",
+                "code": "5123",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -837,26 +934,30 @@
     {
         "english_name": "Planter's Punch",
         "korean_name": "플랜터스 펀치",
-        "code": 0,
+        "code": "82DF628CB6",
         "base": "다크 럼",
         "ingredients": [
             {
                 "name": "다크 럼",
+                "code": "DF34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -869,21 +970,24 @@
     {
         "english_name": "Porto Flip",
         "korean_name": "포르토 플립",
-        "code": 0,
+        "code": "6149A3FD",
         "base": "포트 와인",
         "ingredients": [
             {
                 "name": "포트 와인",
+                "code": "4903",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "브랜디",
+                "code": "A334",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "달걀 노른자",
+                "code": "FD04",
                 "amount": "1개",
                 "unit": ""
             }
@@ -897,46 +1001,54 @@
     {
         "english_name": "Ramos Gin Fizz",
         "korean_name": "라모스 진 피즈",
-        "code": 0,
+        "code": "116862268C4902CA6C",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "생크림",
+                "code": "4902",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
+                "code": "0204",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "오렌지 꽃물",
+                "code": "CA04",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -950,16 +1062,18 @@
     {
         "english_name": "Rusty Nail",
         "korean_name": "러스티 네일",
-        "code": 0,
+        "code": "22D794",
         "base": "스카치 위스키",
         "ingredients": [
             {
                 "name": "스카치 위스키",
+                "code": "D703",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "드람뷔",
+                "code": "9401",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -972,26 +1086,30 @@
     {
         "english_name": "Sazerac",
         "korean_name": "사제락",
-        "code": 0,
+        "code": "23F9749238",
         "base": "라이 위스키",
         "ingredients": [
             {
                 "name": "라이 위스키",
+                "code": "F903",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "압생트",
+                "code": "9236",
                 "amount": "적당량",
                 "unit": ""
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "1 cube",
                 "unit": ""
             }
@@ -1006,21 +1124,24 @@
     {
         "english_name": "Sidecar",
         "korean_name": "사이드카",
-        "code": 0,
+        "code": "33507662",
         "base": "코냑",
         "ingredients": [
             {
                 "name": "코냑",
+                "code": "5034",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1033,16 +1154,18 @@
     {
         "english_name": "Stinger",
         "korean_name": "스팅어",
-        "code": 0,
+        "code": "335026",
         "base": "코냑",
         "ingredients": [
             {
                 "name": "코냑",
+                "code": "5034",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 멘트",
+                "code": "2624",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1055,26 +1178,30 @@
     {
         "english_name": "Tuxedo",
         "korean_name": "턱시도",
-        "code": 0,
+        "code": "1168A49287",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "드라이 베르무트",
+                "code": "A436",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "압생트",
+                "code": "9236",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "오렌지 비터스",
+                "code": "8716",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1088,26 +1215,30 @@
     {
         "english_name": "Vieux Carré",
         "korean_name": "비에우 카레",
-        "code": 0,
+        "code": "23F9507574",
         "base": "라이 위스키",
         "ingredients": [
             {
                 "name": "라이 위스키",
+                "code": "F903",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코냑",
+                "code": "5034",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
+                "code": "7524",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1120,21 +1251,24 @@
     {
         "english_name": "Whiskey Sour",
         "korean_name": "위스키 사워",
-        "code": 0,
+        "code": "21FC628C",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -1148,21 +1282,24 @@
     {
         "english_name": "White Lady",
         "korean_name": "화이트 레이디",
-        "code": 0,
+        "code": "11687662",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1175,16 +1312,18 @@
     {
         "english_name": "Bellini",
         "korean_name": "벨리니",
-        "code": 0,
+        "code": "6369BE",
         "base": "프로세코",
         "ingredients": [
             {
                 "name": "프로세코",
+                "code": "6901",
                 "amount": "100",
                 "unit": "ml"
             },
             {
                 "name": "복숭아 퓌레",
+                "code": "BE01",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1197,16 +1336,18 @@
     {
         "english_name": "Black Russian",
         "korean_name": "블랙 러시안",
-        "code": 0,
+        "code": "70E7BC",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "커피 리큐르",
+                "code": "BC24",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1218,31 +1359,36 @@
     {
         "english_name": "Bloody Mary",
         "korean_name": "블러디 메리",
-        "code": 0,
+        "code": "70E7DD620DA5",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "토마토 주스",
+                "code": "DD02",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "우스터 소스",
+                "code": "0D01",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "소금과 후추",
+                "code": "A501",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1256,21 +1402,24 @@
     {
         "english_name": "Caipirinha",
         "korean_name": "카이피리냐",
-        "code": 0,
+        "code": "4967C38",
         "base": "카샤사",
         "ingredients": [
             {
                 "name": "카샤사",
+                "code": "9601",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임",
+                "code": "7C01",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "2 티스푼",
                 "unit": ""
             }
@@ -1284,21 +1433,24 @@
     {
         "english_name": "Champagne Cocktail",
         "korean_name": "샴페인 칵테일",
-        "code": 0,
+        "code": "641D3874",
         "base": "샴페인",
         "ingredients": [
             {
                 "name": "샴페인",
+                "code": "1D05",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "1 cube",
                 "unit": ""
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1312,26 +1464,30 @@
     {
         "english_name": "Cosmopolitan",
         "korean_name": "코스모폴리탄",
-        "code": 0,
+        "code": "70E77626FC",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
+                "code": "FC02",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -1345,21 +1501,24 @@
     {
         "english_name": "Cuba Libre",
         "korean_name": "쿠바 리브레",
-        "code": 0,
+        "code": "81B38526",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
+                "code": "8501",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1372,26 +1531,30 @@
     {
         "english_name": "French 75",
         "korean_name": "프렌치 75",
-        "code": 0,
+        "code": "1168628C1D",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "샴페인",
+                "code": "1D05",
                 "amount": "60",
                 "unit": "ml"
             }
@@ -1404,16 +1567,18 @@
     {
         "english_name": "French Connection",
         "korean_name": "프렌치 커넥션",
-        "code": 0,
+        "code": "3350E4",
         "base": "코냑",
         "ingredients": [
             {
                 "name": "코냑",
+                "code": "5034",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
+                "code": "E401",
                 "amount": "35",
                 "unit": "ml"
             }
@@ -1425,16 +1590,18 @@
     {
         "english_name": "Godfather",
         "korean_name": "갓파더",
-        "code": 0,
+        "code": "22D7E4",
         "base": "스카치 위스키",
         "ingredients": [
             {
                 "name": "스카치 위스키",
+                "code": "D703",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
+                "code": "E401",
                 "amount": "35",
                 "unit": "ml"
             }
@@ -1446,16 +1613,18 @@
     {
         "english_name": "Godmother",
         "korean_name": "갓마더",
-        "code": 0,
+        "code": "70E7E4",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
+                "code": "E401",
                 "amount": "35",
                 "unit": "ml"
             }
@@ -1467,26 +1636,30 @@
     {
         "english_name": "Golden Dream",
         "korean_name": "골든 드림",
-        "code": 0,
+        "code": "446A76CF43",
         "base": "갈리아노",
         "ingredients": [
             {
                 "name": "갈리아노",
+                "code": "6A01",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "크림",
+                "code": "4302",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1499,21 +1672,24 @@
     {
         "english_name": "Grasshopper",
         "korean_name": "그라스호퍼",
-        "code": 0,
+        "code": "43266D43",
         "base": "크렘 드 멘트",
         "ingredients": [
             {
                 "name": "크렘 드 멘트",
+                "code": "2624",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카카오",
+                "code": "6D24",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크림",
+                "code": "4302",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -1526,26 +1702,30 @@
     {
         "english_name": "Hemingway Special",
         "korean_name": "헤밍웨이 스페셜",
-        "code": 0,
+        "code": "81B3C926C0",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
+                "code": "C924",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
+                "code": "C002",
                 "amount": "40",
                 "unit": "ml"
             }
@@ -1558,26 +1738,30 @@
     {
         "english_name": "Irish Coffee",
         "korean_name": "아이리시 커피",
-        "code": 0,
+        "code": "2434863851",
         "base": "아이리시 위스키",
         "ingredients": [
             {
                 "name": "아이리시 위스키",
+                "code": "3403",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "뜨거운 커피",
+                "code": "8601",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "1 티스푼",
                 "unit": ""
             },
             {
                 "name": "휘핑 크림",
+                "code": "5102",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1590,16 +1774,18 @@
     {
         "english_name": "Kir",
         "korean_name": "키르",
-        "code": 0,
+        "code": "62F89F",
         "base": "화이트 와인",
         "ingredients": [
             {
                 "name": "화이트 와인",
+                "code": "F803",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카시스",
+                "code": "9F01",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1612,46 +1798,54 @@
     {
         "english_name": "Long Island Iced Tea",
         "korean_name": "롱 아일랜드 아이스 티",
-        "code": 0,
+        "code": "70E768B3D176628C85",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "테킬라",
+                "code": "D103",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
+                "code": "8501",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1665,31 +1859,36 @@
     {
         "english_name": "Mai Tai",
         "korean_name": "마이타이",
-        "code": 82,
+        "code": "81B376CFC1B6",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "37.5",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "22.5",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "7.5",
                 "unit": "ml"
             }
@@ -1703,21 +1902,24 @@
     {
         "english_name": "Margarita",
         "korean_name": "마가리타",
-        "code": 0,
+        "code": "50D17626",
         "base": "테킬라",
         "ingredients": [
             {
                 "name": "테킬라",
+                "code": "D103",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -1731,16 +1933,18 @@
     {
         "english_name": "Mimosa",
         "korean_name": "미모사",
-        "code": 0,
+        "code": "641DCF",
         "base": "샴페인",
         "ingredients": [
             {
                 "name": "샴페인",
+                "code": "1D05",
                 "amount": "75",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "75",
                 "unit": "ml"
             }
@@ -1753,31 +1957,36 @@
     {
         "english_name": "Mojito",
         "korean_name": "모히토",
-        "code": 0,
+        "code": "81B37CC7386C",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임",
+                "code": "7C01",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "민트 잎",
+                "code": "C701",
                 "amount": "10",
                 "unit": "장"
             },
             {
                 "name": "설탕",
+                "code": "3802",
                 "amount": "2 티스푼",
                 "unit": ""
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1791,21 +2000,24 @@
     {
         "english_name": "Healing",
         "korean_name": "힐링",
-        "code": 0,
+        "code": "15D2FC9",
         "base": "소주",
         "ingredients": [
             {
                 "name": "소주",
+                "code": "5D01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "요구르트 음료",
+                "code": "2F01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
+                "code": "C901",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1818,21 +2030,24 @@
     {
         "english_name": "Jindo",
         "korean_name": "진도",
-        "code": 0,
+        "code": "15D42C9",
         "base": "소주",
         "ingredients": [
             {
                 "name": "소주",
+                "code": "5D01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "포도 주스",
+                "code": "4202",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
+                "code": "C901",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1845,21 +2060,24 @@
     {
         "english_name": "First Love",
         "korean_name": "풋사랑",
-        "code": 0,
+        "code": "15D37C9",
         "base": "소주",
         "ingredients": [
             {
                 "name": "소주",
+                "code": "5D01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "딸기 주스",
+                "code": "3702",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
+                "code": "C901",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1872,21 +2090,24 @@
     {
         "english_name": "Geumsan",
         "korean_name": "금산",
-        "code": 0,
+        "code": "15DB5C9",
         "base": "소주",
         "ingredients": [
             {
                 "name": "소주",
+                "code": "5D01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "인삼 음료",
+                "code": "B501",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
+                "code": "C901",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1899,21 +2120,24 @@
     {
         "english_name": "Gochang",
         "korean_name": "고창",
-        "code": 0,
+        "code": "15D59C9",
         "base": "소주",
         "ingredients": [
             {
                 "name": "소주",
+                "code": "5D01",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "복분자 주스",
+                "code": "5902",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
+                "code": "C901",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -1926,21 +2150,24 @@
     {
         "english_name": "Moscow Mule",
         "korean_name": "모스코 뮬",
-        "code": 0,
+        "code": "70E726FE",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "진저 비어",
+                "code": "FE03",
                 "amount": "120",
                 "unit": "ml"
             }
@@ -1954,21 +2181,24 @@
     {
         "english_name": "Piña Colada",
         "korean_name": "피나 콜라다",
-        "code": 0,
+        "code": "81B3B9C1",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 크림",
+                "code": "B902",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -1982,26 +2212,30 @@
     {
         "english_name": "Pisco Sour",
         "korean_name": "피스코 사워",
-        "code": 0,
+        "code": "32C5628C02",
         "base": "피스코",
         "ingredients": [
             {
                 "name": "피스코",
+                "code": "C501",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
+                "code": "0204",
                 "amount": "1개",
                 "unit": ""
             }
@@ -2015,21 +2249,24 @@
     {
         "english_name": "Sea Breeze",
         "korean_name": "시브리즈",
-        "code": 0,
+        "code": "70E7FCC0",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
+                "code": "FC02",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
+                "code": "C002",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -2042,26 +2279,30 @@
     {
         "english_name": "Sex on the Beach",
         "korean_name": "섹스 온 더 비치",
-        "code": 0,
+        "code": "70E757CFFC",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "피치 리큐르",
+                "code": "5703",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
+                "code": "FC02",
                 "amount": "40",
                 "unit": "ml"
             }
@@ -2074,46 +2315,54 @@
     {
         "english_name": "Singapore Sling",
         "korean_name": "싱가포르 슬링",
-        "code": 0,
+        "code": "1168CECA76C126BD74",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "체리 브랜디",
+                "code": "CE03",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "베네딕틴",
+                "code": "CA01",
                 "amount": "7.5",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "7.5",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘",
+                "code": "BD01",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
+                "code": "7406",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -2127,21 +2376,24 @@
     {
         "english_name": "Tequila Sunrise",
         "korean_name": "테킬라 선라이즈",
-        "code": 0,
+        "code": "50D1CFB6",
         "base": "테킬라",
         "ingredients": [
             {
                 "name": "테킬라",
+                "code": "D103",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2155,21 +2407,24 @@
     {
         "english_name": "Vesper",
         "korean_name": "베스퍼",
-        "code": 0,
+        "code": "10F1E7EE",
         "base": "진",
         "ingredients": [
             {
                 "name": "진",
+                "code": "F103",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "릴레 블랑",
+                "code": "EE01",
                 "amount": "7.5",
                 "unit": "ml"
             }
@@ -2183,31 +2438,36 @@
     {
         "english_name": "Zombie",
         "korean_name": "좀비",
-        "code": 0,
+        "code": "82DF1E4D26B6",
         "base": "다크 럼",
         "ingredients": [
             {
                 "name": "다크 럼",
+                "code": "DF34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라이트 럼",
+                "code": "1E03",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 큐라소",
+                "code": "4D01",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -2220,31 +2480,36 @@
     {
         "english_name": "Barracuda",
         "korean_name": "바라쿠다",
-        "code": 0,
+        "code": "82DF6AC12669",
         "base": "다크 럼",
         "ingredients": [
             {
                 "name": "다크 럼",
+                "code": "DF34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "갈리아노",
+                "code": "6A01",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "프로세코",
+                "code": "6901",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2257,21 +2522,24 @@
     {
         "english_name": "Bee's Knees",
         "korean_name": "비스 니즈",
-        "code": 0,
+        "code": "116862B4",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "꿀 시럽",
+                "code": "B402",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2284,26 +2552,30 @@
     {
         "english_name": "Bramble",
         "korean_name": "브램블",
-        "code": 0,
+        "code": "1168628CB8",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "블랙베리 리큐르",
+                "code": "B803",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2317,26 +2589,30 @@
     {
         "english_name": "Blue Hawaiian",
         "korean_name": "블루 하와이안",
-        "code": 0,
+        "code": "81B38FB9C1",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "블루 큐라소",
+                "code": "8F01",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 크림",
+                "code": "B902",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -2350,21 +2626,24 @@
     {
         "english_name": "Canchanchara",
         "korean_name": "칸차차라",
-        "code": 0,
+        "code": "80522644",
         "base": "럼",
         "ingredients": [
             {
                 "name": "럼",
+                "code": "5203",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "꿀",
+                "code": "4402",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2377,21 +2656,24 @@
     {
         "english_name": "Dark 'n' Stormy",
         "korean_name": "다크 앤 스토미",
-        "code": 0,
+        "code": "82DFFE26",
         "base": "다크 럼",
         "ingredients": [
             {
                 "name": "다크 럼",
+                "code": "DF34",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "진저 비어",
+                "code": "FE03",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2404,21 +2686,24 @@
     {
         "english_name": "Espresso Martini",
         "korean_name": "에스프레소 마티니",
-        "code": 0,
+        "code": "70E734BC",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "에스프레소",
+                "code": "3401",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "커피 리큐르",
+                "code": "BC24",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -2432,16 +2717,18 @@
     {
         "english_name": "Fernet con Cola",
         "korean_name": "페르난디토",
-        "code": 0,
+        "code": "920185",
         "base": "페르넷 브랑카",
         "ingredients": [
             {
                 "name": "페르넷 브랑카",
+                "code": "0136",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
+                "code": "8501",
                 "amount": "150",
                 "unit": "ml"
             }
@@ -2455,21 +2742,24 @@
     {
         "english_name": "French Martini",
         "korean_name": "프렌치 마티니",
-        "code": 0,
+        "code": "70E7C19F",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카시스",
+                "code": "9F01",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2482,26 +2772,30 @@
     {
         "english_name": "Illegal",
         "korean_name": "일레갈",
-        "code": 0,
+        "code": "51F5A562B4",
         "base": "메스칼",
         "ingredients": [
             {
                 "name": "메스칼",
+                "code": "F501",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
+                "code": "A523",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "꿀 시럽",
+                "code": "B402",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2514,21 +2808,24 @@
     {
         "english_name": "Lemon Drop Martini",
         "korean_name": "레몬 드롭 마티니",
-        "code": 0,
+        "code": "70E7628C",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2542,26 +2839,30 @@
     {
         "english_name": "Naked and Famous",
         "korean_name": "네이키드 앤 페이머스",
-        "code": 0,
+        "code": "51F5A55626",
         "base": "메스칼",
         "ingredients": [
             {
                 "name": "메스칼",
+                "code": "F501",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
+                "code": "A523",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "아페롤",
+                "code": "5601",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -2574,26 +2875,30 @@
     {
         "english_name": "New York",
         "korean_name": "뉴욕",
-        "code": 0,
+        "code": "21FC628CB6",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
+                "code": "B602",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -2606,26 +2911,30 @@
     {
         "english_name": "New York Sour",
         "korean_name": "뉴욕 사워",
-        "code": 0,
+        "code": "21FC628CC4",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레드 와인",
+                "code": "C403",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2638,31 +2947,36 @@
     {
         "english_name": "Old Cuban",
         "korean_name": "올드 큐반",
-        "code": 0,
+        "code": "82DF268CC71D",
         "base": "다크 럼",
         "ingredients": [
             {
                 "name": "다크 럼",
+                "code": "DF34",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "민트 잎",
+                "code": "C701",
                 "amount": "6",
                 "unit": "장"
             },
             {
                 "name": "샴페인",
+                "code": "1D05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2675,26 +2989,30 @@
     {
         "english_name": "Paloma",
         "korean_name": "팔로마",
-        "code": 0,
+        "code": "50D1C06C26",
         "base": "테킬라",
         "ingredients": [
             {
                 "name": "테킬라",
+                "code": "D103",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
+                "code": "C002",
                 "amount": "100",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -2707,26 +3025,30 @@
     {
         "english_name": "Paper Plane",
         "korean_name": "페이퍼 플레인",
-        "code": 0,
+        "code": "21FC569D62",
         "base": "버번 위스키",
         "ingredients": [
             {
                 "name": "버번 위스키",
+                "code": "FC34",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "아페롤",
+                "code": "5601",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "아마로 논리노",
+                "code": "9D01",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -2739,31 +3061,36 @@
     {
         "english_name": "Russian Spring Punch",
         "korean_name": "러시안 스프링 펀치",
-        "code": 0,
+        "code": "70E7628CFCD4",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
+                "code": "FC02",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스파클링 와인",
+                "code": "D403",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2776,26 +3103,30 @@
     {
         "english_name": "Southside",
         "korean_name": "사우스사이드",
-        "code": 0,
+        "code": "1168628CC7",
         "base": "드라이 진",
         "ingredients": [
             {
                 "name": "드라이 진",
+                "code": "6831",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
+                "code": "6201",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
+                "code": "8C02",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "민트 잎",
+                "code": "C701",
                 "amount": "몇 장",
                 "unit": ""
             }
@@ -2808,21 +3139,24 @@
     {
         "english_name": "Spritz",
         "korean_name": "스프리츠",
-        "code": 0,
+        "code": "4556D46C",
         "base": "아페롤",
         "ingredients": [
             {
                 "name": "아페롤",
+                "code": "5601",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스파클링 와인",
+                "code": "D403",
                 "amount": "75",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -2836,21 +3170,24 @@
     {
         "english_name": "Sweet Dream",
         "korean_name": "스위트 드림",
-        "code": 0,
+        "code": "4653E454",
         "base": "베일리스",
         "ingredients": [
             {
                 "name": "베일리스",
+                "code": "5301",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
+                "code": "E401",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "우유",
+                "code": "5404",
                 "amount": "60",
                 "unit": "ml"
             }
@@ -2863,21 +3200,24 @@
     {
         "english_name": "Tiffany",
         "korean_name": "티파니",
-        "code": 0,
+        "code": "478FE7C1",
         "base": "블루 큐라소",
         "ingredients": [
             {
                 "name": "블루 큐라소",
+                "code": "8F01",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -2890,21 +3230,24 @@
     {
         "english_name": "Trevi",
         "korean_name": "트레비",
-        "code": 0,
+        "code": "70E7266C",
         "base": "보드카",
         "ingredients": [
             {
                 "name": "보드카",
+                "code": "E703",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "소다수",
+                "code": "6C05",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2917,21 +3260,24 @@
     {
         "english_name": "Truth",
         "korean_name": "트루스",
-        "code": 0,
+        "code": "81B3B9C1",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 크림",
+                "code": "B902",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
+                "code": "C121",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -2944,16 +3290,18 @@
     {
         "english_name": "Vienna",
         "korean_name": "비엔나",
-        "code": 0,
+        "code": "50651",
         "base": "커피",
         "ingredients": [
             {
                 "name": "커피",
+                "code": "0601",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "휘핑 크림",
+                "code": "5102",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2965,21 +3313,24 @@
     {
         "english_name": "Winter Sun",
         "korean_name": "윈터 선",
-        "code": 0,
+        "code": "48E4CFFC",
         "base": "아마레토",
         "ingredients": [
             {
                 "name": "아마레토",
+                "code": "E401",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
+                "code": "CF21",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
+                "code": "FC02",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -2991,26 +3342,30 @@
     {
         "english_name": "Yellow Bird",
         "korean_name": "옐로우 버드",
-        "code": 0,
+        "code": "81B36A7626",
         "base": "화이트 럼",
         "ingredients": [
             {
                 "name": "화이트 럼",
+                "code": "B303",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "갈리아노",
+                "code": "6A01",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
+                "code": "7621",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
+                "code": "2601",
                 "amount": "15",
                 "unit": "ml"
             }
