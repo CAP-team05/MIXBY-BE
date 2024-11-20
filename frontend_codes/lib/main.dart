@@ -1,127 +1,169 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
-  
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Weather Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: MyCustomLayout(),
       ),
-      home: WeatherScreen(),
     );
   }
 }
 
-class WeatherScreen extends StatefulWidget {
-  @override
-  _WeatherScreenState createState() => _WeatherScreenState();
-}
-
-class _WeatherScreenState extends State<WeatherScreen> {
-  String weatherMessage = "현재 위치의 날씨를 가져오는 중...";
-  final String apiKey = dotenv.env['OPEN_WEATHER_MAP_API_KEY'] ?? ''; // 여기에 OpenWeatherMap API 키를 넣으세요.
-
-  @override
-  void initState() {
-    super.initState();
-    _getCurrentLocationAndWeather();
-  }
-
-  Future<void> _getCurrentLocationAndWeather() async {
-    bool serviceEnabled;
-    LocationPermission permission;
-
-    // 위치 서비스 활성화 여부 확인
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      setState(() {
-        weatherMessage = "위치 서비스가 비활성화되어 있습니다.";
-      });
-      return;
-    }
-
-    // 위치 권한 확인 및 요청
-    permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        setState(() {
-          weatherMessage = "위치 권한이 거부되었습니다.";
-        });
-        return;
-      }
-    }
-
-    if (permission == LocationPermission.deniedForever) {
-      setState(() {
-        weatherMessage = "위치 권한이 영구적으로 거부되었습니다.";
-      });
-      return;
-    }
-
-    // 현재 위치 가져오기
-    Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
-
-    // 날씨 정보 가져오기
-    await _fetchWeather(position.latitude, position.longitude);
-  }
-
-  Future<void> _fetchWeather(double latitude, double longitude) async {
-    final url =
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&units=metric&appid=$apiKey&lang=kr';
-
-    try {
-      final response = await http.get(Uri.parse(url));
-      if (response.statusCode == 200) {
-        final data = json.decode(response.body);
-        final description = data['weather'][0]['description'];
-        final temperature = data['main']['temp'];
-
-        setState(() {
-          weatherMessage =
-          "현재 온도: $temperature°C\n날씨: $description";
-        });
-      } else {
-        setState(() {
-          weatherMessage = "날씨 정보를 가져오지 못했습니다. (${response.statusCode})";
-        });
-      }
-    } catch (e) {
-      setState(() {
-        weatherMessage = "날씨 정보를 가져오는 중 오류가 발생했습니다: $e";
-      });
-    }
-  }
-
+class MyCustomLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('현재 위치 날씨'),
-      ),
-      body: Center(
-        child: Text(
-          weatherMessage,
-          style: TextStyle(fontSize: 20),
-          textAlign: TextAlign.center,
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _getCurrentLocationAndWeather,
-        child: Icon(Icons.refresh),
+    // 화면 크기 정보 가져오기
+    final screenSize = MediaQuery.of(context).size;
+
+    return SingleChildScrollView(  // 스크롤을 가능하게 하기 위해 추가
+      child: Column(
+        children: [
+          // 첫 번째 Stack - 그라디언트 배경과 이미지
+          Stack(
+            children: [
+              // 두 번째 Container (Gradient 배경)
+              Positioned.fill( // Stack 내에서 채워지도록 설정
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0xff595981),
+                        Color(0xff32325d),
+                        Color(0xff060926),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              // 배경 색상
+              Container(
+                width: screenSize.width,  // 전체 화면 너비
+                height: screenSize.height, // 전체 화면 높이
+                decoration: BoxDecoration(
+                  color: Color(0xff32325d),
+                ),
+              ),
+              // 투명 배경색
+              Container(
+                width: screenSize.width,  // 전체 화면 너비
+                height: screenSize.height, // 전체 화면 높이
+                decoration: BoxDecoration(
+                  color: Color(0x991d1c38),
+                ),
+              ),
+              // main_img.png 이미지를 Stack 안에서 가장 앞에 배치
+              Positioned(
+                left: 0,
+                top: 0,
+                child: Image.asset(
+                  "assets/main_img.png",
+                  width: screenSize.width, // 전체 화면 너비로 확장
+                  height: screenSize.height * 0.5, // 높이를 50%로 설정
+                  fit: BoxFit.cover, // 이미지 크기 비율에 맞춰 보정
+                ),
+              ),
+              // 새로운 Container 추가
+              Positioned(
+                left: 10,
+                top: screenSize.height * 0.5,  // main_img 아래에 배치
+                child: Container(
+                  width: 390,
+                  height: 85,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 10,
+                        top: 0,
+                        child: Container(
+                          width: 368,
+                          height: 85,
+                          decoration: ShapeDecoration(
+                            color: Color(0xE532325D),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(180),
+                            ),
+                            shadows: [
+                              BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 4),
+                                spreadRadius: 0,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 112,
+                        top: 15,
+                        child: SizedBox(
+                          width: 250,
+                          height: 40,
+                          child: Text(
+                            '한적한 금요일 저녁,\n취기를 원하신다면..',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontFamily: 'GyeonggiBatangOTF',
+                              fontWeight: FontWeight.w400,
+                              height: 0.08,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 17,
+                        top: 5,
+                        child: Container(
+                          width: 75,
+                          height: 75,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF545A7C),
+                            shape: OvalBorder(),
+                            shadows: [
+                              BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                                offset: Offset(0, 4),
+                                spreadRadius: 0,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 33,
+                        top: 15,
+                        child: Container(
+                          width: 43,
+                          height: 53.96,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("bartender_point.png"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
