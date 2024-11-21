@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')  # '/' 경로 접속 시 start 실행 (라우팅 이라고 부름)
 def start():  # 함수의 이름은 중복만 되지 않으면 됨
-    return send_from_directory('static', 'api_urls.png')
+    return send_from_directory('static', 'api_rules.png')
 
 # show all drink
 @app.route('/drink/all')
