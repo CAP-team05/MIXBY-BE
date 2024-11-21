@@ -1,5 +1,13 @@
 [
     {
+        "english_name": "Locked",
+        "korean_name": "잠김",
+        "code": "empty",
+        "base": "",
+        "ingredients": [],
+        "instructions": []
+    },
+    {
         "english_name": "B-52",
         "korean_name": "B-52",
         "code": "41BC04EF",

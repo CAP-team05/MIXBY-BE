@@ -16,6 +16,10 @@ def drinks():
         response=json.dumps(get_drink.getalldrinks(), indent=4),
         mimetype='application/json'
     )
+# show drink image
+@app.route('/drink/image=<code>')
+def drink_image(code=None):
+    return send_from_directory('static', 'drinks/{}.png'.format(code))
 
 # search drinks by <code>
 @app.route('/drink/code=<code>')
