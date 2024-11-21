@@ -15,6 +15,13 @@ def search_byname(name):
     temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
     return temp_list
 
+def search_bycode(code):
+    temp_list = []
+    for j in all_recipes:
+        if code == j["code"] and j not in temp_list: temp_list.append(j)
+    temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
+    return temp_list
+
 def search_byings(codes):
     code_list = list(map(''.join, zip(*[iter(codes)]*2)))
     temp_list = []

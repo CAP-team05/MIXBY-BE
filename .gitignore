@@ -1,3 +1,5 @@
 .DS*
 .VS*
 .env
+
+frontend_codes/

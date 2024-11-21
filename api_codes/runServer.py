@@ -66,6 +66,16 @@ def recipe_name(name):
         mimetype='application/json'
     )
 
+# search recipes by <code>
+@app.route('/recipe/code=<code>')
+def recipe_code(code):
+    print(code)
+    info = get_recipe.search_bycode(code)
+    return app.response_class(
+        response=json.dumps(info, indent=4),
+        mimetype='application/json'
+    )
+
 # search available recipes
 @app.route('/recipe/with=<codes>')
 def recipe_with(codes):
