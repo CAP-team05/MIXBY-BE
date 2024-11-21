@@ -1,3 +1,6 @@
 .DS*
 .VS*
 .env
+*.pyc
+__cache__/
+temp/
