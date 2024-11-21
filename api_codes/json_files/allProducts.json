@@ -1682,8 +1682,8 @@
     {
         "code": "5010284100056",
         "name": "말리부",
-        "base_code": 80,
-        "type": "럼",
+        "base_code": 40,
+        "type": "리큐르",
         "volume": "350ML",
         "alcohol": 21.0
     },
