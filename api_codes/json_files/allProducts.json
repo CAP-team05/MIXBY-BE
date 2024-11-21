@@ -642,16 +642,16 @@
     {
         "code": "3245990001218",
         "name": "헤네시 XO",
-        "base_code": 30,
-        "type": "브랜디",
+        "base_code": 33,
+        "type": "꼬냑",
         "volume": "700ml",
         "alcohol": 40.0
     },
     {
         "code": "3245990969419",
         "name": "헤네시 VSOP",
-        "base_code": 30,
-        "type": "브랜디",
+        "base_code": 33,
+        "type": "꼬냑",
         "volume": "700ML",
         "alcohol": 40.0
     },
