@@ -3,4 +3,4 @@
 .env
 
 frontend_codes/
-__pycache__/
+api_codes/__pycache__/
