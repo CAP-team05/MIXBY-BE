@@ -1,6 +1,6 @@
 .DS*
 .VS*
 .env
-
-frontend_codes/
-api_codes/__pycache__/
+*.pyc
+__cache__/
+temp/
