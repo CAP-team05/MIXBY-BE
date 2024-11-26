@@ -2,4 +2,5 @@
 .VS*
 .env
 *.pyc
-__pycache__/
+__cache__/
+temp/
