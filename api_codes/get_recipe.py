@@ -33,6 +33,6 @@ def search_byings(codes):
                 for c in code_list:
                     if c in recipe_code: cnt+=1
                 j["have"] = "{}/{}".format(cnt, int(len(j["code"])/2))
-                temp_list.append(j)
+                if j not in temp_list: temp_list.append(j)
     
     return temp_list

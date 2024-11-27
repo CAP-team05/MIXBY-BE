@@ -96,4 +96,4 @@ def ing_image(name=None):
     return send_from_directory('static', 'ingredients/{}.png'.format(name))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)  # app 실행
+    app.run(host='0.0.0.0', port=2222, debug=True)  # app 실행
