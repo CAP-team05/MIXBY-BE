@@ -27,11 +27,12 @@ def search_byings(codes):
     temp_list = []
     for input_code in code_list:
         for j in all_recipes:
-            recipe_code = j["code"][2:]
+            recipe_code = j["code"]
             if input_code in recipe_code:
                 cnt = 0
                 for c in code_list:
-                    if c in recipe_code: cnt+=1
+                    if c in recipe_code: 
+                        if int(recipe_code.find(c))%2 == 0: cnt+=1
                 j["have"] = "{}/{}".format(cnt, int(len(j["code"])/2))
                 if j not in temp_list: temp_list.append(j)
     
