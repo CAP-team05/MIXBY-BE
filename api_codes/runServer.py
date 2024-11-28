@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory, jsonify
 
 import json
-import get_drink, get_recipe
+import get_drink, get_recipe, get_ingredients
 
 app = Flask(__name__)
 
@@ -88,6 +88,17 @@ def recipe_with(codes):
         response=json.dumps(info, indent=4),
         mimetype='application/json'
     )
+
+
+# search ingredients by code
+@app.route('/ing/with=<codes>')
+def ing_code(codes):
+    info = get_ingredients.getCode(codes)
+    return app.response_class(
+        response=json.dumps(info, indent=4),
+        mimetype='application/json'
+    )
+
 
 
 # show ingredient image
