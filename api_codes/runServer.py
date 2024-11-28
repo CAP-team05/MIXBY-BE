@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, jsonify
+from flask import Flask, send_from_directory, jsonify, request
 
 import json
 import get_drink, get_recipe, get_ingredients
@@ -105,6 +105,20 @@ def ing_code(codes):
 @app.route('/ing/image=<name>')
 def ing_image(name=None):
     return send_from_directory('static', 'ingredients/{}.png'.format(name))
+
+@app.route('/userinfo', methods=['POST'])
+def userinfo():
+    data = request.get_json()
+    for item in data:
+        print(item, item['name'])
+
+    # id = data['id']
+    # name = data['name']
+    # gender = data['gender']
+    # favoriteTaste = data['favoriteTaste']
+
+    return jsonify({'result': 'confirmed'})
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2222, debug=True)  # app 실행
