@@ -142,36 +142,6 @@
         ]
     },
     {
-        "english_name": "Grasshopper",
-        "korean_name": "그래스호퍼",
-        "code": "43266DF5",
-        "base": "크렘 드 멘트",
-        "ingredients": [
-            {
-                "name": "크렘 드 멘트",
-                "code": "2624",
-                "amount": "30",
-                "unit": "ml"
-            },
-            {
-                "name": "크렘 드 카카오",
-                "code": "6D24",
-                "amount": "30",
-                "unit": "ml"
-            },
-            {
-                "name": "신선한 크림",
-                "code": "F524",
-                "amount": "30",
-                "unit": "ml"
-            }
-        ],
-        "instructions": [
-            "셰이커에 얼음과 모든 재료를 넣고 셰이킹한다.",
-            "차가운 칵테일 글라스에 따라낸다."
-        ]
-    },
-    {
         "english_name": "Apple Martini",
         "korean_name": "애플 마티니",
         "code": "70E7D626",
@@ -1679,7 +1649,7 @@
     },
     {
         "english_name": "Grasshopper",
-        "korean_name": "그라스호퍼",
+        "korean_name": "그래스호퍼",
         "code": "43266D43",
         "base": "크렘 드 멘트",
         "ingredients": [
@@ -3263,36 +3233,6 @@
         "instructions": [
             "하이볼 글라스에 얼음을 채운다.",
             "보드카와 라임 주스를 넣고 소다수를 추가해 섞는다."
-        ]
-    },
-    {
-        "english_name": "Truth",
-        "korean_name": "트루스",
-        "code": "81B3B9C1",
-        "base": "화이트 럼",
-        "ingredients": [
-            {
-                "name": "화이트 럼",
-                "code": "B303",
-                "amount": "50",
-                "unit": "ml"
-            },
-            {
-                "name": "코코넛 크림",
-                "code": "B902",
-                "amount": "30",
-                "unit": "ml"
-            },
-            {
-                "name": "파인애플 주스",
-                "code": "C121",
-                "amount": "90",
-                "unit": "ml"
-            }
-        ],
-        "instructions": [
-            "블렌더에 얼음과 모든 재료를 넣고 섞는다.",
-            "차가운 글라스에 따라낸다."
         ]
     },
     {
