@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "name": "미도리사워",
+        "date": "2024-11-20",
+        "tag1": "탄산",
+        "tag2": "단맛",
+        "eval": "매우 만족",
+        "sweetness": "불만",
+        "sourness": "만족",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 2,
+        "name": "모스크 뮬",
+        "date": "2024-11-26",
+        "tag1": "청량",
+        "tag2": "시원",
+        "eval": "보통",
+        "sweetness": "불만족",
+        "sourness": "만족",
+        "alcohol": "만족"
+    },
+    {
+        "id": 3,
+        "name": "잭콕",
+        "date": "2024-11-26",
+        "tag1": "탄산",
+        "tag2": "단맛",
+        "eval": "만족",
+        "sweetness": "보통",
+        "sourness": "만족",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 4,
+        "name": "블루라군",
+        "date": "2024-11-20",
+        "tag1": "시원",
+        "tag2": "단맛",
+        "eval": "매우 만족",
+        "sweetness": "만족",
+        "sourness": "보통",
+        "alcohol": "보통"
+    },
+    {
+        "id": 5,
+        "name": "핀콜라다",
+        "date": "2024-11-25",
+        "tag1": "달콤",
+        "tag2": "열대",
+        "eval": "만족",
+        "sweetness": "매우 만족",
+        "sourness": "불만족",
+        "alcohol": "만족"
+    },
+    {
+        "id": 6,
+        "name": "데킬라 선라이즈",
+        "date": "2024-11-24",
+        "tag1": "달콤",
+        "tag2": "열대",
+        "eval": "보통",
+        "sweetness": "보통",
+        "sourness": "만족",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 7,
+        "name": "롱아일랜드 아이스티",
+        "date": "2024-11-21",
+        "tag1": "강렬",
+        "tag2": "다채",
+        "eval": "매우 만족",
+        "sweetness": "만족",
+        "sourness": "보통",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 8,
+        "name": "마가리타",
+        "date": "2024-11-22",
+        "tag1": "시원",
+        "tag2": "강렬",
+        "eval": "만족",
+        "sweetness": "보통",
+        "sourness": "매우 만족",
+        "alcohol": "만족"
+    },
+    {
+        "id": 9,
+        "name": "아메리카노",
+        "date": "2024-11-23",
+        "tag1": "쓴맛",
+        "tag2": "깔끔",
+        "eval": "보통",
+        "sweetness": "불만족",
+        "sourness": "보통",
+        "alcohol": "만족"
+    },
+    {
+        "id": 10,
+        "name": "화이트러시안",
+        "date": "2024-11-24",
+        "tag1": "크리미",
+        "tag2": "달콤",
+        "eval": "만족",
+        "sweetness": "만족",
+        "sourness": "불만족",
+        "alcohol": "보통"
+    },
+    {
+        "id": 11,
+        "name": "쿠바리브레",
+        "date": "2024-11-25",
+        "tag1": "탄산",
+        "tag2": "깔끔",
+        "eval": "매우 만족",
+        "sweetness": "보통",
+        "sourness": "만족",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 12,
+        "name": "다이퀴리",
+        "date": "2024-11-26",
+        "tag1": "시원",
+        "tag2": "강렬",
+        "eval": "보통",
+        "sweetness": "만족",
+        "sourness": "매우 만족",
+        "alcohol": "만족"
+    },
+    {
+        "id": 13,
+        "name": "네그로니",
+        "date": "2024-11-27",
+        "tag1": "쓴맛",
+        "tag2": "다채",
+        "eval": "만족",
+        "sweetness": "불만족",
+        "sourness": "보통",
+        "alcohol": "만족"
+    },
+    {
+        "id": 14,
+        "name": "싱가포르 슬링",
+        "date": "2024-11-28",
+        "tag1": "달콤",
+        "tag2": "과일",
+        "eval": "매우 만족",
+        "sweetness": "매우 만족",
+        "sourness": "만족",
+        "alcohol": "보통"
+    },
+    {
+        "id": 15,
+        "name": "코스모폴리탄",
+        "date": "2024-11-29",
+        "tag1": "깔끔",
+        "tag2": "시원",
+        "eval": "만족",
+        "sweetness": "보통",
+        "sourness": "만족",
+        "alcohol": "매우 만족"
+    },
+    {
+        "id": 16,
+        "name": "애플 마티니",
+        "date": "2024-11-30",
+        "tag1": "달콤",
+        "tag2": "과일",
+        "eval": "만족",
+        "sweetness": "만족",
+        "sourness": "만족",
+        "alcohol": "보통"
+    },
+    {
+        "id": 17,
+        "name": "그레이하운드",
+        "date": "2024-12-01",
+        "tag1": "상큼",
+        "tag2": "과일",
+        "eval": "보통",
+        "sweetness": "보통",
+        "sourness": "만족",
+        "alcohol": "만족"
+    },
+    {
+        "id": 18,
+        "name": "라즈베리 모히토",
+        "date": "2024-12-02",
+        "tag1": "상큼",
+        "tag2": "달콤",
+        "eval": "매우 만족",
+        "sweetness": "매우 만족",
+        "sourness": "만족",
+        "alcohol": "보통"
+    },
+    {
+        "id": 19,
+        "name": "푸른 하와이",
+        "date": "2024-12-03",
+        "tag1": "시원",
+        "tag2": "열대",
+        "eval": "만족",
+        "sweetness": "만족",
+        "sourness": "보통",
+        "alcohol": "보통"
+    },
+    {
+        "id": 20,
+        "name": "샹그리아",
+        "date": "2024-12-04",
+        "tag1": "과일",
+        "tag2": "달콤",
+        "eval": "매우 만족",
+        "sweetness": "매우 만족",
+        "sourness": "만족",
+        "alcohol": "보통"
+    }
+]
