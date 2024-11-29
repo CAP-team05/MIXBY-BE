@@ -1678,36 +1678,6 @@
         ]
     },
     {
-        "english_name": "Grasshopper",
-        "korean_name": "그라스호퍼",
-        "code": "43266D43",
-        "base": "크렘 드 멘트",
-        "ingredients": [
-            {
-                "name": "크렘 드 멘트",
-                "code": "2624",
-                "amount": "30",
-                "unit": "ml"
-            },
-            {
-                "name": "크렘 드 카카오",
-                "code": "6D24",
-                "amount": "30",
-                "unit": "ml"
-            },
-            {
-                "name": "크림",
-                "code": "4302",
-                "amount": "30",
-                "unit": "ml"
-            }
-        ],
-        "instructions": [
-            "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
-            "차가운 칵테일 글라스에 따라낸다."
-        ]
-    },
-    {
         "english_name": "Hemingway Special",
         "korean_name": "헤밍웨이 스페셜",
         "code": "81B3C926C0",
