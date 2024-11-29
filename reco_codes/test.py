@@ -1,10 +1,8 @@
-cocktails = [
-    "스크류 드라이버",
-    "보드카토닉",
-    "모스크뮬",
-    "마티니",
-    "블랙 러시안",
-    "롱 아일랜드 아이스티"
-]
+import json
 
-print(", ".join(cocktails))
+with open('api_codes/json_files/allRecipes.json') as f1:
+    data = json.load(f1)
+
+print(len(data))
+for item in data:
+    print(item['korean_name'] + "\t\t" + item['english_name'] + "\t" + item['code'])
