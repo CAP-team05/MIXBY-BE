@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, request, Response
 from functools import wraps
 
 import json
-import get_drink, get_recipe, get_ingredients
+import get_drink, get_recipe, get_ingredients, get_persona
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
@@ -117,24 +117,23 @@ def as_json(f):
         return Response(res, content_type='application/json; charset=utf-8')
     return decorated_function
 
-@app.route('/userinfo', methods=['POST'])
+# get persona / input : userInfo, tastingNote
+@app.route('/persona', methods=['POST'])
 @as_json
 def userinfo():
     data = request.get_json()
+    name = ""
     for item in data:
-        item['persona'] = "수정됨."
-        print(item, item['name'])
+        if (item['ver'] == 'userInfo'):
+            userData = item['content']
+            name = item['content'][0]['name']
+        elif (item['ver'] == 'tastingNote'):
+            drinkData = item['content']
 
-    # id = data['id']
-    # name = data['name']
-    # gender = data['gender']
-    # favoriteTaste = data['favoriteTaste']
+    persona = get_persona.getPersona(userData, drinkData)
+    ret = {"name": name, "persona": persona}
 
-    result = json.dumps(data, ensure_ascii=False, indent=4)
-    data.append({'result': 'confirmed'})
-    print(data)
-
-    return data
+    return ret
 
 
 if __name__ == '__main__':
