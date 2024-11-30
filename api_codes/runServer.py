@@ -101,8 +101,6 @@ def ing_code(codes):
         mimetype='application/json'
     )
 
-
-
 # show ingredient image
 @app.route('/ing/image=<name>')
 def ing_image(name=None):
