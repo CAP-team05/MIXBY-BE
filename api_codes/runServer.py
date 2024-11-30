@@ -101,12 +101,16 @@ def ing_code(codes):
         mimetype='application/json'
     )
 
-
-
 # show ingredient image
 @app.route('/ing/image=<name>')
 def ing_image(name=None):
     return send_from_directory('static', 'ingredients/{}.png'.format(name))
+
+
+# show tool image
+@app.route('/tool/image=<name>')
+def tool_image(name=None):
+    return send_from_directory('static', 'tools/{}.png'.format(name))
 
 
 def as_json(f):
