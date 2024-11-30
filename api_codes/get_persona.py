@@ -2,18 +2,22 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import json
+import get_recipe
 
 load_dotenv()
 
 OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
+
 def getDrinkList(tasting_data):
     drinkList = []
     r = ""
     for item in tasting_data:
+        _d = get_recipe.search_bycode(item["code"])
+        print(_d[1]["korean_name"])
         _str = "["
-        _str += item["cocktailName"] + ", " + item["drinkDate"] + ", " + item["tag1"] + ", " + item["tag2"] + ", " + to_eval(item["eval"]) + ", " + to_eval(item["sweetness"]) + ", " + to_eval(item["sourness"]) + ", " + to_eval(item["alcohol"])
+        _str += _d[1]["korean_name"] + ", " + item["drinkDate"] + ", " + _d[1]["tag1"] + ", " + _d[1]["tag2"] + ", " + to_eval(item["eval"]) + ", " + to_eval(item["sweetness"]) + ", " + to_eval(item["sourness"]) + ", " + to_eval(item["alcohol"])
         _str += "]"
         drinkList.append(_str)
     for i in drinkList:
