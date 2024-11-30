@@ -1,9 +1,11 @@
-from flask import Flask, send_from_directory, jsonify
+from flask import Flask, send_from_directory, jsonify, request, Response
+from functools import wraps
 
 import json
-import get_drink, get_recipe, get_ingredients
+import get_drink, get_recipe, get_ingredients, get_persona
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
 
 @app.route('/')  # '/' 경로 접속 시 start 실행 (라우팅 이라고 부름)
 def start():  # 함수의 이름은 중복만 되지 않으면 됨
@@ -105,6 +107,34 @@ def ing_code(codes):
 @app.route('/ing/image=<name>')
 def ing_image(name=None):
     return send_from_directory('static', 'ingredients/{}.png'.format(name))
+
+
+def as_json(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        res = f(*args, **kwargs)
+        res = json.dumps(res, ensure_ascii=False).encode('utf8')
+        return Response(res, content_type='application/json; charset=utf-8')
+    return decorated_function
+
+# get persona / input : userInfo, tastingNote
+@app.route('/persona', methods=['POST'])
+@as_json
+def userinfo():
+    data = request.get_json()
+    name = ""
+    for item in data:
+        if (item['ver'] == 'userInfo'):
+            userData = item['content']
+            name = item['content'][0]['name']
+        elif (item['ver'] == 'tastingNote'):
+            drinkData = item['content']
+
+    persona = get_persona.getPersona(userData, drinkData)
+    ret = {"name": name, "persona": persona}
+
+    return ret
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2222, debug=True)  # app 실행
