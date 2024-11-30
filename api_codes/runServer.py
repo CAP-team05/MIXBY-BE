@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, request, Response
 from functools import wraps
 
 import json
-import get_drink, get_recipe, get_ingredients, get_persona
+import get_drink, get_recipe, get_ingredients, get_persona, get_weather
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
@@ -101,8 +101,6 @@ def ing_code(codes):
         mimetype='application/json'
     )
 
-
-
 # show ingredient image
 @app.route('/ing/image=<name>')
 def ing_image(name=None):
@@ -123,6 +121,7 @@ def as_json(f):
 def userinfo():
     data = request.get_json()
     name = ""
+    print(data)
     for item in data:
         if (item['ver'] == 'userInfo'):
             userData = item['content']
@@ -135,6 +134,17 @@ def userinfo():
 
     return ret
 
+@app.route('/weather', methods=['POST'])
+@as_json
+def weather():
+    data = request.get_json()
+    latitude = data['latitude']
+    longitude = data['longitude']
+    
+    ret = get_weather.get_weather_by_location(latitude, longitude)
+    
+    return {'weather': ret['weather'][0]['description']}
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2222, debug=True)  # app 실행
