@@ -8,27 +8,33 @@ load_dotenv()
 OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
-with open('reco_codes/_userInfo.json') as f1:
-    user_data = json.load(f1)
-
-with open('reco_codes/_tastingNotes.json') as f2:
-    tasting_data = json.load(f2)
-
-def getDrinkList():
+def getDrinkList(tasting_data):
     drinkList = []
     r = ""
     for item in tasting_data:
         _str = "["
-        _str += item["name"] + ", " + item["date"] + ", " + item["tag1"] + ", " + item["tag2"] + ", " + item["eval"] + ", " + item["sweetness"] + ", " + item["sourness"] + ", " + item["alcohol"]
+        _str += item["cocktailName"] + ", " + item["drinkDate"] + ", " + item["tag1"] + ", " + item["tag2"] + ", " + to_eval(item["eval"]) + ", " + to_eval(item["sweetness"]) + ", " + to_eval(item["sourness"]) + ", " + to_eval(item["alcohol"])
         _str += "]"
         drinkList.append(_str)
     for i in drinkList:
         r += i + ", "
     return r
 
-print(getDrinkList())
+def to_eval(n: int) -> str:
+    eval_mapping = {
+        0: "매우 불만",
+        1: "대체로 불만",
+        2: "조금 불만",
+        3: "보통",
+        4: "조금 만족",
+        5: "대체로 만족",
+        6: "매우 만족"
+    }
+    return eval_mapping.get(n, str(n))
 
-def getPersona():
+# print(getDrinkList())
+
+def getPersona(user_data, tasting_data):
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
@@ -46,7 +52,7 @@ def getPersona():
                 "content": [
                     {
                         "type": "text",
-                        "text": "사용자 정보는 다음과 같습니다: " + user_data[0]["name"] + ", " + user_data[0]["gender"] + ", " + user_data[0]["prefer"]
+                        "text": "사용자 정보는 다음과 같습니다: " + user_data[0]["name"] + ", " + user_data[0]["gender"] + ", " + user_data[0]["favoriteTaste"]
                     }
                 ]
             },
@@ -55,7 +61,7 @@ def getPersona():
                 "content": [
                     {
                         "type": "text",
-                        "text": "지금까지 사용자가 먹은 칵테일을 다음과 같습니다: " + getDrinkList()
+                        "text": "지금까지 사용자가 먹은 칵테일을 다음과 같습니다: " + getDrinkList(tasting_data)
                     }
                 ]
             }
@@ -78,12 +84,12 @@ def getPersona():
 
     return ret
 
-cocktail_list = "스크류 드라이버, 보드카토닉, 모스크뮬, 마티니, 블랙 러시안, 롱 아일랜드 아이스티, 준벅, 미도리사워, 마가리타, 블루 라군"
-season = "가을"
-time = "저녁"
-weather = "눈"
+_cocktail_list = "스크류 드라이버, 보드카토닉, 모스크뮬, 마티니, 블랙 러시안, 롱 아일랜드 아이스티, 준벅, 미도리사워, 마가리타, 블루 라군"
+_season = "가을"
+_time = "저녁"
+_weather = "눈"
 
-def getDefaultRecommend():
+def getDefaultRecommend(persona, cocktail_list, season, time, weather):
     
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -101,7 +107,7 @@ def getDefaultRecommend():
             "role": "user",
             "content": [
                 {
-                "text": "제공된 페르소나는 다음과 같습니다: " + getPersona(),
+                "text": "제공된 페르소나는 다음과 같습니다: " + persona,
                 "type": "text"
                 }
             ]
@@ -141,10 +147,4 @@ def getDefaultRecommend():
     formateed_json = json.dumps(j, ensure_ascii=False, indent=4)
     print(j)
 
-    #ret = json.loads(j)["reason"]
-
     return formateed_json
-
-
-print(getDefaultRecommend())
-# print(getSummary())
