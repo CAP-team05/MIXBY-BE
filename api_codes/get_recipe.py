@@ -31,9 +31,9 @@ def search_byings(codes):
         recipe_codes = list(map(''.join, zip(*[iter(recipe["code"])]*3)))
         cnt = 0
         for i in input_codes:
-            if i[:2] == recipe_codes[:2]:
-                cnt += 1
-                print(cnt)
+            for j in recipe_codes:
+                if i[:2] == j[:2]:
+                    cnt += 1
                 
         if cnt > 0:
             tempDict = {}
@@ -42,7 +42,7 @@ def search_byings(codes):
             tempDict["korean_name"] = recipe["korean_name"]
             tempDict["tag1"] = recipe["tag1"]
             tempDict["tag2"] = recipe["tag2"]
-            tempDict["have"] = "{}/{}".format(cnt, len(recipe_codes))
+            tempDict["have"] = "{}-{}".format(cnt, len(recipe_codes))
             
             temp_list.append(tempDict)
 
