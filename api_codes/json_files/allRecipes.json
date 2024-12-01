@@ -2,69 +2,65 @@
     {
         "english_name": "B-52",
         "korean_name": "B-52",
-        "code": "40BC46EF",
-        "base": "커피 리큐르",
+        "code": "100101102",
         "ingredients": [
             {
                 "name": "커피 리큐르",
-                "code": "BC24",
+                "code": "100",
                 "amount": "20",
                 "unit": "ml"
             },
             {
-                "name": "아이리시 크림 리큐르",
-                "code": "4624",
+                "name": "크림 리큐르",
+                "code": "101",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 리큐르",
-                "code": "EF21",
+                "code": "102",
                 "amount": "20",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "슈터 글라스에 커피 리큐르를 먼저 붓는다.",
-            "바 스푼을 사용하여 아이리시 크림 리큐르를 조심스럽게 부어 첫 번째 층 위에 올린다.",
+            "바 스푼을 사용하여 크림 리큐르를 조심스럽게 부어 첫 번째 층 위에 올린다.",
             "마지막으로 오렌지 리큐르를 천천히 부어 최상층을 만든다."
-        ],
-        "tag1": "달콤",
-        "tag2": "클래식"
+        ]
     },
     {
-        "english_name": "Jun Bug",
+        "english_name": "Jun-Bug",
         "korean_name": "준 벅",
-        "code": "40C44040C1LJ",
-        "base": "멜론 리큐르",
+        "code": "103104105106107",
         "ingredients": [
             {
                 "name": "멜론 리큐르",
-                "code": "C424",
+                "code": "103",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 리큐르",
-                "code": "4024",
+                "code": "104",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "바나나 리큐르",
-                "code": "4024",
+                "code": "105",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -72,31 +68,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 하이볼 글라스에 따라낸다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "과일향"
+        ]
     },
     {
         "english_name": "Alexander",
         "korean_name": "알렉산더",
-        "code": "30A3CKF5",
-        "base": "브랜디",
+        "code": "108109110",
         "ingredients": [
             {
                 "name": "브랜디",
-                "code": "A334",
+                "code": "108",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카카오",
-                "code": "CK24",
+                "code": "109",
                 "amount": "30",
                 "unit": "ml"
             },
             {
-                "name": "신선한 크림",
-                "code": "F524",
+                "name": "크림",
+                "code": "110",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -105,31 +98,28 @@
             "셰이커에 얼음과 모든 재료를 넣고 셰이킹한다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "넛맥을 갈아 위에 장식한다."
-        ],
-        "tag1": "우유향",
-        "tag2": "부드러움"
+        ]
     },
     {
         "english_name": "Bacardi",
         "korean_name": "바카디",
-        "code": "8082LJSS",
-        "base": "럼",
+        "code": "111107112",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -137,31 +127,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 셰이킹한다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "깔끔",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Apple Martini",
+        "english_name": "Apple-Martini",
         "korean_name": "애플 마티니",
-        "code": "70E7D6LJ",
-        "base": "보드카",
+        "code": "113114107",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "애플 리큐르",
-                "code": "D621",
+                "code": "114",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -169,31 +156,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 셰이킹한다.",
             "차가운 마티니 글라스에 따라낸다."
-        ],
-        "tag1": "사과향",
-        "tag2": "상큼"
+        ]
     },
     {
-        "english_name": "Apricot Cocktail",
+        "english_name": "Apricot-Cocktail",
         "korean_name": "애프리콧 칵테일",
-        "code": "303111LJ",
-        "base": "살구 브랜디",
+        "code": "115116107",
         "ingredients": [
             {
                 "name": "살구 브랜디",
-                "code": "3123",
+                "code": "115",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -201,64 +185,58 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "살구향",
-        "tag2": "달콤"
+        ]
     },
     {
         "english_name": "Americano",
         "korean_name": "아메리카노",
-        "code": "00DC6006",
-        "base": "캄파리",
+        "code": "117118119",
         "ingredients": [
             {
                 "name": "캄파리",
-                "code": "DC46",
+                "code": "117",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "30",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "얼음을 채운 하이볼 글라스에 캄파리와 스위트 베르무트를 붓는다.",
-            "소다수를 가득 채운다.",
+            "탄산수를 가득 채운다.",
             "오렌지 슬라이스로 장식한다."
-        ],
-        "tag1": "비터",
-        "tag2": "스파이시"
+        ]
     },
     {
-        "english_name": "Angel Face",
+        "english_name": "Angel-Face",
         "korean_name": "엔젤 페이스",
-        "code": "10113133",
-        "base": "드라이 진",
+        "code": "116115120",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "살구 브랜디",
-                "code": "3123",
+                "code": "115",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "애플 브랜디",
-                "code": "3323",
+                "code": "120",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -266,37 +244,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "프루티",
-        "tag2": "우아"
+        ]
     },
     {
         "english_name": "Aviation",
         "korean_name": "에비에이션",
-        "code": "1011C9MJCV",
-        "base": "드라이 진",
+        "code": "116121122123",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 바이올렛",
-                "code": "CV24",
+                "code": "123",
                 "amount": "5",
                 "unit": "ml"
             }
@@ -304,37 +279,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "플로럴",
-        "tag2": "드라이"
+        ]
     },
     {
-        "english_name": "Between the Sheets",
+        "english_name": "Between-the-Sheets",
         "korean_name": "비트윈 더 시츠",
-        "code": "80823440MJ",
-        "base": "화이트 럼",
+        "code": "111124125122",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코냑",
-                "code": "3434",
+                "code": "124",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -342,31 +314,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "시트러스"
+        ]
     },
     {
         "english_name": "Boulevardier",
         "korean_name": "불바디에",
-        "code": "2021DC60",
-        "base": "버번 위스키",
+        "code": "126117118",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "캄파리",
-                "code": "DC46",
+                "code": "117",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -375,37 +344,34 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "오렌지 필로 장식한다."
-        ],
-        "tag1": "스모키",
-        "tag2": "깊은맛"
+        ]
     },
     {
-        "english_name": "Brandy Crusta",
+        "english_name": "Brandy-Crusta",
         "korean_name": "브랜디 크러스타",
-        "code": "30A3MJ40SS",
-        "base": "브랜디",
+        "code": "108122125112",
         "ingredients": [
             {
                 "name": "브랜디",
-                "code": "A334",
+                "code": "108",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "5",
                 "unit": "ml"
             }
@@ -414,37 +380,34 @@
             "칵테일 글라스 가장자리에 설탕으로 리밍한다.",
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 글라스에 따라낸다."
-        ],
-        "tag1": "과일향",
-        "tag2": "부드러움"
+        ]
     },
     {
         "english_name": "Casino",
         "korean_name": "카지노",
-        "code": "1011C9MJ93",
-        "base": "드라이 진",
+        "code": "116121122127",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 비터스",
-                "code": "9316",
+                "code": "127",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -453,37 +416,34 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "마라스키노 체리로 장식한다."
-        ],
-        "tag1": "프레쉬",
-        "tag2": "새콤"
+        ]
     },
     {
-        "english_name": "Clover Club",
+        "english_name": "Clover-Club",
         "korean_name": "클로버 클럽",
-        "code": "1011RSMJEW",
-        "base": "드라이 진",
+        "code": "116128122129",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라즈베리 시럽",
-                "code": "RS02",
+                "code": "128",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
-                "code": "EW04",
+                "code": "129",
                 "amount": "1개",
                 "unit": ""
             }
@@ -492,31 +452,28 @@
             "셰이커에 얼음 없이 모든 재료를 넣고 드라이 셰이크한다.",
             "얼음을 추가하여 다시 셰이크한다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "달콤",
-        "tag2": "크리미"
+        ]
     },
     {
         "english_name": "Daiquiri",
         "korean_name": "다이키리",
-        "code": "8082LJSS",
-        "base": "화이트 럼",
+        "code": "111107112",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -524,25 +481,22 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Dry Martini",
+        "english_name": "Dry-Martini",
         "korean_name": "드라이 마티니",
-        "code": "1011A4",
-        "base": "드라이 진",
+        "code": "116130",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "드라이 베르무트",
-                "code": "A436",
+                "code": "130",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -551,69 +505,63 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 마티니 글라스에 따라낸다.",
             "레몬 트위스트나 올리브로 장식한다."
-        ],
-        "tag1": "드라이",
-        "tag2": "우아"
+        ]
     },
     {
-        "english_name": "Gin Fizz",
+        "english_name": "Gin-Fizz",
         "korean_name": "진 피즈",
-        "code": "1011MJSS06",
-        "base": "드라이 진",
+        "code": "116122112119",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "셰이커에 얼음과 진, 레몬 주스, 설탕 시럽을 넣고 섞는다.",
-            "차가운 하이볼 글라스에 따라낸 후 소다수를 가득 채운다."
-        ],
-        "tag1": "탄산",
-        "tag2": "상큼"
+            "차가운 하이볼 글라스에 따라낸 후 탄산수를 가득 채운다."
+        ]
     },
     {
-        "english_name": "Hanky Panky",
+        "english_name": "Hanky-Panky",
         "korean_name": "행키 팽키",
-        "code": "10116093",
-        "base": "드라이 진",
+        "code": "116118131",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "페르넷 브랑카",
-                "code": "9336",
+                "code": "131",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -622,76 +570,70 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "오렌지 필로 장식한다."
-        ],
-        "tag1": "비터",
-        "tag2": "아로마틱"
+        ]
     },
     {
-        "english_name": "John Collins",
+        "english_name": "John-Collins",
         "korean_name": "존 콜린스",
-        "code": "10F1MJSS06",
-        "base": "진",
+        "code": "132122112119",
         "ingredients": [
             {
                 "name": "진",
-                "code": "F103",
+                "code": "132",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "하이볼 글라스에 얼음과 진, 레몬 주스, 설탕 시럽을 넣는다.",
-            "소다수를 가득 채운 후 잘 저어준다.",
+            "탄산수를 가득 채운 후 잘 저어준다.",
             "레몬 슬라이스로 장식한다."
-        ],
-        "tag1": "새콤",
-        "tag2": "탄산"
+        ]
     },
     {
-        "english_name": "Last Word",
+        "english_name": "Last-Word",
         "korean_name": "라스트 워드",
-        "code": "1011A5C9LJ",
-        "base": "드라이 진",
+        "code": "116133121107",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
-                "code": "A523",
+                "code": "133",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -699,31 +641,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "허브향",
-        "tag2": "복합미"
+        ]
     },
     {
         "english_name": "Manhattan",
         "korean_name": "맨해튼",
-        "code": "20216093",
-        "base": "버번 위스키",
+        "code": "126118134",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -732,37 +671,34 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "마라스키노 체리로 장식한다."
-        ],
-        "tag1": "스모키",
-        "tag2": "고전"
+        ]
     },
     {
         "english_name": "Martinez",
         "korean_name": "마르티네즈",
-        "code": "101160C993",
-        "base": "드라이 진",
+        "code": "116118121127",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "5",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 비터스",
-                "code": "9316",
+                "code": "127",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -771,37 +707,34 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "레몬 트위스트로 장식한다."
-        ],
-        "tag1": "달콤",
-        "tag2": "비터"
+        ]
     },
     {
-        "english_name": "Mary Pickford",
+        "english_name": "Mary-Pickford",
         "korean_name": "메리 픽퍼드",
-        "code": "8082C1C9B6",
-        "base": "화이트 럼",
+        "code": "111106121135",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -809,37 +742,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "달콤",
-        "tag2": "과일향"
+        ]
     },
     {
-        "english_name": "Monkey Gland",
+        "english_name": "Monkey-Gland",
         "korean_name": "몽키 글랜드",
-        "code": "1011CFB608",
-        "base": "드라이 진",
+        "code": "116136135137",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "압생트",
-                "code": "0836",
+                "code": "137",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -847,31 +777,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "과일향",
-        "tag2": "트로피칼"
+        ]
     },
     {
         "english_name": "Negroni",
         "korean_name": "네그로니",
-        "code": "1011DC60",
-        "base": "드라이 진",
+        "code": "116117118",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "캄파리",
-                "code": "DC46",
+                "code": "117",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -880,37 +807,34 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "오렌지 필로 장식한다."
-        ],
-        "tag1": "비터",
-        "tag2": "복합미"
+        ]
     },
     {
-        "english_name": "Old Fashioned",
+        "english_name": "Old-Fashioned",
         "korean_name": "올드 패션드",
-        "code": "2021SG9300",
-        "base": "버번 위스키",
+        "code": "126138134139",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "1 cube",
                 "unit": ""
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "물",
-                "code": "0004",
+                "code": "139",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -919,31 +843,28 @@
             "글라스에 설탕과 앙고스투라 비터스를 넣고 물을 약간 첨가해 설탕을 녹인다.",
             "얼음을 추가하고 위스키를 붓는다.",
             "오렌지 슬라이스와 체리로 장식한다."
-        ],
-        "tag1": "스모키",
-        "tag2": "깊은맛"
+        ]
     },
     {
         "english_name": "Paradise",
         "korean_name": "파라다이스",
-        "code": "101131CF",
-        "base": "드라이 진",
+        "code": "116115136",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "살구 브랜디",
-                "code": "3123",
+                "code": "115",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -951,37 +872,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "과일향",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Planter's Punch",
+        "english_name": "Planter's-Punch",
         "korean_name": "플랜터스 펀치",
-        "code": "80DFMJSSB6",
-        "base": "다크 럼",
+        "code": "140122112135",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "DF34",
+                "code": "140",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -989,31 +907,28 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "오렌지 슬라이스와 체리로 장식한다."
-        ],
-        "tag1": "과일향",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "Porto Flip",
+        "english_name": "Porto-Flip",
         "korean_name": "포르토 플립",
-        "code": "6061A3FD",
-        "base": "포트 와인",
+        "code": "141108142",
         "ingredients": [
             {
                 "name": "포트 와인",
-                "code": "6103",
+                "code": "141",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "브랜디",
-                "code": "A334",
+                "code": "108",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "달걀 노른자",
-                "code": "FD04",
+                "code": "142",
                 "amount": "1개",
                 "unit": ""
             }
@@ -1022,61 +937,58 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "넛맥을 갈아 위에 장식한다."
-        ],
-        "tag1": "크리미",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "Ramos Gin Fizz",
+        "english_name": "Ramos-Gin-Fizz",
         "korean_name": "라모스 진 피즈",
-        "code": "1011MJLJSSRCEWCA06",
-        "base": "드라이 진",
+        "code": "116122107112110129143119",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "30",
                 "unit": "ml"
             },
             {
-                "name": "생크림",
-                "code": "RC02",
+                "name": "크림",
+                "code": "110",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
-                "code": "EW04",
+                "code": "129",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "오렌지 꽃물",
-                "code": "CA04",
+                "code": "143",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1084,26 +996,23 @@
         "instructions": [
             "셰이커에 얼음 없이 모든 재료를 넣고 드라이 셰이크한다.",
             "얼음을 추가하여 다시 셰이크한다.",
-            "소다수를 채운 하이볼 글라스에 따라낸다."
-        ],
-        "tag1": "크리미",
-        "tag2": "상쾌함"
+            "탄산수를 채운 하이볼 글라스에 따라낸다."
+        ]
     },
     {
-        "english_name": "Rusty Nail",
+        "english_name": "Rusty-Nail",
         "korean_name": "러스티 네일",
-        "code": "20D740",
-        "base": "스카치 위스키",
+        "code": "144145",
         "ingredients": [
             {
                 "name": "스카치 위스키",
-                "code": "D703",
+                "code": "144",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "드람뷔",
-                "code": "4001",
+                "code": "145",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -1111,37 +1020,34 @@
         "instructions": [
             "글라스에 얼음을 넣고 모든 재료를 섞는다.",
             "오렌지 필로 장식한다."
-        ],
-        "tag1": "스모키",
-        "tag2": "달콤"
+        ]
     },
     {
         "english_name": "Sazerac",
         "korean_name": "사제락",
-        "code": "20F99308SG",
-        "base": "라이 위스키",
+        "code": "146134137138",
         "ingredients": [
             {
                 "name": "라이 위스키",
-                "code": "F903",
+                "code": "146",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "압생트",
-                "code": "0836",
+                "code": "137",
                 "amount": "적당량",
                 "unit": ""
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "1 cube",
                 "unit": ""
             }
@@ -1151,31 +1057,28 @@
             "믹싱 글라스에 설탕과 비터스를 넣고 잘 녹인다.",
             "라이 위스키를 추가한 후 섞어 준비된 글라스에 따른다.",
             "레몬 필로 장식한다."
-        ],
-        "tag1": "스파이시",
-        "tag2": "깊은맛"
+        ]
     },
     {
         "english_name": "Sidecar",
         "korean_name": "사이드카",
-        "code": "003440MJ",
-        "base": "코냑",
+        "code": "124125122",
         "ingredients": [
             {
                 "name": "코냑",
-                "code": "3434",
+                "code": "124",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1183,25 +1086,22 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "우아"
+        ]
     },
     {
         "english_name": "Stinger",
         "korean_name": "스팅어",
-        "code": "0034CM",
-        "base": "코냑",
+        "code": "124147",
         "ingredients": [
             {
                 "name": "코냑",
-                "code": "3434",
+                "code": "124",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 멘트",
-                "code": "CM24",
+                "code": "147",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1209,37 +1109,34 @@
         "instructions": [
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "민트",
-        "tag2": "프레쉬"
+        ]
     },
     {
         "english_name": "Tuxedo",
         "korean_name": "턱시도",
-        "code": "1011A40893",
-        "base": "드라이 진",
+        "code": "116130137127",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "드라이 베르무트",
-                "code": "A436",
+                "code": "130",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "압생트",
-                "code": "0836",
+                "code": "137",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "오렌지 비터스",
-                "code": "9316",
+                "code": "127",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1248,37 +1145,34 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "체리로 장식한다."
-        ],
-        "tag1": "드라이",
-        "tag2": "우아"
+        ]
     },
     {
-        "english_name": "Vieux Carré",
+        "english_name": "Vieux-Carré",
         "korean_name": "비에우 카레",
-        "code": "20F9346093",
-        "base": "라이 위스키",
+        "code": "146124118134",
         "ingredients": [
             {
                 "name": "라이 위스키",
-                "code": "F903",
+                "code": "146",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "코냑",
-                "code": "3434",
+                "code": "124",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "스위트 베르무트",
-                "code": "6024",
+                "code": "118",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1286,31 +1180,28 @@
         "instructions": [
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "스파이시",
-        "tag2": "깊은맛"
+        ]
     },
     {
-        "english_name": "Whiskey Sour",
+        "english_name": "Whiskey-Sour",
         "korean_name": "위스키 사워",
-        "code": "2021MJSS",
-        "base": "버번 위스키",
+        "code": "126122112",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -1319,31 +1210,28 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다.",
             "체리와 오렌지 슬라이스로 장식한다."
-        ],
-        "tag1": "새콤",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "White Lady",
+        "english_name": "White-Lady",
         "korean_name": "화이트 레이디",
-        "code": "101140MJ",
-        "base": "드라이 진",
+        "code": "116125122",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -1351,94 +1239,85 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "플로럴",
-        "tag2": "상큼"
+        ]
     },
     {
         "english_name": "Bellini",
         "korean_name": "벨리니",
-        "code": "0060BE",
-        "base": "프로세코",
+        "code": "148149",
         "ingredients": [
             {
                 "name": "프로세코",
-                "code": "6001",
+                "code": "148",
                 "amount": "100",
                 "unit": "ml"
             },
             {
-                "name": "복숭아 퓌레",
-                "code": "BE01",
+                "name": "복숭아 퓨레",
+                "code": "149",
                 "amount": "50",
                 "unit": "ml"
             }
         ],
         "instructions": [
-            "샴페인 플루트 글라스에 복숭아 퓌레를 넣는다.",
+            "샴페인 플루트 글라스에 복숭아 퓨레를 넣는다.",
             "프로세코를 천천히 부어 섞는다."
-        ],
-        "tag1": "과일향",
-        "tag2": "스파클링"
+        ]
     },
     {
-        "english_name": "Black Russian",
+        "english_name": "Black-Russian",
         "korean_name": "블랙 러시안",
-        "code": "70E7BC",
-        "base": "보드카",
+        "code": "113100",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "커피 리큐르",
-                "code": "BC24",
+                "code": "100",
                 "amount": "20",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "글라스에 얼음을 채운 뒤 보드카와 커피 리큐르를 부어 섞는다."
-        ],
-        "tag1": "커피향",
-        "tag2": "강렬"
+        ]
     },
     {
-        "english_name": "Bloody Mary",
+        "english_name": "Bloody-Mary",
         "korean_name": "블러디 메리",
-        "code": "70E7DDMJOSA5",
-        "base": "보드카",
+        "code": "113150122151152",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "토마토 주스",
-                "code": "DD02",
+                "code": "150",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "우스터 소스",
-                "code": "OS01",
+                "code": "151",
                 "amount": "몇 방울",
                 "unit": ""
             },
             {
                 "name": "소금과 후추",
-                "code": "A501",
+                "code": "152",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1447,31 +1326,28 @@
             "하이볼 글라스에 얼음을 채운다.",
             "모든 재료를 넣고 잘 섞는다.",
             "셀러리 스틱과 레몬 조각으로 장식한다."
-        ],
-        "tag1": "스파이시",
-        "tag2": "상쾌함"
+        ]
     },
     {
         "english_name": "Caipirinha",
         "korean_name": "카이피리냐",
-        "code": "0008LMSG",
-        "base": "카샤사",
+        "code": "153154138",
         "ingredients": [
             {
                 "name": "카샤사",
-                "code": "0801",
+                "code": "153",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임",
-                "code": "LM01",
+                "code": "154",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "2 티스푼",
                 "unit": ""
             }
@@ -1480,31 +1356,28 @@
             "라임을 자르고 설탕과 함께 글라스에 넣어 으깬다.",
             "얼음을 추가하고 카샤사를 붓는다.",
             "잘 섞은 후 제공한다."
-        ],
-        "tag1": "새콤",
-        "tag2": "과일향"
+        ]
     },
     {
-        "english_name": "Champagne Cocktail",
+        "english_name": "Champagne-Cocktail",
         "korean_name": "샴페인 칵테일",
-        "code": "0064SG93",
-        "base": "샴페인",
+        "code": "155138134",
         "ingredients": [
             {
                 "name": "샴페인",
-                "code": "6405",
+                "code": "155",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "1 cube",
                 "unit": ""
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -1513,37 +1386,34 @@
             "샴페인 글라스에 설탕 큐브를 넣는다.",
             "앙고스투라 비터스를 설탕에 떨어뜨린다.",
             "샴페인을 부어 섞는다."
-        ],
-        "tag1": "스파클링",
-        "tag2": "고급스러움"
+        ]
     },
     {
         "english_name": "Cosmopolitan",
         "korean_name": "코스모폴리탄",
-        "code": "70E740LJCJ",
-        "base": "보드카",
+        "code": "113125107156",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
-                "code": "CJ02",
+                "code": "156",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -1552,31 +1422,28 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 마티니 글라스에 따라낸다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "프루티",
-        "tag2": "우아"
+        ]
     },
     {
-        "english_name": "Cuba Libre",
+        "english_name": "Cuba-Libre",
         "korean_name": "쿠바 리브레",
-        "code": "808207LJ",
-        "base": "화이트 럼",
+        "code": "111157107",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
-                "code": "0701",
+                "code": "157",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1584,37 +1451,34 @@
         "instructions": [
             "하이볼 글라스에 얼음을 넣고 모든 재료를 부은 후 섞는다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "탄산",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "French 75",
+        "english_name": "French-75",
         "korean_name": "프렌치 75",
-        "code": "1011MJSS64",
-        "base": "드라이 진",
+        "code": "116122112155",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "샴페인",
-                "code": "6405",
+                "code": "155",
                 "amount": "60",
                 "unit": "ml"
             }
@@ -1622,112 +1486,100 @@
         "instructions": [
             "셰이커에 얼음과 진, 레몬 주스, 설탕 시럽을 넣고 섞는다.",
             "샴페인 플루트 글라스에 따른 후 샴페인을 추가한다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "스파클링"
+        ]
     },
     {
-        "english_name": "French Connection",
+        "english_name": "French-Connection",
         "korean_name": "프렌치 커넥션",
-        "code": "0034E4",
-        "base": "코냑",
+        "code": "124158",
         "ingredients": [
             {
                 "name": "코냑",
-                "code": "3434",
+                "code": "124",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
-                "code": "E401",
+                "code": "158",
                 "amount": "35",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "글라스에 얼음을 넣고 모든 재료를 부어 섞는다."
-        ],
-        "tag1": "깊은맛",
-        "tag2": "스모키"
+        ]
     },
     {
         "english_name": "Godfather",
         "korean_name": "갓파더",
-        "code": "20D7E4",
-        "base": "스카치 위스키",
+        "code": "144158",
         "ingredients": [
             {
                 "name": "스카치 위스키",
-                "code": "D703",
+                "code": "144",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
-                "code": "E401",
+                "code": "158",
                 "amount": "35",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "글라스에 얼음을 넣고 모든 재료를 부어 섞는다."
-        ],
-        "tag1": "스모키",
-        "tag2": "달콤"
+        ]
     },
     {
         "english_name": "Godmother",
         "korean_name": "갓마더",
-        "code": "70E7E4",
-        "base": "보드카",
+        "code": "113158",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "35",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
-                "code": "E401",
+                "code": "158",
                 "amount": "35",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "글라스에 얼음을 넣고 모든 재료를 부어 섞는다."
-        ],
-        "tag1": "부드러움",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "Golden Dream",
+        "english_name": "Golden-Dream",
         "korean_name": "골든 드림",
-        "code": "004040CFC0",
-        "base": "갈리아노",
+        "code": "159125136110",
         "ingredients": [
             {
                 "name": "갈리아노",
-                "code": "4001",
+                "code": "159",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "크림",
-                "code": "C002",
+                "code": "110",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1735,31 +1587,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "오렌지향",
-        "tag2": "부드러움"
+        ]
     },
     {
         "english_name": "Grasshopper",
         "korean_name": "그래스호퍼",
-        "code": "43266D43",
-        "base": "크렘 드 멘트",
+        "code": "147109110",
         "ingredients": [
             {
                 "name": "크렘 드 멘트",
-                "code": "CM24",
+                "code": "147",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카카오",
-                "code": "CK24",
+                "code": "109",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크림",
-                "code": "C002",
+                "code": "110",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -1767,37 +1616,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "민트",
-        "tag2": "크리미"
+        ]
     },
     {
-        "english_name": "Hemingway Special",
+        "english_name": "Hemingway-Special",
         "korean_name": "헤밍웨이 스페셜",
-        "code": "8082C9LJPJ",
-        "base": "화이트 럼",
+        "code": "111121107160",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "마라스키노 리큐르",
-                "code": "C924",
+                "code": "121",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
-                "code": "PJ02",
+                "code": "160",
                 "amount": "40",
                 "unit": "ml"
             }
@@ -1805,63 +1651,57 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Irish Coffee",
+        "english_name": "Irish-Coffee",
         "korean_name": "아이리시 커피",
-        "code": "2024HCSGWC",
-        "base": "아이리시 위스키",
+        "code": "161162138110",
         "ingredients": [
             {
                 "name": "아이리시 위스키",
-                "code": "2403",
+                "code": "161",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "뜨거운 커피",
-                "code": "HC01",
+                "code": "162",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "1 티스푼",
                 "unit": ""
             },
             {
-                "name": "휘핑 크림",
-                "code": "WC02",
+                "name": "크림",
+                "code": "110",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "따뜻한 글라스에 설탕, 위스키, 커피를 넣고 섞는다.",
-            "휘핑 크림을 조심스럽게 올려 층을 만든다."
-        ],
-        "tag1": "커피향",
-        "tag2": "크리미"
+            "크림을 조심스럽게 올려 층을 만든다."
+        ]
     },
     {
         "english_name": "Kir",
         "korean_name": "키르",
-        "code": "6063CC",
-        "base": "화이트 와인",
+        "code": "163164",
         "ingredients": [
             {
                 "name": "화이트 와인",
-                "code": "6303",
+                "code": "163",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카시스",
-                "code": "CC01",
+                "code": "164",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -1869,61 +1709,58 @@
         "instructions": [
             "화이트 와인 글라스에 크렘 드 카시스를 넣는다.",
             "화이트 와인을 천천히 부어 섞는다."
-        ],
-        "tag1": "스파클링",
-        "tag2": "베리향"
+        ]
     },
     {
-        "english_name": "Long Island Iced Tea",
+        "english_name": "Long-Island-Iced-Tea",
         "korean_name": "롱 아일랜드 아이스 티",
-        "code": "70E71182D140MJSS07",
-        "base": "보드카",
+        "code": "113116111165125122112157",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "테킬라",
-                "code": "D103",
+                "code": "165",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
-                "code": "0701",
+                "code": "157",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -1932,43 +1769,40 @@
             "하이볼 글라스에 얼음과 모든 재료를 넣는다.",
             "콜라를 채운 후 잘 섞는다.",
             "레몬 웨지로 장식한다."
-        ],
-        "tag1": "강렬",
-        "tag2": "복합미"
+        ]
     },
     {
-        "english_name": "Mai Tai",
+        "english_name": "Mai-Tai",
         "korean_name": "마이타이",
-        "code": "808240CFC1B6",
-        "base": "화이트 럼",
+        "code": "111125136106135",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "37.5",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "22.5",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "7.5",
                 "unit": "ml"
             }
@@ -1977,31 +1811,28 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "얼음이 든 글라스에 따라낸다.",
             "파인애플 웨지와 체리로 장식한다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "달콤"
+        ]
     },
     {
         "english_name": "Margarita",
         "korean_name": "마가리타",
-        "code": "50D140LJ",
-        "base": "테킬라",
+        "code": "165125107",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "D103",
+                "code": "165",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2010,25 +1841,22 @@
             "칵테일 글라스 가장자리를 소금으로 리밍한다.",
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "시트러스"
+        ]
     },
     {
         "english_name": "Mimosa",
         "korean_name": "미모사",
-        "code": "0064CF",
-        "base": "샴페인",
+        "code": "155136",
         "ingredients": [
             {
                 "name": "샴페인",
-                "code": "6405",
+                "code": "155",
                 "amount": "75",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "75",
                 "unit": "ml"
             }
@@ -2036,76 +1864,70 @@
         "instructions": [
             "샴페인 플루트 글라스에 오렌지 주스를 따른다.",
             "샴페인을 천천히 부어 섞는다."
-        ],
-        "tag1": "오렌지향",
-        "tag2": "스파클링"
+        ]
     },
     {
         "english_name": "Mojito",
         "korean_name": "모히토",
-        "code": "8082LMC7SG06",
-        "base": "화이트 럼",
+        "code": "111154166138119",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임",
-                "code": "LM01",
+                "code": "154",
                 "amount": "1개",
                 "unit": ""
             },
             {
                 "name": "민트 잎",
-                "code": "C701",
+                "code": "166",
                 "amount": "10",
                 "unit": "장"
             },
             {
                 "name": "설탕",
-                "code": "SG02",
+                "code": "138",
                 "amount": "2 티스푼",
                 "unit": ""
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "글라스에 민트, 라임, 설탕을 넣고 으깬다.",
-            "얼음을 추가하고 럼을 부은 후 소다수를 채운다.",
+            "얼음을 추가하고 럼을 부은 후 탄산수를 채운다.",
             "민트 잎으로 장식한다."
-        ],
-        "tag1": "민트",
-        "tag2": "상쾌함"
+        ]
     },
     {
         "english_name": "Healing",
         "korean_name": "힐링",
-        "code": "0001YDC9",
-        "base": "소주",
+        "code": "167168169",
         "ingredients": [
             {
                 "name": "소주",
-                "code": "0101",
+                "code": "167",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "요구르트 음료",
-                "code": "YD01",
+                "code": "168",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
-                "code": "C901",
+                "code": "169",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -2113,31 +1935,28 @@
         "instructions": [
             "글라스에 소주, 요구르트 음료, 사이다를 넣고 잘 섞는다.",
             "얼음을 추가해 제공한다."
-        ],
-        "tag1": "부드러움",
-        "tag2": "새콤"
+        ]
     },
     {
         "english_name": "Jindo",
         "korean_name": "진도",
-        "code": "0001GJC9",
-        "base": "소주",
+        "code": "167170169",
         "ingredients": [
             {
                 "name": "소주",
-                "code": "0101",
+                "code": "167",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "포도 주스",
-                "code": "GJ02",
+                "code": "170",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
-                "code": "C901",
+                "code": "169",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -2145,31 +1964,28 @@
         "instructions": [
             "글라스에 소주, 포도 주스, 사이다를 넣고 잘 섞는다.",
             "얼음을 추가해 제공한다."
-        ],
-        "tag1": "독특함",
-        "tag2": "강렬"
+        ]
     },
     {
-        "english_name": "First Love",
+        "english_name": "First-Love",
         "korean_name": "풋사랑",
-        "code": "0001SJC9",
-        "base": "소주",
+        "code": "167171169",
         "ingredients": [
             {
                 "name": "소주",
-                "code": "0101",
+                "code": "167",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "딸기 주스",
-                "code": "SJ02",
+                "code": "171",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
-                "code": "C901",
+                "code": "169",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -2177,31 +1993,28 @@
         "instructions": [
             "글라스에 소주, 딸기 주스, 사이다를 넣고 잘 섞는다.",
             "얼음을 추가해 제공한다."
-        ],
-        "tag1": "달콤",
-        "tag2": "프루티"
+        ]
     },
     {
         "english_name": "Geumsan",
         "korean_name": "금산",
-        "code": "0001B5C9",
-        "base": "소주",
+        "code": "167172169",
         "ingredients": [
             {
                 "name": "소주",
-                "code": "0101",
+                "code": "167",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "인삼 음료",
-                "code": "B501",
+                "code": "172",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
-                "code": "C901",
+                "code": "169",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -2209,31 +2022,28 @@
         "instructions": [
             "글라스에 소주, 인삼 음료, 사이다를 넣고 잘 섞는다.",
             "얼음을 추가해 제공한다."
-        ],
-        "tag1": "깊은맛",
-        "tag2": "전통적"
+        ]
     },
     {
         "english_name": "Gochang",
         "korean_name": "고창",
-        "code": "0001BJC9",
-        "base": "소주",
+        "code": "167173169",
         "ingredients": [
             {
                 "name": "소주",
-                "code": "0101",
+                "code": "167",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "복분자 주스",
-                "code": "BJ02",
+                "code": "173",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "사이다",
-                "code": "C901",
+                "code": "169",
                 "amount": "50",
                 "unit": "ml"
             }
@@ -2241,31 +2051,28 @@
         "instructions": [
             "글라스에 소주, 복분자 주스, 사이다를 넣고 잘 섞는다.",
             "얼음을 추가해 제공한다."
-        ],
-        "tag1": "베리향",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "Moscow Mule",
+        "english_name": "Moscow-Mule",
         "korean_name": "모스코 뮬",
-        "code": "70E7LJFE",
-        "base": "보드카",
+        "code": "113107174",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "진저 비어",
-                "code": "FE03",
+                "code": "174",
                 "amount": "120",
                 "unit": "ml"
             }
@@ -2274,31 +2081,28 @@
             "컵에 얼음과 보드카, 라임 주스를 넣는다.",
             "진저 비어를 부어 섞는다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "강렬"
+        ]
     },
     {
-        "english_name": "Piña Colada",
+        "english_name": "Piña-Colada",
         "korean_name": "피나 콜라다",
-        "code": "8082B9C1",
-        "base": "화이트 럼",
+        "code": "111175106",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 크림",
-                "code": "B902",
+                "code": "175",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -2307,37 +2111,34 @@
             "블렌더에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 글라스에 따라낸다.",
             "파인애플 웨지와 체리로 장식한다."
-        ],
-        "tag1": "코코넛",
-        "tag2": "트로피칼"
+        ]
     },
     {
-        "english_name": "Pisco Sour",
+        "english_name": "Pisco-Sour",
         "korean_name": "피스코 사워",
-        "code": "00C5MJSSEW",
-        "base": "피스코",
+        "code": "176122112129",
         "ingredients": [
             {
                 "name": "피스코",
-                "code": "C501",
+                "code": "176",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "달걀 흰자",
-                "code": "EW04",
+                "code": "129",
                 "amount": "1개",
                 "unit": ""
             }
@@ -2346,31 +2147,28 @@
             "셰이커에 얼음 없이 모든 재료를 넣고 드라이 셰이크한다.",
             "얼음을 추가하여 다시 셰이크한다.",
             "차가운 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "부드러움"
+        ]
     },
     {
-        "english_name": "Sea Breeze",
+        "english_name": "Sea-Breeze",
         "korean_name": "시브리즈",
-        "code": "70E7CJPJ",
-        "base": "보드카",
+        "code": "113156160",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
-                "code": "CJ02",
+                "code": "156",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
-                "code": "PJ02",
+                "code": "160",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -2378,37 +2176,34 @@
         "instructions": [
             "하이볼 글라스에 얼음과 모든 재료를 넣고 섞는다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "프루티",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Sex on the Beach",
+        "english_name": "Sex-on-the-Beach",
         "korean_name": "섹스 온 더 비치",
-        "code": "70E740CFCJ",
-        "base": "보드카",
+        "code": "113177136156",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "피치 리큐르",
-                "code": "4003",
+                "code": "177",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
-                "code": "CJ02",
+                "code": "156",
                 "amount": "40",
                 "unit": "ml"
             }
@@ -2416,61 +2211,58 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 섞는다.",
             "오렌지 슬라이스로 장식한다."
-        ],
-        "tag1": "프루티",
-        "tag2": "달콤"
+        ]
     },
     {
-        "english_name": "Singapore Sling",
+        "english_name": "Singapore-Sling",
         "korean_name": "싱가포르 슬링",
-        "code": "1011CECA40C1LJ4793",
-        "base": "드라이 진",
+        "code": "116178179125106107135134",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "체리 브랜디",
-                "code": "CE03",
+                "code": "178",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "베네딕틴",
-                "code": "CA01",
+                "code": "179",
                 "amount": "7.5",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "7.5",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
-                "name": "그레나딘",
-                "code": "4701",
+                "name": "그레나딘 시럽",
+                "code": "135",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "9306",
+                "code": "134",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -2479,31 +2271,28 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 글라스에 따라낸다.",
             "파인애플 웨지와 체리로 장식한다."
-        ],
-        "tag1": "복합미",
-        "tag2": "과일향"
+        ]
     },
     {
-        "english_name": "Tequila Sunrise",
+        "english_name": "Tequila-Sunrise",
         "korean_name": "테킬라 선라이즈",
-        "code": "50D1CFB6",
-        "base": "테킬라",
+        "code": "165136135",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "D103",
+                "code": "165",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "90",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2512,31 +2301,28 @@
             "글라스에 얼음을 넣고 테킬라와 오렌지 주스를 부어 섞는다.",
             "그레나딘 시럽을 천천히 부어 층을 만든다.",
             "오렌지 슬라이스로 장식한다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "트로피칼"
+        ]
     },
     {
         "english_name": "Vesper",
         "korean_name": "베스퍼",
-        "code": "10F1E7EE",
-        "base": "진",
+        "code": "132113180",
         "ingredients": [
             {
                 "name": "진",
-                "code": "F103",
+                "code": "132",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "릴레 블랑",
-                "code": "EE01",
+                "code": "180",
                 "amount": "7.5",
                 "unit": "ml"
             }
@@ -2545,43 +2331,40 @@
             "믹싱 글라스에 얼음과 모든 재료를 넣고 잘 저어준다.",
             "차가운 마티니 글라스에 따라낸다.",
             "레몬 트위스트로 장식한다."
-        ],
-        "tag1": "드라이",
-        "tag2": "강렬"
+        ]
     },
     {
         "english_name": "Zombie",
         "korean_name": "좀비",
-        "code": "80DF8445LJB6",
-        "base": "다크 럼",
+        "code": "140181182107135",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "DF34",
+                "code": "140",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라이트 럼",
-                "code": "8403",
+                "code": "181",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 큐라소",
-                "code": "4501",
+                "code": "182",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -2589,43 +2372,40 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "파인애플 웨지와 체리로 장식한다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "강렬"
+        ]
     },
     {
         "english_name": "Barracuda",
         "korean_name": "바라쿠다",
-        "code": "80DF40C1LJ60",
-        "base": "다크 럼",
+        "code": "140159106107148",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "DF34",
+                "code": "140",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "갈리아노",
-                "code": "4001",
+                "code": "159",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "프로세코",
-                "code": "6001",
+                "code": "148",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -2633,31 +2413,28 @@
         "instructions": [
             "글라스에 얼음과 럼, 갈리아노, 주스를 넣고 섞는다.",
             "프로세코를 추가해 제공한다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "스파클링"
+        ]
     },
     {
-        "english_name": "Bee's Knees",
+        "english_name": "Bee's-Knees",
         "korean_name": "비스 니즈",
-        "code": "1011MJB4",
-        "base": "드라이 진",
+        "code": "116122183",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "꿀 시럽",
-                "code": "B402",
+                "code": "183",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2665,37 +2442,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "허브향",
-        "tag2": "새콤"
+        ]
     },
     {
         "english_name": "Bramble",
         "korean_name": "브램블",
-        "code": "1011MJSSB8",
-        "base": "드라이 진",
+        "code": "116122112184",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "블랙베리 리큐르",
-                "code": "B803",
+                "code": "184",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2704,37 +2478,34 @@
             "글라스에 얼음과 진, 레몬 주스, 설탕 시럽을 넣고 섞는다.",
             "블랙베리 리큐르를 천천히 부어 층을 만든다.",
             "블랙베리와 레몬 슬라이스로 장식한다."
-        ],
-        "tag1": "베리향",
-        "tag2": "프레쉬"
+        ]
     },
     {
-        "english_name": "Blue Hawaiian",
+        "english_name": "Blue-Hawaiian",
         "korean_name": "블루 하와이안",
-        "code": "808244B9C1",
-        "base": "화이트 럼",
+        "code": "111185175106",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "블루 큐라소",
-                "code": "4401",
+                "code": "185",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "코코넛 크림",
-                "code": "B902",
+                "code": "175",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -2743,31 +2514,28 @@
             "블렌더에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 글라스에 따라낸다.",
             "파인애플 웨지와 체리로 장식한다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "시원"
+        ]
     },
     {
         "english_name": "Canchanchara",
         "korean_name": "칸차차라",
-        "code": "8080LJHN",
-        "base": "럼",
+        "code": "186107183",
         "ingredients": [
             {
                 "name": "럼",
-                "code": "8003",
+                "code": "186",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "20",
                 "unit": "ml"
             },
             {
-                "name": "꿀",
-                "code": "HN02",
+                "name": "꿀 시럽",
+                "code": "183",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2775,31 +2543,28 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "허브향",
-        "tag2": "강렬"
+        ]
     },
     {
-        "english_name": "Dark 'n' Stormy",
+        "english_name": "Dark-'n'-Stormy",
         "korean_name": "다크 앤 스토미",
-        "code": "80DFFELJ",
-        "base": "다크 럼",
+        "code": "140174107",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "DF34",
+                "code": "140",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "진저 비어",
-                "code": "FE03",
+                "code": "174",
                 "amount": "120",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2807,31 +2572,28 @@
         "instructions": [
             "글라스에 얼음과 진저 비어를 넣고 럼을 천천히 부어 층을 만든다.",
             "라임 웨지로 장식한다."
-        ],
-        "tag1": "스파이시",
-        "tag2": "강렬"
+        ]
     },
     {
-        "english_name": "Espresso Martini",
+        "english_name": "Espresso-Martini",
         "korean_name": "에스프레소 마티니",
-        "code": "70E7EPBC",
-        "base": "보드카",
+        "code": "113187100",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "에스프레소",
-                "code": "EP01",
+                "code": "187",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "커피 리큐르",
-                "code": "BC24",
+                "code": "100",
                 "amount": "20",
                 "unit": "ml"
             }
@@ -2840,25 +2602,22 @@
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 마티니 글라스에 따라낸다.",
             "커피 원두로 장식한다."
-        ],
-        "tag1": "커피향",
-        "tag2": "부드러움"
+        ]
     },
     {
-        "english_name": "Fernet con Cola",
+        "english_name": "Fernet-con-Cola",
         "korean_name": "페르난디토",
-        "code": "009307",
-        "base": "페르넷 브랑카",
+        "code": "131157",
         "ingredients": [
             {
                 "name": "페르넷 브랑카",
-                "code": "9336",
+                "code": "131",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "콜라",
-                "code": "0701",
+                "code": "157",
                 "amount": "150",
                 "unit": "ml"
             }
@@ -2867,31 +2626,28 @@
             "하이볼 글라스에 얼음을 채운다.",
             "페르넷 브랑카와 콜라를 부어 섞는다.",
             "레몬 웨지로 장식한다."
-        ],
-        "tag1": "허브향",
-        "tag2": "독특함"
+        ]
     },
     {
-        "english_name": "French Martini",
+        "english_name": "French-Martini",
         "korean_name": "프렌치 마티니",
-        "code": "70E7C1CC",
-        "base": "보드카",
+        "code": "113106164",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "크렘 드 카시스",
-                "code": "CC01",
+                "code": "164",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2899,37 +2655,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 마티니 글라스에 따라낸다."
-        ],
-        "tag1": "프루티",
-        "tag2": "달콤"
+        ]
     },
     {
         "english_name": "Illegal",
         "korean_name": "일레갈",
-        "code": "00F5A5MJB4",
-        "base": "메스칼",
+        "code": "188133122183",
         "ingredients": [
             {
                 "name": "메스칼",
-                "code": "F501",
+                "code": "188",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
-                "code": "A523",
+                "code": "133",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "꿀 시럽",
-                "code": "B402",
+                "code": "183",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2937,31 +2690,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "강렬",
-        "tag2": "스파이시"
+        ]
     },
     {
-        "english_name": "Lemon Drop Martini",
+        "english_name": "Lemon-Drop-Martini",
         "korean_name": "레몬 드롭 마티니",
-        "code": "70E7MJSS",
-        "base": "보드카",
+        "code": "113122112",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -2970,37 +2720,34 @@
             "칵테일 글라스 가장자리를 설탕으로 리밍한다.",
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Naked and Famous",
+        "english_name": "Naked-and-Famous",
         "korean_name": "네이키드 앤 페이머스",
-        "code": "00F5A540LJ",
-        "base": "메스칼",
+        "code": "188133189107",
         "ingredients": [
             {
                 "name": "메스칼",
-                "code": "F501",
+                "code": "188",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "녹색 샤르트뢰즈",
-                "code": "A523",
+                "code": "133",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "아페롤",
-                "code": "4001",
+                "code": "189",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -3008,37 +2755,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "강렬",
-        "tag2": "복합미"
+        ]
     },
     {
-        "english_name": "New York",
+        "english_name": "New-York",
         "korean_name": "뉴욕",
-        "code": "2021MJSSB6",
-        "base": "버번 위스키",
+        "code": "126122112135",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "그레나딘 시럽",
-                "code": "B602",
+                "code": "135",
                 "amount": "몇 방울",
                 "unit": ""
             }
@@ -3046,37 +2790,34 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "스모키",
-        "tag2": "우아"
+        ]
     },
     {
-        "english_name": "New York Sour",
+        "english_name": "New-York-Sour",
         "korean_name": "뉴욕 사워",
-        "code": "2021MJSSC4",
-        "base": "버번 위스키",
+        "code": "126122112190",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "레드 와인",
-                "code": "C403",
+                "code": "190",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -3084,43 +2825,40 @@
         "instructions": [
             "셰이커에 얼음과 위스키, 레몬 주스, 설탕 시럽을 넣고 섞는다.",
             "차가운 글라스에 따라낸 후 레드 와인을 천천히 부어 층을 만든다."
-        ],
-        "tag1": "새콤",
-        "tag2": "깊은맛"
+        ]
     },
     {
-        "english_name": "Old Cuban",
+        "english_name": "Old-Cuban",
         "korean_name": "올드 큐반",
-        "code": "80DFLJSSC764",
-        "base": "다크 럼",
+        "code": "140107112166155",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "DF34",
+                "code": "140",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "10",
                 "unit": "ml"
             },
             {
                 "name": "민트 잎",
-                "code": "C701",
+                "code": "166",
                 "amount": "6",
                 "unit": "장"
             },
             {
                 "name": "샴페인",
-                "code": "6405",
+                "code": "155",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -3128,37 +2866,34 @@
         "instructions": [
             "셰이커에 얼음과 럼, 라임 주스, 설탕 시럽, 민트 잎을 넣고 잘 섞는다.",
             "샴페인 글라스에 따라낸 후 샴페인을 추가한다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "클래식"
+        ]
     },
     {
         "english_name": "Paloma",
         "korean_name": "팔로마",
-        "code": "50D1PJ06LJ",
-        "base": "테킬라",
+        "code": "165160119107",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "D103",
+                "code": "165",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "자몽 주스",
-                "code": "PJ02",
+                "code": "160",
                 "amount": "100",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "10",
                 "unit": "ml"
             }
@@ -3166,37 +2901,34 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "자몽 슬라이스로 장식한다."
-        ],
-        "tag1": "시트러스",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Paper Plane",
+        "english_name": "Paper-Plane",
         "korean_name": "페이퍼 플레인",
-        "code": "20214090MJ",
-        "base": "버번 위스키",
+        "code": "126189191122",
         "ingredients": [
             {
                 "name": "버번 위스키",
-                "code": "2134",
+                "code": "126",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "아페롤",
-                "code": "4001",
+                "code": "189",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "아마로 논리노",
-                "code": "9001",
+                "code": "191",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "30",
                 "unit": "ml"
             }
@@ -3204,43 +2936,40 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "새콤",
-        "tag2": "복합미"
+        ]
     },
     {
-        "english_name": "Russian Spring Punch",
+        "english_name": "Russian-Spring-Punch",
         "korean_name": "러시안 스프링 펀치",
-        "code": "70E7MJSSCJD4",
-        "base": "보드카",
+        "code": "113122112156192",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "25",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
-                "code": "CJ02",
+                "code": "156",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스파클링 와인",
-                "code": "D403",
+                "code": "192",
                 "amount": "적당량",
                 "unit": ""
             }
@@ -3248,37 +2977,34 @@
         "instructions": [
             "셰이커에 얼음과 보드카, 레몬 주스, 설탕 시럽, 크랜베리 주스를 넣고 섞는다.",
             "하이볼 글라스에 따라낸 후 스파클링 와인을 추가한다."
-        ],
-        "tag1": "프루티",
-        "tag2": "스파클링"
+        ]
     },
     {
         "english_name": "Southside",
         "korean_name": "사우스사이드",
-        "code": "1011MJSSC7",
-        "base": "드라이 진",
+        "code": "116122112166",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "1131",
+                "code": "116",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "레몬 주스",
-                "code": "MJ01",
+                "code": "122",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "설탕 시럽",
-                "code": "SS02",
+                "code": "112",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "민트 잎",
-                "code": "C701",
+                "code": "166",
                 "amount": "몇 장",
                 "unit": ""
             }
@@ -3286,31 +3012,28 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "민트",
-        "tag2": "프레쉬"
+        ]
     },
     {
         "english_name": "Spritz",
         "korean_name": "스프리츠",
-        "code": "0040D406",
-        "base": "아페롤",
+        "code": "189192119",
         "ingredients": [
             {
                 "name": "아페롤",
-                "code": "4001",
+                "code": "189",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "스파클링 와인",
-                "code": "D403",
+                "code": "192",
                 "amount": "75",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "25",
                 "unit": "ml"
             }
@@ -3319,31 +3042,28 @@
             "와인 글라스에 얼음을 채운다.",
             "모든 재료를 넣고 잘 섞는다.",
             "오렌지 슬라이스로 장식한다."
-        ],
-        "tag1": "스파클링",
-        "tag2": "상쾌함"
+        ]
     },
     {
-        "english_name": "Sweet Dream",
+        "english_name": "Sweet-Dream",
         "korean_name": "스위트 드림",
-        "code": "0042E4MK",
-        "base": "베일리스",
+        "code": "193158194",
         "ingredients": [
             {
                 "name": "베일리스",
-                "code": "4201",
+                "code": "193",
                 "amount": "40",
                 "unit": "ml"
             },
             {
                 "name": "아마레토",
-                "code": "E401",
+                "code": "158",
                 "amount": "20",
                 "unit": "ml"
             },
             {
                 "name": "우유",
-                "code": "MK04",
+                "code": "194",
                 "amount": "60",
                 "unit": "ml"
             }
@@ -3351,31 +3071,28 @@
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 섞는다.",
             "민트 잎으로 장식한다."
-        ],
-        "tag1": "달콤",
-        "tag2": "부드러움"
+        ]
     },
     {
         "english_name": "Tiffany",
         "korean_name": "티파니",
-        "code": "0044E7C1",
-        "base": "블루 큐라소",
+        "code": "185113106",
         "ingredients": [
             {
                 "name": "블루 큐라소",
-                "code": "4401",
+                "code": "185",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "파인애플 주스",
-                "code": "C121",
+                "code": "106",
                 "amount": "90",
                 "unit": "ml"
             }
@@ -3383,125 +3100,113 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "우아",
-        "tag2": "시트러스"
+        ]
     },
     {
         "english_name": "Trevi",
         "korean_name": "트레비",
-        "code": "70E7LJ06",
-        "base": "보드카",
+        "code": "113107119",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "E703",
+                "code": "113",
                 "amount": "50",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             },
             {
-                "name": "소다수",
-                "code": "0605",
+                "name": "탄산수",
+                "code": "119",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
             "하이볼 글라스에 얼음을 채운다.",
-            "보드카와 라임 주스를 넣고 소다수를 추가해 섞는다."
-        ],
-        "tag1": "탄산",
-        "tag2": "상쾌함"
+            "보드카와 라임 주스를 넣고 탄산수를 추가해 섞는다."
+        ]
     },
     {
         "english_name": "Vienna",
         "korean_name": "비엔나",
-        "code": "0006WC",
-        "base": "커피",
+        "code": "195110",
         "ingredients": [
             {
                 "name": "커피",
-                "code": "0601",
+                "code": "195",
                 "amount": "90",
                 "unit": "ml"
             },
             {
-                "name": "휘핑 크림",
-                "code": "WC02",
+                "name": "크림",
+                "code": "110",
                 "amount": "적당량",
                 "unit": ""
             }
         ],
         "instructions": [
-            "따뜻한 커피 위에 휘핑 크림을 올려 층을 만든다."
-        ],
-        "tag1": "커피향",
-        "tag2": "부드러움"
+            "따뜻한 커피 위에 크림을 올려 층을 만든다."
+        ]
     },
     {
-        "english_name": "Winter Sun",
+        "english_name": "Winter-Sun",
         "korean_name": "윈터 선",
-        "code": "00E4CFCJ",
-        "base": "아마레토",
+        "code": "158136156",
         "ingredients": [
             {
                 "name": "아마레토",
-                "code": "E401",
+                "code": "158",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "오렌지 주스",
-                "code": "CF21",
+                "code": "136",
                 "amount": "60",
                 "unit": "ml"
             },
             {
                 "name": "크랜베리 주스",
-                "code": "CJ02",
+                "code": "156",
                 "amount": "30",
                 "unit": "ml"
             }
         ],
         "instructions": [
             "글라스에 얼음과 모든 재료를 넣고 섞는다."
-        ],
-        "tag1": "따뜻함",
-        "tag2": "스파이시"
+        ]
     },
     {
-        "english_name": "Yellow Bird",
+        "english_name": "Yellow-Bird",
         "korean_name": "옐로우 버드",
-        "code": "80824040LJ",
-        "base": "화이트 럼",
+        "code": "111159125107",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "8203",
+                "code": "111",
                 "amount": "30",
                 "unit": "ml"
             },
             {
                 "name": "갈리아노",
-                "code": "4001",
+                "code": "159",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "트리플 섹",
-                "code": "4021",
+                "code": "125",
                 "amount": "15",
                 "unit": "ml"
             },
             {
                 "name": "라임 주스",
-                "code": "LJ01",
+                "code": "107",
                 "amount": "15",
                 "unit": "ml"
             }
@@ -3509,8 +3214,6 @@
         "instructions": [
             "셰이커에 얼음과 모든 재료를 넣고 잘 섞는다.",
             "차가운 칵테일 글라스에 따라낸다."
-        ],
-        "tag1": "트로피칼",
-        "tag2": "상쾌함"
+        ]
     }
 ]
