@@ -25,8 +25,8 @@ for recipe in allRecipes:
             if recipeIng["name"] == ing["name"]:
                 ingDict["name"] = ing["name"]
                 ingDict["code"] = ing["code"]
-                ingDict["amount"] = recipeIng["name"]
-                ingDict["unit"] = recipeIng["name"]
+                ingDict["amount"] = recipeIng["amount"]
+                ingDict["unit"] = recipeIng["unit"]
                 ingList.append(ingDict)
 
     code = ""
