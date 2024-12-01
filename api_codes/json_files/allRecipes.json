@@ -77,11 +77,11 @@
     {
         "english_name": "Alexander",
         "korean_name": "알렉산더",
-        "code": "108109110",
+        "code": "700109110",
         "ingredients": [
             {
                 "name": "브랜디",
-                "code": "108",
+                "code": "700",
                 "amount": "브랜디",
                 "unit": "브랜디"
             },
@@ -109,11 +109,11 @@
     {
         "english_name": "Bacardi",
         "korean_name": "바카디",
-        "code": "111107112",
+        "code": "401107112",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -140,11 +140,11 @@
     {
         "english_name": "Apple-Martini",
         "korean_name": "애플 마티니",
-        "code": "113207107",
+        "code": "600207107",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -171,17 +171,17 @@
     {
         "english_name": "Apricot-Cocktail",
         "korean_name": "애프리콧 칵테일",
-        "code": "108116107",
+        "code": "701301107",
         "ingredients": [
             {
                 "name": "살구 브랜디",
-                "code": "108",
+                "code": "701",
                 "amount": "살구 브랜디",
                 "unit": "살구 브랜디"
             },
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -234,23 +234,23 @@
     {
         "english_name": "Angel-Face",
         "korean_name": "엔젤 페이스",
-        "code": "116108108",
+        "code": "301701702",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
             {
                 "name": "살구 브랜디",
-                "code": "108",
+                "code": "701",
                 "amount": "살구 브랜디",
                 "unit": "살구 브랜디"
             },
             {
                 "name": "애플 브랜디",
-                "code": "108",
+                "code": "702",
                 "amount": "애플 브랜디",
                 "unit": "애플 브랜디"
             }
@@ -265,11 +265,11 @@
     {
         "english_name": "Aviation",
         "korean_name": "에비에이션",
-        "code": "116210122123",
+        "code": "301210122123",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -302,11 +302,11 @@
     {
         "english_name": "Between-the-Sheets",
         "korean_name": "비트윈 더 시츠",
-        "code": "111124125122",
+        "code": "401124125122",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -371,11 +371,11 @@
     {
         "english_name": "Brandy-Crusta",
         "korean_name": "브랜디 크러스타",
-        "code": "108122125112",
+        "code": "700122125112",
         "ingredients": [
             {
                 "name": "브랜디",
-                "code": "108",
+                "code": "700",
                 "amount": "브랜디",
                 "unit": "브랜디"
             },
@@ -409,11 +409,11 @@
     {
         "english_name": "Casino",
         "korean_name": "카지노",
-        "code": "116210122127",
+        "code": "301210122211",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -431,7 +431,7 @@
             },
             {
                 "name": "오렌지 비터스",
-                "code": "127",
+                "code": "211",
                 "amount": "오렌지 비터스",
                 "unit": "오렌지 비터스"
             }
@@ -447,11 +447,11 @@
     {
         "english_name": "Clover-Club",
         "korean_name": "클로버 클럽",
-        "code": "116128122129",
+        "code": "301128122129",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -485,11 +485,11 @@
     {
         "english_name": "Daiquiri",
         "korean_name": "다이키리",
-        "code": "111107112",
+        "code": "401107112",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -516,11 +516,11 @@
     {
         "english_name": "Dry-Martini",
         "korean_name": "드라이 마티니",
-        "code": "116130",
+        "code": "301130",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -542,11 +542,11 @@
     {
         "english_name": "Gin-Fizz",
         "korean_name": "진 피즈",
-        "code": "116122112119",
+        "code": "301122112119",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -579,11 +579,11 @@
     {
         "english_name": "Hanky-Panky",
         "korean_name": "행키 팽키",
-        "code": "116118131",
+        "code": "301118131",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -611,11 +611,11 @@
     {
         "english_name": "John-Collins",
         "korean_name": "존 콜린스",
-        "code": "132122112119",
+        "code": "300122112119",
         "ingredients": [
             {
                 "name": "진",
-                "code": "132",
+                "code": "300",
                 "amount": "진",
                 "unit": "진"
             },
@@ -649,11 +649,11 @@
     {
         "english_name": "Last-Word",
         "korean_name": "라스트 워드",
-        "code": "116133210107",
+        "code": "301133210107",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -686,7 +686,7 @@
     {
         "english_name": "Manhattan",
         "korean_name": "맨해튼",
-        "code": "100118134",
+        "code": "100118212",
         "ingredients": [
             {
                 "name": "버번 위스키",
@@ -702,7 +702,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             }
@@ -718,11 +718,11 @@
     {
         "english_name": "Martinez",
         "korean_name": "마르티네즈",
-        "code": "116118210127",
+        "code": "301118210211",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -740,7 +740,7 @@
             },
             {
                 "name": "오렌지 비터스",
-                "code": "127",
+                "code": "211",
                 "amount": "오렌지 비터스",
                 "unit": "오렌지 비터스"
             }
@@ -756,11 +756,11 @@
     {
         "english_name": "Mary-Pickford",
         "korean_name": "메리 픽퍼드",
-        "code": "111106210135",
+        "code": "401106210135",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -793,11 +793,11 @@
     {
         "english_name": "Monkey-Gland",
         "korean_name": "몽키 글랜드",
-        "code": "116136135137",
+        "code": "301136135137",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -830,11 +830,11 @@
     {
         "english_name": "Negroni",
         "korean_name": "네그로니",
-        "code": "116117118",
+        "code": "301117118",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -862,7 +862,7 @@
     {
         "english_name": "Old-Fashioned",
         "korean_name": "올드 패션드",
-        "code": "100138134139",
+        "code": "100138212139",
         "ingredients": [
             {
                 "name": "버번 위스키",
@@ -878,7 +878,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             },
@@ -900,17 +900,17 @@
     {
         "english_name": "Paradise",
         "korean_name": "파라다이스",
-        "code": "116108136",
+        "code": "301701136",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
             {
                 "name": "살구 브랜디",
-                "code": "108",
+                "code": "701",
                 "amount": "살구 브랜디",
                 "unit": "살구 브랜디"
             },
@@ -931,11 +931,11 @@
     {
         "english_name": "Planter's-Punch",
         "korean_name": "플랜터스 펀치",
-        "code": "111122112135",
+        "code": "402122112135",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "111",
+                "code": "402",
                 "amount": "다크 럼",
                 "unit": "다크 럼"
             },
@@ -968,17 +968,17 @@
     {
         "english_name": "Porto-Flip",
         "korean_name": "포르토 플립",
-        "code": "141108142",
+        "code": "801700142",
         "ingredients": [
             {
                 "name": "포트 와인",
-                "code": "141",
+                "code": "801",
                 "amount": "포트 와인",
                 "unit": "포트 와인"
             },
             {
                 "name": "브랜디",
-                "code": "108",
+                "code": "700",
                 "amount": "브랜디",
                 "unit": "브랜디"
             },
@@ -1000,11 +1000,11 @@
     {
         "english_name": "Ramos-Gin-Fizz",
         "korean_name": "라모스 진 피즈",
-        "code": "116122107112110129143119",
+        "code": "301122107112110129143119",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -1087,7 +1087,7 @@
     {
         "english_name": "Sazerac",
         "korean_name": "사제락",
-        "code": "100134137138",
+        "code": "100212137138",
         "ingredients": [
             {
                 "name": "라이 위스키",
@@ -1097,7 +1097,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             },
@@ -1182,11 +1182,11 @@
     {
         "english_name": "Tuxedo",
         "korean_name": "턱시도",
-        "code": "116130137127",
+        "code": "301130137211",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -1204,7 +1204,7 @@
             },
             {
                 "name": "오렌지 비터스",
-                "code": "127",
+                "code": "211",
                 "amount": "오렌지 비터스",
                 "unit": "오렌지 비터스"
             }
@@ -1220,7 +1220,7 @@
     {
         "english_name": "Vieux-Carré",
         "korean_name": "비에우 카레",
-        "code": "100124118134",
+        "code": "100124118212",
         "ingredients": [
             {
                 "name": "라이 위스키",
@@ -1242,7 +1242,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             }
@@ -1289,11 +1289,11 @@
     {
         "english_name": "White-Lady",
         "korean_name": "화이트 레이디",
-        "code": "116125122",
+        "code": "301125122",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -1345,11 +1345,11 @@
     {
         "english_name": "Black-Russian",
         "korean_name": "블랙 러시안",
-        "code": "113201",
+        "code": "600201",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -1369,11 +1369,11 @@
     {
         "english_name": "Bloody-Mary",
         "korean_name": "블러디 메리",
-        "code": "113150122151152",
+        "code": "600150122151152",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -1445,7 +1445,7 @@
     {
         "english_name": "Champagne-Cocktail",
         "korean_name": "샴페인 칵테일",
-        "code": "155138134",
+        "code": "155138212",
         "ingredients": [
             {
                 "name": "샴페인",
@@ -1461,7 +1461,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             }
@@ -1477,11 +1477,11 @@
     {
         "english_name": "Cosmopolitan",
         "korean_name": "코스모폴리탄",
-        "code": "113125107156",
+        "code": "600125107156",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -1515,11 +1515,11 @@
     {
         "english_name": "Cuba-Libre",
         "korean_name": "쿠바 리브레",
-        "code": "111157107",
+        "code": "401157107",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -1546,11 +1546,11 @@
     {
         "english_name": "French-75",
         "korean_name": "프렌치 75",
-        "code": "116122112155",
+        "code": "301122112155",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -1631,11 +1631,11 @@
     {
         "english_name": "Godmother",
         "korean_name": "갓마더",
-        "code": "113158",
+        "code": "600158",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -1723,11 +1723,11 @@
     {
         "english_name": "Hemingway-Special",
         "korean_name": "헤밍웨이 스페셜",
-        "code": "111210107160",
+        "code": "401210107160",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -1797,11 +1797,11 @@
     {
         "english_name": "Kir",
         "korean_name": "키르",
-        "code": "163164",
+        "code": "802164",
         "ingredients": [
             {
                 "name": "화이트 와인",
-                "code": "163",
+                "code": "802",
                 "amount": "화이트 와인",
                 "unit": "화이트 와인"
             },
@@ -1822,29 +1822,29 @@
     {
         "english_name": "Long-Island-Iced-Tea",
         "korean_name": "롱 아일랜드 아이스 티",
-        "code": "113116111165125122112157",
+        "code": "600301401500125122112157",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
             {
                 "name": "테킬라",
-                "code": "165",
+                "code": "500",
                 "amount": "테킬라",
                 "unit": "테킬라"
             },
@@ -1884,11 +1884,11 @@
     {
         "english_name": "Mai-Tai",
         "korean_name": "마이타이",
-        "code": "111125136106135",
+        "code": "401125136106135",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -1928,11 +1928,11 @@
     {
         "english_name": "Margarita",
         "korean_name": "마가리타",
-        "code": "165125107",
+        "code": "500125107",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "165",
+                "code": "500",
                 "amount": "테킬라",
                 "unit": "테킬라"
             },
@@ -1985,11 +1985,11 @@
     {
         "english_name": "Mojito",
         "korean_name": "모히토",
-        "code": "111154166138119",
+        "code": "401154166138119",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -2184,11 +2184,11 @@
     {
         "english_name": "Moscow-Mule",
         "korean_name": "모스코 뮬",
-        "code": "113107174",
+        "code": "600107174",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2216,11 +2216,11 @@
     {
         "english_name": "Piña-Colada",
         "korean_name": "피나 콜라다",
-        "code": "111175106",
+        "code": "401175106",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -2286,11 +2286,11 @@
     {
         "english_name": "Sea-Breeze",
         "korean_name": "시브리즈",
-        "code": "113156160",
+        "code": "600156160",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2317,11 +2317,11 @@
     {
         "english_name": "Sex-on-the-Beach",
         "korean_name": "섹스 온 더 비치",
-        "code": "113209136156",
+        "code": "600209136156",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2354,17 +2354,17 @@
     {
         "english_name": "Singapore-Sling",
         "korean_name": "싱가포르 슬링",
-        "code": "116108179125106107135134",
+        "code": "301703179125106107135212",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
             {
                 "name": "체리 브랜디",
-                "code": "108",
+                "code": "703",
                 "amount": "체리 브랜디",
                 "unit": "체리 브랜디"
             },
@@ -2400,7 +2400,7 @@
             },
             {
                 "name": "앙고스투라 비터스",
-                "code": "134",
+                "code": "212",
                 "amount": "앙고스투라 비터스",
                 "unit": "앙고스투라 비터스"
             }
@@ -2416,11 +2416,11 @@
     {
         "english_name": "Tequila-Sunrise",
         "korean_name": "테킬라 선라이즈",
-        "code": "165136135",
+        "code": "500136135",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "165",
+                "code": "500",
                 "amount": "테킬라",
                 "unit": "테킬라"
             },
@@ -2448,17 +2448,17 @@
     {
         "english_name": "Vesper",
         "korean_name": "베스퍼",
-        "code": "132113180",
+        "code": "300600180",
         "ingredients": [
             {
                 "name": "진",
-                "code": "132",
+                "code": "300",
                 "amount": "진",
                 "unit": "진"
             },
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2480,17 +2480,17 @@
     {
         "english_name": "Zombie",
         "korean_name": "좀비",
-        "code": "111111182107135",
+        "code": "402403182107135",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "111",
+                "code": "402",
                 "amount": "다크 럼",
                 "unit": "다크 럼"
             },
             {
                 "name": "라이트 럼",
-                "code": "111",
+                "code": "403",
                 "amount": "라이트 럼",
                 "unit": "라이트 럼"
             },
@@ -2523,11 +2523,11 @@
     {
         "english_name": "Barracuda",
         "korean_name": "바라쿠다",
-        "code": "111159106107148",
+        "code": "402159106107148",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "111",
+                "code": "402",
                 "amount": "다크 럼",
                 "unit": "다크 럼"
             },
@@ -2566,11 +2566,11 @@
     {
         "english_name": "Bee's-Knees",
         "korean_name": "비스 니즈",
-        "code": "116122183",
+        "code": "301122183",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -2597,11 +2597,11 @@
     {
         "english_name": "Bramble",
         "korean_name": "브램블",
-        "code": "116122112208",
+        "code": "301122112208",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -2635,11 +2635,11 @@
     {
         "english_name": "Blue-Hawaiian",
         "korean_name": "블루 하와이안",
-        "code": "111185175106",
+        "code": "401185175106",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },
@@ -2673,11 +2673,11 @@
     {
         "english_name": "Canchanchara",
         "korean_name": "칸차차라",
-        "code": "111107183",
+        "code": "400107183",
         "ingredients": [
             {
                 "name": "럼",
-                "code": "111",
+                "code": "400",
                 "amount": "럼",
                 "unit": "럼"
             },
@@ -2704,11 +2704,11 @@
     {
         "english_name": "Dark-'n'-Stormy",
         "korean_name": "다크 앤 스토미",
-        "code": "111174107",
+        "code": "402174107",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "111",
+                "code": "402",
                 "amount": "다크 럼",
                 "unit": "다크 럼"
             },
@@ -2735,11 +2735,11 @@
     {
         "english_name": "Espresso-Martini",
         "korean_name": "에스프레소 마티니",
-        "code": "113187201",
+        "code": "600187201",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2793,11 +2793,11 @@
     {
         "english_name": "French-Martini",
         "korean_name": "프렌치 마티니",
-        "code": "113106164",
+        "code": "600106164",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2861,11 +2861,11 @@
     {
         "english_name": "Lemon-Drop-Martini",
         "korean_name": "레몬 드롭 마티니",
-        "code": "113122112",
+        "code": "600122112",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -2967,7 +2967,7 @@
     {
         "english_name": "New-York-Sour",
         "korean_name": "뉴욕 사워",
-        "code": "100122112190",
+        "code": "100122112803",
         "ingredients": [
             {
                 "name": "버번 위스키",
@@ -2989,7 +2989,7 @@
             },
             {
                 "name": "레드 와인",
-                "code": "190",
+                "code": "803",
                 "amount": "레드 와인",
                 "unit": "레드 와인"
             }
@@ -3004,11 +3004,11 @@
     {
         "english_name": "Old-Cuban",
         "korean_name": "올드 큐반",
-        "code": "111107112166155",
+        "code": "402107112166155",
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "111",
+                "code": "402",
                 "amount": "다크 럼",
                 "unit": "다크 럼"
             },
@@ -3047,11 +3047,11 @@
     {
         "english_name": "Paloma",
         "korean_name": "팔로마",
-        "code": "165160119107",
+        "code": "500160119107",
         "ingredients": [
             {
                 "name": "테킬라",
-                "code": "165",
+                "code": "500",
                 "amount": "테킬라",
                 "unit": "테킬라"
             },
@@ -3084,7 +3084,7 @@
     {
         "english_name": "Paper-Plane",
         "korean_name": "페이퍼 플레인",
-        "code": "100189191122",
+        "code": "100189901122",
         "ingredients": [
             {
                 "name": "버번 위스키",
@@ -3100,7 +3100,7 @@
             },
             {
                 "name": "아마로 논리노",
-                "code": "191",
+                "code": "901",
                 "amount": "아마로 논리노",
                 "unit": "아마로 논리노"
             },
@@ -3121,11 +3121,11 @@
     {
         "english_name": "Russian-Spring-Punch",
         "korean_name": "러시안 스프링 펀치",
-        "code": "113122112156192",
+        "code": "600122112156804",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -3149,7 +3149,7 @@
             },
             {
                 "name": "스파클링 와인",
-                "code": "192",
+                "code": "804",
                 "amount": "스파클링 와인",
                 "unit": "스파클링 와인"
             }
@@ -3164,11 +3164,11 @@
     {
         "english_name": "Southside",
         "korean_name": "사우스사이드",
-        "code": "116122112166",
+        "code": "301122112166",
         "ingredients": [
             {
                 "name": "드라이 진",
-                "code": "116",
+                "code": "301",
                 "amount": "드라이 진",
                 "unit": "드라이 진"
             },
@@ -3201,7 +3201,7 @@
     {
         "english_name": "Spritz",
         "korean_name": "스프리츠",
-        "code": "189192119",
+        "code": "189804119",
         "ingredients": [
             {
                 "name": "아페롤",
@@ -3211,7 +3211,7 @@
             },
             {
                 "name": "스파클링 와인",
-                "code": "192",
+                "code": "804",
                 "amount": "스파클링 와인",
                 "unit": "스파클링 와인"
             },
@@ -3264,7 +3264,7 @@
     {
         "english_name": "Tiffany",
         "korean_name": "티파니",
-        "code": "185113106",
+        "code": "185600106",
         "ingredients": [
             {
                 "name": "블루 큐라소",
@@ -3274,7 +3274,7 @@
             },
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -3295,11 +3295,11 @@
     {
         "english_name": "Trevi",
         "korean_name": "트레비",
-        "code": "113107119",
+        "code": "600107119",
         "ingredients": [
             {
                 "name": "보드카",
-                "code": "113",
+                "code": "600",
                 "amount": "보드카",
                 "unit": "보드카"
             },
@@ -3380,11 +3380,11 @@
     {
         "english_name": "Yellow-Bird",
         "korean_name": "옐로우 버드",
-        "code": "111159125107",
+        "code": "401159125107",
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "111",
+                "code": "401",
                 "amount": "화이트 럼",
                 "unit": "화이트 럼"
             },

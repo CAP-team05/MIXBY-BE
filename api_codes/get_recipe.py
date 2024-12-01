@@ -31,7 +31,7 @@ def search_byings(codes):
         recipe_codes = list(map(''.join, zip(*[iter(recipe["code"])]*3)))
         cnt = 0
         for i in input_codes:
-            if i in recipe_codes:
+            if i[:2] == recipe_codes[:2]:
                 cnt += 1
                 print(cnt)
                 
