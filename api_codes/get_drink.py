@@ -21,9 +21,7 @@ def search_bytype(keyword):
     temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
     return temp_list
 
-def search_bycode(keyword):
-    temp_list = []
-    for j in all_drinks:
-        if keyword == j["code"] and j not in temp_list: temp_list.append(j)
-    temp_list.insert(0, "Total result found : {}".format(len(temp_list)))
-    return temp_list
+def search_bycode(code):
+    for d in all_drinks:
+        if code == d["code"]: return d
+    return "no result found"
