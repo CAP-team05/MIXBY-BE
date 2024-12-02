@@ -19,17 +19,15 @@ def search_bycode(code):
 
 def search_byings(codes):
     temp_list = []
-
-    input_codes = list(map(''.join, zip(*[iter(codes)]*3)))
-    print(input_codes)
-
+    ing_list = []
+    
     for recipe in all_recipes:
-        recipe_codes = list(map(''.join, zip(*[iter(recipe["code"])]*3)))
-        cnt = 0
-        for i in input_codes:
-            for j in recipe_codes:
-                if i[:2] == j[:2]:
-                    cnt += 1
+        rc = recipe["code"]
+        recipe_codes = [rc[i:i+3] for i in range(0, len(rc), 3)]
+        input_codes = [codes[i:i+3] for i in range(0, len(codes), 3)]
+
+        matching_chunks = set(recipe_codes) & set(input_codes)
+        cnt = len(matching_chunks)
                 
         if cnt > 0:
             tempDict = {}
