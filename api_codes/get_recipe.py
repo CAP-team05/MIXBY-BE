@@ -12,14 +12,12 @@ def search_byname(name):
     return temp_list
 
 def search_bycode(code):
-    temp_list = []
     for j in all_recipes:
         if code == j["code"]: return j
     return "no result found"
 
 def search_byings(codes):
     temp_list = []
-    ing_list = []
     
     for recipe in all_recipes:
         rc = recipe["code"]

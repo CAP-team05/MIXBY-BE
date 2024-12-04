@@ -15,9 +15,8 @@ def getDrinkList(tasting_data):
     r = ""
     for item in tasting_data:
         _d = get_recipe.search_bycode(item["code"])
-        print(_d[1]["korean_name"])
         _str = "["
-        _str += _d[1]["korean_name"] + ", " + item["drinkDate"] + ", " + _d[1]["tag1"] + ", " + _d[1]["tag2"] + ", " + to_eval(item["eval"]) + ", " + to_eval(item["sweetness"]) + ", " + to_eval(item["sourness"]) + ", " + to_eval(item["alcohol"])
+        _str += _d["korean_name"] + ", " + item["drinkDate"] + ", " + _d["tag1"] + ", " + _d["tag2"] + ", " + to_eval(item["eval"]) + ", " + to_eval(item["sweetness"]) + ", " + to_eval(item["sourness"]) + ", " + to_eval(item["alcohol"])
         _str += "]"
         drinkList.append(_str)
     for i in drinkList:
