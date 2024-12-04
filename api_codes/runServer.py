@@ -15,7 +15,7 @@ def start():  # 함수의 이름은 중복만 되지 않으면 됨
 @app.route('/drink/all')
 def drinks():
     return app.response_class(
-        response=json.dumps(get_drink.getalldrinks(), indent=4),
+        response=json.dumps(get_drink.all_drinks, indent=4),
         mimetype='application/json'
     )
 # show drink image
@@ -55,7 +55,7 @@ def drink_type(type):
 @app.route('/recipe/all')
 def all_recipes():
     return app.response_class(
-        response=json.dumps(get_recipe.getallrecipes(), indent=4),
+        response=json.dumps(get_recipe.all_recipes, indent=4),
         mimetype='application/json'
     )
 # show recipe image
@@ -102,10 +102,12 @@ def ing_code(codes):
     )
 
 # show ingredient image
-@app.route('/ing/image=<name>')
-def ing_image(name=None):
-    return send_from_directory('static', 'ingredients/{}.png'.format(name))
-
+@app.route('/ing/all')
+def all_ingredients():
+    return app.response_class(
+        response=json.dumps(get_ingredients.all_ingredients, indent=4),
+        mimetype='application/json'
+    )
 
 def as_json(f):
     @wraps(f)
