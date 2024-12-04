@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, request, Response
 from functools import wraps
 
 import json
-import get_drink, get_recipe, get_ingredients, get_persona, get_weather
+import get_drink, get_recipe, get_ingredients, get_persona, get_weather, get_recommend
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
@@ -134,6 +134,21 @@ def userinfo():
 
     return ret
 
+@app.route('/recommend', methods=['POST'])
+@as_json
+def recommmend():
+    data = request.get_json()
+    print(data)
+    persona = data['persona']
+    cocktail_list = data['cocktail_list']
+    season = data['season']
+    time = data['time']
+    weather = data['weather']
+    
+    ret = get_recommend.getDefaultRecommend(persona, cocktail_list, season, time, weather)
+    
+    return ret
+
 @app.route('/weather', methods=['POST'])
 @as_json
 def weather():
@@ -143,7 +158,7 @@ def weather():
     
     ret = get_weather.get_weather_by_location(latitude, longitude)
     
-    return {'weather': ret['weather'][0]['description']}
+    return {'weather_id': ret['weather'][0]['id'], 'weather_desc': ret['weather'][0]['description']}
     
 
 if __name__ == '__main__':
