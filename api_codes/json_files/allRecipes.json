@@ -113,7 +113,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -306,7 +306,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "30",
                 "unit": "ml"
             },
@@ -489,7 +489,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -754,7 +754,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "60",
                 "unit": "ml"
             },
@@ -929,7 +929,7 @@
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "402",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -1507,7 +1507,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "50",
                 "unit": "ml"
             },
@@ -1715,7 +1715,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "60",
                 "unit": "ml"
             },
@@ -1826,7 +1826,7 @@
             },
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "15",
                 "unit": "ml"
             },
@@ -1876,7 +1876,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "37.5",
                 "unit": "ml"
             },
@@ -1977,7 +1977,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -2208,7 +2208,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -2472,13 +2472,13 @@
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "402",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
             {
                 "name": "라이트 럼",
-                "code": "403",
+                "code": "400",
                 "amount": "15",
                 "unit": "ml"
             },
@@ -2515,7 +2515,7 @@
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "402",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -2627,7 +2627,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -2696,7 +2696,7 @@
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "402",
+                "code": "400",
                 "amount": "60",
                 "unit": "ml"
             },
@@ -2996,7 +2996,7 @@
         "ingredients": [
             {
                 "name": "다크 럼",
-                "code": "402",
+                "code": "400",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -3372,7 +3372,7 @@
         "ingredients": [
             {
                 "name": "화이트 럼",
-                "code": "401",
+                "code": "400",
                 "amount": "30",
                 "unit": "ml"
             },
