@@ -182,7 +182,7 @@
     {
         "code": "0081128028862",
         "name": "브라운 페페로페즈G",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -263,7 +263,7 @@
     {
         "code": "0086395095005",
         "name": "송죽매 준마이",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "750ml",
         "alcohol": "15.0",
@@ -497,7 +497,7 @@
     {
         "code": "0728817199129",
         "name": "월계관 준마이",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "750ml",
         "alcohol": "15.6",
@@ -506,7 +506,7 @@
     {
         "code": "0811538010375",
         "name": "호세 1800 코코넛",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "35.0",
@@ -650,7 +650,7 @@
     {
         "code": "3024480001781",
         "name": "레미마틴 1738",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -659,7 +659,7 @@
     {
         "code": "3024482270123",
         "name": "레미마틴 VSOP",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -668,7 +668,7 @@
     {
         "code": "3028130076457",
         "name": "까뮤 VSOP",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -722,7 +722,7 @@
     {
         "code": "3245990001218",
         "name": "헤네시 XO",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "꼬냑",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -731,7 +731,7 @@
     {
         "code": "3245990969419",
         "name": "헤네시 VSOP",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "꼬냑",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -740,7 +740,7 @@
     {
         "code": "3760107310606",
         "name": "에이치 바이 하인 브이에스오피",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -749,7 +749,7 @@
     {
         "code": "3760107311887",
         "name": "에이치 바이 하인 하인볼 패키지",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -785,7 +785,7 @@
     {
         "code": "4062400543125",
         "name": "씨에라 데킬라 레포사도",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "700ml",
         "alcohol": "38.0",
@@ -812,7 +812,7 @@
     {
         "code": "4527054222159",
         "name": "후쿠이와이 유즈슈",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "7.5",
@@ -821,7 +821,7 @@
     {
         "code": "4532620001908",
         "name": "핫카이산 다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.5",
@@ -830,7 +830,7 @@
     {
         "code": "4571146740051",
         "name": "기꾸히메카요우 기꾸자케",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "17.5",
@@ -866,7 +866,7 @@
     {
         "code": "4901030056660",
         "name": "월계관 누벨쥰마이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.5",
@@ -875,7 +875,7 @@
     {
         "code": "4901030225660",
         "name": "월계관 카라구치팩",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "2L",
         "alcohol": "13.5",
@@ -884,7 +884,7 @@
     {
         "code": "4901309100568",
         "name": "카오리 하나야구 준마이",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "15.5",
@@ -893,7 +893,7 @@
     {
         "code": "4901309106294",
         "name": "와타루세켄 오니타이지",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "13.5",
@@ -902,7 +902,7 @@
     {
         "code": "4901410015201",
         "name": "하나 기자쿠라 준마이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "12.0",
@@ -911,7 +911,7 @@
     {
         "code": "4901410043396",
         "name": "센노유메",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "14.0",
@@ -920,7 +920,7 @@
     {
         "code": "4901410062175",
         "name": "카라구치 잇콘",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "14.0",
@@ -965,7 +965,7 @@
     {
         "code": "4902051018651",
         "name": "하쿠시카 호화 쥰마이 다이긴죠 천년수",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.7",
@@ -974,7 +974,7 @@
     {
         "code": "4902051022115",
         "name": "하쿠시카 쿠로마츠 쥰마이 모찌요단",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "14.5",
@@ -983,7 +983,7 @@
     {
         "code": "4902051032244",
         "name": "하쿠시카 쥰마이팩",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "14.5",
@@ -992,7 +992,7 @@
     {
         "code": "4902051340615",
         "name": "오제끼 스모",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "13.5",
@@ -1001,7 +1001,7 @@
     {
         "code": "4902650005335",
         "name": "하쿠쯔루 마루",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "13.5",
@@ -1010,7 +1010,7 @@
     {
         "code": "4902650032447",
         "name": "하쿠쯔루 다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.5",
@@ -1019,7 +1019,7 @@
     {
         "code": "4904670058278",
         "name": "시라신켄보리",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "25.0",
@@ -1028,7 +1028,7 @@
     {
         "code": "4904670216067",
         "name": "송죽매 미오",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "750ml",
         "alcohol": "5.0",
@@ -1037,7 +1037,7 @@
     {
         "code": "4904670280921",
         "name": "쇼치쿠바이 텐",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "500ml",
         "alcohol": "13.5",
@@ -1055,7 +1055,7 @@
     {
         "code": "4905991035221",
         "name": "코즈루 쿠로고구마",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "25.0",
@@ -1064,7 +1064,7 @@
     {
         "code": "4905991035238",
         "name": "쿠라노시콘고구마",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "25.0",
@@ -1082,7 +1082,7 @@
     {
         "code": "4932236172106",
         "name": "기모츠루 혼죠조 가라구치",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "14.5",
@@ -1091,7 +1091,7 @@
     {
         "code": "4934228900995",
         "name": "심백 야마다니시키 준마이다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -1100,7 +1100,7 @@
     {
         "code": "4935115400135",
         "name": "온나나카세 준마이 다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -1109,7 +1109,7 @@
     {
         "code": "4936446001089",
         "name": "닷사이 준마이다이긴죠 39",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -1118,7 +1118,7 @@
     {
         "code": "4936446010067",
         "name": "닷사이 45",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -1127,7 +1127,7 @@
     {
         "code": "4936446060154",
         "name": "닷사이 23",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -1145,7 +1145,7 @@
     {
         "code": "4940209222567",
         "name": "사쿠라 준마이",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.0",
@@ -1154,7 +1154,7 @@
     {
         "code": "4956764906804",
         "name": "아마부키 하쿠토우슈",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "8.0",
@@ -1163,7 +1163,7 @@
     {
         "code": "4971634004045",
         "name": "긴노츠카사 준마이다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "14.0",
@@ -1172,7 +1172,7 @@
     {
         "code": "4973766000897",
         "name": "간노꼬보리",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "25.0",
@@ -1244,7 +1244,7 @@
     {
         "code": "4977042240922",
         "name": "간바레오또상",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "900ml",
         "alcohol": "14.5",
@@ -1253,7 +1253,7 @@
     {
         "code": "4977042300749",
         "name": "간바레오또상 1.8L",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "1.8L",
         "alcohol": "14.5",
@@ -1262,7 +1262,7 @@
     {
         "code": "4977991372620",
         "name": "킨미야 소주",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "25.0",
@@ -1271,7 +1271,7 @@
     {
         "code": "4980444024663",
         "name": "후쿠쥬 준마이 긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.0",
@@ -1280,7 +1280,7 @@
     {
         "code": "4980573203526",
         "name": "조젠 미즈노코토시 준마이",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "17.5",
@@ -1289,7 +1289,7 @@
     {
         "code": "4980573303523",
         "name": "조젠 미즈노코토시 준마이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "14.5",
@@ -1298,7 +1298,7 @@
     {
         "code": "4984283000048",
         "name": "쿠보타 센쥬 준마이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.0",
@@ -1307,7 +1307,7 @@
     {
         "code": "4984283002028",
         "name": "쿠보타 만쥬",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.0",
@@ -1316,7 +1316,7 @@
     {
         "code": "4984283010023",
         "name": "쿠보타 센쥬",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.0",
@@ -1325,7 +1325,7 @@
     {
         "code": "4984283010030",
         "name": "쿠보타 센쥬",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "300ml",
         "alcohol": "15.0",
@@ -1334,7 +1334,7 @@
     {
         "code": "4990516014041",
         "name": "오또코야마 준마이다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
@@ -3341,7 +3341,7 @@
     {
         "code": "7501035010109",
         "name": "호세 쿠엘보",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "38.0",
@@ -3350,7 +3350,7 @@
     {
         "code": "7501035010192",
         "name": "호세 1800 레포사도",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -3359,7 +3359,7 @@
     {
         "code": "7501035010208",
         "name": "1800 아네호",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -3368,7 +3368,7 @@
     {
         "code": "7501035012219",
         "name": "호세쿠엘보 트레디셔널 레포사도",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "700ml",
         "alcohol": "38.0",
@@ -3386,7 +3386,7 @@
     {
         "code": "7501035042322",
         "name": "호세쿠엘보 실버",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "750ml",
         "alcohol": "38.0",
@@ -3395,7 +3395,7 @@
     {
         "code": "7501145233375",
         "name": "에라두라 플라타",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3404,7 +3404,7 @@
     {
         "code": "7501145233382",
         "name": "에라두라 레포사도",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3413,7 +3413,7 @@
     {
         "code": "7501145233399",
         "name": "에라두라 아네호",
-        "baseCode": "165",
+        "baseCode": "500",
         "type": "테킬라",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3827,7 +3827,7 @@
     {
         "code": "8801056543013",
         "name": "스카치블루 인터내셔널",
-        "baseCode": "108",
+        "baseCode": "700",
         "type": "브랜디",
         "volume": "450ml",
         "alcohol": "40.0",
@@ -3836,7 +3836,7 @@
     {
         "code": "8804009199522",
         "name": "다카시미즈 준마이다이긴죠",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "15.5",
@@ -3881,7 +3881,7 @@
     {
         "code": "8809500070306",
         "name": "닷사이 45 세트",
-        "baseCode": "167",
+        "baseCode": "930",
         "type": "사케",
         "volume": "720ml",
         "alcohol": "16.0",
