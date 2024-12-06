@@ -56,7 +56,7 @@
     {
         "code": "0080480280024",
         "name": "그레이구스 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -65,7 +65,7 @@
     {
         "code": "0080480280031",
         "name": "그레이구스 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "40.0",
@@ -74,7 +74,7 @@
     {
         "code": "0080480281038",
         "name": "그레이구스 오렌지",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -83,7 +83,7 @@
     {
         "code": "0080480282042",
         "name": "그레이구스 씨트론",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -92,7 +92,7 @@
     {
         "code": "0080480283339",
         "name": "그레이구스 포아",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -245,7 +245,7 @@
     {
         "code": "0085156275021",
         "name": "케틀원",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -524,7 +524,7 @@
     {
         "code": "0835229000803",
         "name": "앱솔루트 애플",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -533,7 +533,7 @@
     {
         "code": "0835229008809",
         "name": "앱솔루트 라즈베리",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "40.0",
@@ -542,7 +542,7 @@
     {
         "code": "0835229010420",
         "name": "앱솔루트 그레이프프루트",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "40.0",
@@ -776,7 +776,7 @@
     {
         "code": "4004752319201",
         "name": "단즈카 애플",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -938,7 +938,7 @@
     {
         "code": "4901777284920",
         "name": "하쿠 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3098,7 +3098,7 @@
     {
         "code": "5410316519724",
         "name": "스미노프 레드",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3107,7 +3107,7 @@
     {
         "code": "5788686120124",
         "name": "단즈카 크랜라즈",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -3116,7 +3116,7 @@
     {
         "code": "5788686123552",
         "name": "단즈카 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "750ml",
         "alcohol": "40.0",
@@ -3125,7 +3125,7 @@
     {
         "code": "6412709021776",
         "name": "핀란디아 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3242,7 +3242,7 @@
     {
         "code": "7312040017591",
         "name": "앱솔루트 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "40.0",
@@ -3251,7 +3251,7 @@
     {
         "code": "7312040017683",
         "name": "앱솔루트 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3260,7 +3260,7 @@
     {
         "code": "7312040070701",
         "name": "앱솔루트 어피치",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3269,7 +3269,7 @@
     {
         "code": "7312040150700",
         "name": "앱솔루트 페어",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3278,7 +3278,7 @@
     {
         "code": "7312040551668",
         "name": "앱솔루트 라임",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3287,7 +3287,7 @@
     {
         "code": "7312040551804",
         "name": "앱솔루트 액스트랙",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3296,7 +3296,7 @@
     {
         "code": "7312040551965",
         "name": "앱솔루트 라임",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "40.0",
@@ -3314,7 +3314,7 @@
     {
         "code": "7312040552153",
         "name": "앱솔루트 자몽",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3323,7 +3323,7 @@
     {
         "code": "7312040552573",
         "name": "앱솔루트 어피치",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "375ml",
         "alcohol": "38.0",
@@ -3332,7 +3332,7 @@
     {
         "code": "7312040552726",
         "name": "앱솔루트 워터멜론",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -3737,7 +3737,7 @@
     {
         "code": "8801027560032",
         "name": "길비스 보드카",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "37.5",
@@ -3764,7 +3764,7 @@
     {
         "code": "8801027880697",
         "name": "스미노프 레드",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "200ml",
         "alcohol": "40.0",
@@ -3773,7 +3773,7 @@
     {
         "code": "8801027880727",
         "name": "스미노프 그린애플",
-        "baseCode": "113",
+        "baseCode": "600",
         "type": "보드카",
         "volume": "700ml",
         "alcohol": "37.5",
