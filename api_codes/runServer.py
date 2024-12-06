@@ -109,6 +109,18 @@ def all_ingredients():
         mimetype='application/json'
     )
 
+@app.route('/weather/lat=<lat>/long=<long>')
+def weather_get(lat, long):
+    result = get_weather.get_weather_by_location(lat, long)
+    return app.response_class(
+        response=json.dumps(result, indent=4),
+        mimetype='application/json'
+    )
+
+
+
+# json file POST methods
+
 def as_json(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
