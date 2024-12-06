@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, request, Response
 from functools import wraps
 
 import json
-import get_drink, get_recipe, get_ingredients, get_persona, get_weather, get_recommend
+import get_drink, get_recipe, get_ingredients, get_persona, get_weather, get_recommend, get_challenges
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
@@ -106,6 +106,13 @@ def ing_code(codes):
 def all_ingredients():
     return app.response_class(
         response=json.dumps(get_ingredients.all_ingredients, indent=4),
+        mimetype='application/json'
+    )
+
+@app.route('/challenges/all')
+def all_challenges():
+    return app.response_class(
+        response=json.dumps(get_challenges.all_challenges, indent=4),
         mimetype='application/json'
     )
 
