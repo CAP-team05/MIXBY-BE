@@ -93,9 +93,9 @@ def recipe_with(codes):
     )
 
 # return random recipe for testing
-@app.route('recipe/random')
+@app.route('/recipe/random')
 def recipe_random():
-    info = get_recipe.all_recipes[random.randint(0, len(all_recipes))]
+    info = get_recipe.all_recipes[random.randint(0, len(get_recipe.all_recipes))]
     return app.response_class(
         response=json.dumps(info, indent=4),
         mimetype='application/json'
