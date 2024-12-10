@@ -72,4 +72,4 @@ def getDefaultRecommend(persona, cocktail_list, season, time, weather):
     formateed_json = json.dumps(j, ensure_ascii=False, indent=4)
     print(j)
 
-    return formateed_json
+    return formateed_json 
