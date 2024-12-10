@@ -6,7 +6,7 @@ with open('api_codes/json_files/allRecipes.json', 'r', encoding='UTF-8') as json
 
 def search_byname(name):
     for j in all_recipes:
-        if name == j["name"]:
+        if name == j["korean_name"]:
             return j
     return "no result found"
 
