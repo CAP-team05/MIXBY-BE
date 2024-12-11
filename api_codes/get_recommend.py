@@ -2,7 +2,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import json
-import get_recipe
+import match_cocktailname
 
 load_dotenv()
 
@@ -69,7 +69,9 @@ def getDefaultRecommend(persona, cocktail_list, season, time, weather):
     print(response)
     print("end of response\n")
     j = response.choices[0].message.content
-    formateed_json = json.dumps(j, ensure_ascii=False, indent=4)
-    print(j)
+    
+    matched_response = match_cocktailname.match_cocktail_in_json(cocktail_list, j)
+    formatted_json = json.dumps(matched_response, ensure_ascii=False, indent=4)
+    print(formatted_json)
 
-    return formateed_json 
+    return formatted_json
