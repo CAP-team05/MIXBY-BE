@@ -164,9 +164,9 @@ def userinfo():
 
     return ret
 
-@app.route('/recommend', methods=['POST'])
+@app.route('/recommend/<id>', methods=['POST'])
 @as_json
-def recommmend():
+def recommmend(id):
     data = request.get_json()
     print(data)
     persona = data['persona']
@@ -174,8 +174,15 @@ def recommmend():
     season = data['season']
     time = data['time']
     weather = data['weather']
-    
-    ret = get_recommend.getDefaultRecommend(persona, cocktail_list, season, time, weather)
+    print(type(id))
+    if (id == '0'):
+        ret = get_recommend.getDefaultRecommend(persona, cocktail_list, season, time, weather)
+    elif (id == '1'):
+        ret = get_recommend.getFeelingRecommend(persona, cocktail_list)
+    elif (id == '2'):
+        ret = get_recommend.getSituationRecommend(persona, cocktail_list)
+    else:
+        ret = {"error": "invalid id"}
     return ret
 
 @app.route('/weather', methods=['POST'])
