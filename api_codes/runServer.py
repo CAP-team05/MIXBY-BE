@@ -10,7 +10,7 @@ app.config['JSON_AS_ASCII'] = False  # 한글이 깨지지 않도록 설정
 
 @app.route('/')  # '/' 경로 접속 시 start 실행 (라우팅 이라고 부름)
 def start():  # 함수의 이름은 중복만 되지 않으면 됨
-    return send_from_directory('static', 'api_rules.png')
+    return send_from_directory('static', 'api_rules.md')
 
 # show all drink
 @app.route('/drink/all')
@@ -22,7 +22,7 @@ def drinks():
 # show drink image
 @app.route('/drink/image=<code>')
 def drink_image(code=None):
-    return send_from_directory('static', 'drinks/{}.png'.format(code))
+    return send_from_directory('static', f'drinks/{code}.png')
 
 # search drinks by <code>
 @app.route('/drink/code=<code>')
@@ -62,7 +62,7 @@ def all_recipes():
 # show recipe image
 @app.route('/recipe/image=<code>')
 def recipe_image(code=None):
-    return send_from_directory('static', 'recipes/{}.png'.format(code))
+    return send_from_directory('static', f'recipes/{code}.png')
 
 # search recipes by <name>
 @app.route('/recipe/name=<name>')
@@ -198,4 +198,4 @@ def weather():
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=2222, debug=True)  # app 실행
+    app.run(host='0.0.0.0', port=8080, debug=True)  # app 실행
