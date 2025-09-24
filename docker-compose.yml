@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  mixby-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8080
+      - LOG_LEVEL=INFO
+    volumes:
+      # 개발 시에만 사용 (코드 변경 사항 실시간 반영)
+      # - .:/app
+      # 로그 파일 영구 저장
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mixby-network
+
+  # 개발용 서비스 (필요시 주석 해제)
+  mixby-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=True
+      - API_HOST=0.0.0.0
+      - API_PORT=8080
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - .:/app
+    command: ["python", "run.py"]
+    profiles:
+      - dev
+    networks:
+      - mixby-network
+
+networks:
+  mixby-network:
+    driver: bridge
