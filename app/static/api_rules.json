@@ -1,0 +1,23 @@
+{
+"drink": {
+"all": "http://snsn.kr:8080/drink/all",
+"image": "http://snsn.kr:8080/drink/image={drink_code}",
+"search code": "http://snsn.kr:8080/drink/code={search_code}",
+"search name": "http://snsn.kr:8080/drink/name={search_name}",
+"search type": "http://snsn.kr:8080/drink/type={search_type}"
+},
+"recipe": {
+"all": "http://snsn.kr:8080/recipe/all",
+"image": "http://snsn.kr:8080/recipe/image={recipe_name}",
+"search code": "http://snsn.kr:8080/recipe/code={search_code}",
+"search codes": "http://snsn.kr:8080/recipe/with={search_codes}",
+"get random": "http://snsn.kr:8080/recipe/random"
+},
+"ingredients": {
+"all": "http://snsn.kr:8080/ingredients/all",
+"search codes": "http://snsn.kr:8080/ingredients/with={search_codes}"
+},
+"challenges": {
+"all": "http://snsn.kr:8080/challenges/all"
+}
+}
