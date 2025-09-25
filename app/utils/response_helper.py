@@ -129,3 +129,14 @@ class ResponseHelper:
 
 # 전역 응답 헬퍼 인스턴스
 response_helper = ResponseHelper()
+
+
+# 편의 함수들 (추천 서비스용)
+def success_response(data: Any, message: str = "성공", status_code: int = 200) -> Response:
+    """성공 응답을 생성하는 편의 함수"""
+    return ResponseHelper.success_response(data, message, status_code)
+
+
+def error_response(message: str, status_code: int = 400, error_code: str = None) -> Response:
+    """에러 응답을 생성하는 편의 함수"""
+    return ResponseHelper.error_response(message, status_code, error_code)

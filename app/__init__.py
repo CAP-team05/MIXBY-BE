@@ -45,9 +45,11 @@ def register_blueprints(app: Flask):
     """Blueprint들을 등록합니다."""
     from app.routes.drink_routes import drink_bp
     from app.routes.recipe_routes import recipe_bp
+    from app.routes.recommendation_routes import recommendation_bp
 
     app.register_blueprint(drink_bp)
     app.register_blueprint(recipe_bp)
+    app.register_blueprint(recommendation_bp, url_prefix='/api/recommendations')
 
 
 def register_error_handlers(app: Flask):

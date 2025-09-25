@@ -215,3 +215,28 @@ class InputValidator:
 
 # 전역 검증기 인스턴스
 validator = InputValidator()
+
+
+def validate_required_fields(data: Dict[str, Any], required_fields: List[str]) -> Optional[str]:
+    """
+    필수 필드가 모두 존재하는지 검증합니다.
+    
+    Args:
+        data: 검증할 데이터 딕셔너리
+        required_fields: 필수 필드 목록
+        
+    Returns:
+        에러 메시지 (없으면 None)
+    """
+    if not data:
+        return "요청 데이터가 필요합니다."
+    
+    missing_fields = []
+    for field in required_fields:
+        if field not in data or data[field] is None:
+            missing_fields.append(field)
+    
+    if missing_fields:
+        return f"다음 필드가 누락되었습니다: {', '.join(missing_fields)}"
+    
+    return None

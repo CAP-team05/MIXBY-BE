@@ -12,7 +12,7 @@ Mixby로 자신의 퍼스널라이징 바텐더를 만들어보세요!
 ## How to test
 1. 이 repository를 clone 해주세요.
 ```bash
-git clone https://github.com/CAP-team05/Mixby
+git clone https://github.com/CAP-team05/MIXBY-BE
 ```
 2. clone 받은 폴더로 이동합니다.
 ```bash
@@ -28,7 +28,7 @@ OPENWEATHER_API_KEY=cf790*************
 ```bash
 code .
 ```
-이후 `api_codes/runServer.py` 실행합니다.
+이후 `run.py` 실행합니다.
 
 5. library가 설치되어 있지 않다면 해당되는 library를 install 해주세요.
 ```bash
@@ -40,22 +40,88 @@ etc.
 ```
 
 ## Directory Structure
-### api_codes
-서버에서 실행하는 주요 코드입니다.
-1. json_files  
-레시피 정보, 주류 정보 등 데이터베이스를 저장해두는 폴더입니다.  
-데이터의 양이 대단히 많진 않기 때문에 json으로 구현했습니다.
-2. static  
-이미지 파일과  같이 정적인 resource를 보관하는 폴더입니다.  
-3. *.py  
-서버를 돌릴 때 사용되는 코드들입니다.  
-json_files, static 폴더들에서 get 요청을 통해서 값을 넘겨주거나 post 요청들을 처리하는 코드들이 작성되어 있습니다.
-
-### backend_codes
-데이터를 수집할 때 사용했던 코드입니다.
-
-### reco_codes
-추천 알고리즘을 테스트하면서 사용했던 코드입니다.
+### app/
+서버에서 실행하는 주요 코드와 관련된 모든 파일이 포함됩니다.
+1.  `data/`  
+    레시피 정보, 주류 정보 등 데이터베이스를 저장해두는 폴더입니다. 데이터의 양이 대단히 많진 않기 때문에 json으로 구현했습니다.
+2.  `static/`  
+    이미지 파일과 같이 정적인 resource를 보관하는 폴더입니다.
+3.  `models/`  
+    데이터 모델 정의를 포함합니다.
+4.  `routes/`  
+    API 엔드포인트 및 라우팅 로직을 처리합니다.
+5.  `services/`  
+    비즈니스 로직 및 데이터 처리를 담당하는 서비스 계층입니다.
+6.  `utils/`  
+    다양한 유틸리티 함수 및 헬퍼 모듈을 포함합니다.
 
 ### .env
 api키와 같이 보안이 필요한 key 값들을 저장해두었습니다.  
+
+## API Endpoints
+
+### 추천 API
+
+#### 1. 페르소나 생성 API
+사용자의 기본 정보와 테이스팅 이력을 바탕으로 페르소나를 생성합니다.
+
+**Endpoint:** `POST /api/recommendations/persona`
+
+**Request Body:**
+```json
+{
+    "user_data": [
+        {
+            "name": "홍길동",
+            "gender": "남성", 
+            "favoriteTaste": "단맛"
+        }
+    ],
+    "tasting_data": [
+        {
+            "code": "001",
+            "drinkDate": "2024-01-01",
+            "eval": 5,
+            "sweetness": 4,
+            "sourness": 2,
+            "alcohol": 3
+        }
+    ]
+}
+```
+
+#### 2. 기본 추천 API (계절, 시간, 날씨 기반)
+**Endpoint:** `POST /api/recommendations/default`
+
+**Request Body:**
+```json
+{
+    "persona": "생성된 사용자 페르소나",
+    "cocktail_list": "스크류 드라이버, 보드카토닉, 모스크뮬, 마티니",
+    "season": "가을",
+    "time": "저녁", 
+    "weather": "눈"
+}
+```
+
+#### 3. 감정 기반 추천 API
+**Endpoint:** `POST /api/recommendations/feeling`
+
+**Request Body:**
+```json
+{
+    "persona": "생성된 사용자 페르소나",
+    "cocktail_list": "스크류 드라이버, 보드카토닉, 모스크뮬, 마티니"
+}
+```
+
+#### 4. 상황 기반 추천 API
+**Endpoint:** `POST /api/recommendations/situation`
+
+**Request Body:**
+```json
+{
+    "persona": "생성된 사용자 페르소나", 
+    "cocktail_list": "스크류 드라이버, 보드카토닉, 모스크뮬, 마티니"
+}
+```
