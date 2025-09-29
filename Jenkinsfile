@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DOTENV_CREDENTIALS_ID = 'mixby-dotenv'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -13,15 +16,41 @@ pipeline {
         }
         stage('Load Env') {
             steps {
-                sh 'export $(grep -v "^#" .env | xargs)'
+                script {
+                    if (!fileExists('.env')) {
+                        if (env.DOTENV_CREDENTIALS_ID?.trim()) {
+                            withCredentials([file(credentialsId: env.DOTENV_CREDENTIALS_ID, variable: 'DOTENV_FILE')]) {
+                                sh 'cp "$DOTENV_FILE" .env'
+                            }
+                        } else {
+                            error '.env file is missing and DOTENV_CREDENTIALS_ID is not configured. Provide a .env file for Jenkins.'
+                        }
+                    }
+
+                    readFile('.env')
+                        .split("\r?\n")
+                        .each { line ->
+                            def trimmed = line.trim()
+                            if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
+                                def parts = trimmed.split('=', 2)
+                                env[parts[0]] = parts[1]
+                            }
+                        }
+
+                    if (env.API_PORT) {
+                        echo "Loaded API_PORT=${env.API_PORT}"
+                    } else {
+                        echo 'API_PORT not defined in .env; Makefile default (8080) will be used.'
+                    }
+                }
             }
         }
         stage('Build & Deploy') {
             steps {
-                sh 'set -a && source .env && set +a && make stop'
-                sh 'set -a && source .env && set +a && make clean'
-                sh 'set -a && source .env && set +a && make build'
-                sh 'set -a && source .env && set +a && make run'
+                sh 'make stop'
+                sh 'make clean'
+                sh 'make build'
+                sh 'make run'
             }
         }
     }
