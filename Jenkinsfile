@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'API_PORT', defaultValue: '', description: 'Optional override when .env is not present')
-        string(name: 'DOTENV_CREDENTIALS_ID', defaultValue: '', description: 'Secret file credential ID that contains .env')
+        string(name: 'DOTENV_CREDENTIALS_ID', defaultValue: 'mixby-dotenv', description: 'Secret file credential ID that contains .env')
     }
     stages {
         stage('Checkout') {
