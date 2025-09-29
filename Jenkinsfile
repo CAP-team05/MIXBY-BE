@@ -18,27 +18,22 @@ pipeline {
         stage('Load Env') {
             steps {
                 script {
-                    if (!fileExists('.env')) {
-                        def credentialId = (params.DOTENV_CREDENTIALS_ID ?: env.DOTENV_CREDENTIALS_ID)?.trim()
-                        if (credentialId) {
-                            withCredentials([file(credentialsId: credentialId, variable: 'DOTENV_FILE')]) {
-                                sh 'cp "$DOTENV_FILE" .env'
-                            }
-                        } else {
-                            echo '.env file not found; continuing with Jenkins-provided environment variables only.'
-                        }
-                    }
-
-                    if (fileExists('.env')) {
-                        readFile('.env')
-                            .split("\r?\n")
-                            .each { line ->
-                                def trimmed = line.trim()
-                                if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
-                                    def parts = trimmed.split('=', 2)
-                                    env[parts[0]] = parts[1]
+                    def credentialId = (params.DOTENV_CREDENTIALS_ID ?: env.DOTENV_CREDENTIALS_ID)?.trim()
+                    if (credentialId) {
+                        withCredentials([file(credentialsId: credentialId, variable: 'DOTENV_FILE')]) {
+                            def dotenvContent = readFile(env.DOTENV_FILE)
+                            dotenvContent
+                                .split("\r?\n")
+                                .each { line ->
+                                    def trimmed = line.trim()
+                                    if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
+                                        def parts = trimmed.split('=', 2)
+                                        env[parts[0]] = parts[1]
+                                    }
                                 }
-                            }
+                        }
+                    } else {
+                        echo 'DOTENV credential ID missing; continuing with Jenkins-provided environment variables only.'
                     }
 
                     if (params.API_PORT?.trim()) {
