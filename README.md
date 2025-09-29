@@ -6,7 +6,7 @@ Mixby로 자신의 퍼스널라이징 바텐더를 만들어보세요!
 ## Introduction
 이 repository는 mixby의 **백엔드**를 다룹니다.  
 > [Swift Mixby](https://github.com/CAP-team05/Swift_Mixby)에서 프론트앤드 코드를 참고하세요!  
-> 해당 백엔드 코드는 자체 서버에서 돌아가고 있습니다.  
+> 해당 백엔드 코드는 자체 서버에서 돌아가고 있습니다..!
 > 따라서 swift mixby repository에서는 localhost가 아닌 다른 api address를 사용하고 있습니다.  
 
 ## How to test

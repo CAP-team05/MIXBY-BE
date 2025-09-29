@@ -18,6 +18,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+SERVER_PORT=${SERVER_PORT:-8080}
+
 # 체크 함수
 check_file() {
     if [ -f "$1" ]; then

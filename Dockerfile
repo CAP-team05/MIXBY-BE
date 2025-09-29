@@ -1,6 +1,8 @@
 # Python 3.10 slim 이미지 사용 (경량화)
 FROM python:3.10-slim
 
+ARG SERVER_PORT=8080
+
 # 작업 디렉토리 설정
 WORKDIR /app
 

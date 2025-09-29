@@ -3,7 +3,10 @@ Flask 애플리케이션 실행 파일
 """
 
 import os
+from dotenv import load_dotenv
 from app import create_app
+
+load_dotenv()
 
 # 환경 변수에서 설정 이름 가져오기 (기본값: development)
 config_name = os.environ.get("FLASK_ENV", "development")

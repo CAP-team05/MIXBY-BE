@@ -18,21 +18,25 @@ pipeline {
         }
         stage('Build & Deploy') {
             steps {
-                sh '''
-                echo "🛑 Stopping old container..."
-                docker stop mixby-container || true
-                docker rm mixby-container || true
-
-                echo "📦 Building new image (latest)..."
-                docker build -t mixby-api:latest .
-
-                echo "🚀 Starting new container..."
-                docker run -d --name mixby-container \
-                  -p ${SERVER_PORT:-5050}:${SERVER_PORT:-5050} \
-                  -e SERVER_PORT=${SERVER_PORT:-5050} \
-                  -e API_PORT=${SERVER_PORT:-5050} \
-                  mixby-api:latest
-                '''
+                sh 'make clean'
+                sh 'make build'
+                sh 'make run'
+            }
+        }
+        post {
+            success {
+                emailext (
+                    subject: "✅ SUCCESS: MIXBY-BE Build #${BUILD_NUMBER}",
+                    body: "빌드 성공!\n자세히 보기: ${BUILD_URL}",
+                    to: "ahnjh05141@naver.com", "handlecu@gmail.com"
+                )
+            }
+            failure {
+                emailext (
+                    subject: "❌ FAILURE: MIXBY-BE Build #${BUILD_NUMBER}",
+                    body: "빌드 실패...\n로그 확인: ${BUILD_URL}",
+                    to: "ahnjh05141@naver.com", "handlecu@gmail.com"
+                )
             }
         }
     }

@@ -264,14 +264,14 @@ spec:
       - name: mixby-api
         image: mixby-api:latest
         ports:
-        - containerPort: 8080
+        - containerPort: <SERVER_PORT>
         env:
         - name: FLASK_ENV
           value: "production"
         livenessProbe:
           httpGet:
             path: /health
-            port: 8080
+            port: <SERVER_PORT>
           initialDelaySeconds: 30
           periodSeconds: 10
 ```
