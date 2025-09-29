@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Cleanup') {
-            steps {
-                deleteDir()
-            }
-        }
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
@@ -16,10 +11,19 @@ pipeline {
                 ])
             }
         }
+        stage('Load Env') {
+            steps {
+                script {
+                    def props = readProperties file: '.env'
+                    props.each { key, value ->
+                        env[key] = value
+                    }
+                }
+            }
+        }
         stage('Build & Deploy') {
             steps {
-                sh 'docker stop mixby-container || true'
-                sh 'docker rm mixby-container || true'
+                sh 'make stop'
                 sh 'make clean'
                 sh 'make build'
                 sh 'make run'
