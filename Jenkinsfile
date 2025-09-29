@@ -38,7 +38,10 @@ pipeline {
                                 }
 
                             if (apiPortFromSecret) {
+                                echo 'API_PORT pulled from secret file.'
                                 env.API_PORT = apiPortFromSecret
+                            } else {
+                                echo 'API_PORT not found in secret file; awaiting other sources.'
                             }
                         }
                     } else {
