@@ -18,6 +18,8 @@ pipeline {
         }
         stage('Build & Deploy') {
             steps {
+                sh 'docker stop mixby-container || true'
+                sh 'docker rm mixby-container || true'
                 sh 'make clean'
                 sh 'make build'
                 sh 'make run'
