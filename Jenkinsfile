@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:ORG/REPO.git'
+                git branch: 'ahn', url: 'git@github.com:ORG/REPO.git'
             }
         }
         stage('Build & Deploy') {
