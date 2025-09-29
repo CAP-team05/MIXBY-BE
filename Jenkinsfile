@@ -13,12 +13,7 @@ pipeline {
         }
         stage('Load Env') {
             steps {
-                script {
-                    def props = readProperties file: '.env'
-                    props.each { key, value ->
-                        env[key] = value
-                    }
-                }
+                sh 'export $(grep -v "^#" .env | xargs)'
             }
         }
         stage('Build & Deploy') {
