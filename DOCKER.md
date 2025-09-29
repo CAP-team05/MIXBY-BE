@@ -49,10 +49,14 @@ make clean
 docker build -t mixby-api:latest .
 
 # 컨테이너 실행
-docker run -d --name mixby-container -p 8080:8080 mixby-api:latest
+docker run -d --name mixby-container \\
+  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \\
+  -e SERVER_PORT=${SERVER_PORT:-8080} \\
+  -e API_PORT=${SERVER_PORT:-8080} \\
+  mixby-api:latest
 
 # 헬스체크
-curl http://localhost:8080/health
+curl http://localhost:${SERVER_PORT:-8080}/health
 ```
 
 ## 📂 환경별 실행
@@ -74,9 +78,11 @@ docker-compose --profile dev up -d
 make build-prod
 
 # Gunicorn으로 실행
-docker run -d --name mixby-prod \
-  -p 8080:8080 \
-  -e FLASK_ENV=production \
+docker run -d --name mixby-prod \\
+  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \\
+  -e FLASK_ENV=production \\
+  -e SERVER_PORT=${SERVER_PORT:-8080} \\
+  -e API_PORT=${SERVER_PORT:-8080} \\
   mixby-api:prod
 ```
 
@@ -86,7 +92,8 @@ docker run -d --name mixby-prod \
 |--------|--------|------|
 | `FLASK_ENV` | `production` | Flask 환경 설정 |
 | `API_HOST` | `0.0.0.0` | API 서버 호스트 |
-| `API_PORT` | `8080` | API 서버 포트 |
+| `SERVER_PORT` | `8080` | 컨테이너 내부/외부에서 사용할 기본 포트 |
+| `API_PORT` | `8080` | API 서버 포트 (`SERVER_PORT`와 동일하게 유지 권장) |
 | `LOG_LEVEL` | `INFO` | 로그 레벨 |
 | `SECRET_KEY` | 자동 생성 | Flask 비밀 키 |
 | `CORS_ORIGINS` | `*` | CORS 허용 도메인 |
@@ -97,7 +104,7 @@ docker run -d --name mixby-prod \
 
 ```bash
 # API 헬스체크
-curl http://localhost:8080/health
+curl http://localhost:${SERVER_PORT:-8080}/health
 
 # Docker 헬스체크 상태 확인
 docker ps
@@ -133,9 +140,9 @@ make docker-test
 
 ```bash
 # 기본 API 테스트
-curl http://localhost:8080/drink/all
-curl http://localhost:8080/recipe/random
-curl "http://localhost:8080/drink/name=위스키"
+curl http://localhost:${SERVER_PORT:-8080}/drink/all
+curl http://localhost:${SERVER_PORT:-8080}/recipe/random
+curl "http://localhost:${SERVER_PORT:-8080}/drink/name=위스키"
 ```
 
 ## 🔄 볼륨 마운트
@@ -146,7 +153,7 @@ curl "http://localhost:8080/drink/name=위스키"
 # 로그 디렉토리 마운트
 docker run -d \
   --name mixby-container \
-  -p 8080:8080 \
+  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \
   -v $(pwd)/logs:/app/logs \
   mixby-api:latest
 ```
@@ -157,8 +164,10 @@ docker run -d \
 # 코드 변경 사항 실시간 반영
 docker run -d \
   --name mixby-dev \
-  -p 8081:8080 \
+  -p ${DEV_HOST_PORT:-8081}:${SERVER_PORT:-8080} \
   -e FLASK_ENV=development \
+  -e SERVER_PORT=${SERVER_PORT:-8080} \
+  -e API_PORT=${SERVER_PORT:-8080} \
   -v $(pwd):/app \
   mixby-api:latest
 ```
@@ -179,7 +188,11 @@ docker exec -it mixby-container /bin/bash
 
 ```bash
 # 다른 포트로 실행
-docker run -d --name mixby-container -p 8081:8080 mixby-api:latest
+docker run -d --name mixby-container \\
+  -p ${DEV_HOST_PORT:-8081}:${SERVER_PORT:-8080} \\
+  -e SERVER_PORT=${SERVER_PORT:-8080} \\
+  -e API_PORT=${SERVER_PORT:-8080} \\
+  mixby-api:latest
 ```
 
 ### 이미지 크기 최적화
@@ -241,14 +254,14 @@ spec:
       - name: mixby-api
         image: mixby-api:latest
         ports:
-        - containerPort: 8080
+        - containerPort: <SERVER_PORT>
         env:
         - name: FLASK_ENV
           value: "production"
         livenessProbe:
           httpGet:
             path: /health
-            port: 8080
+            port: <SERVER_PORT>
           initialDelaySeconds: 30
           periodSeconds: 10
 ```

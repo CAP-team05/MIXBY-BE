@@ -21,7 +21,8 @@ class Config:
 
     # API 설정
     API_HOST = os.environ.get("API_HOST") or "0.0.0.0"
-    API_PORT = int(os.environ.get("API_PORT") or 8080)
+    SERVER_PORT = int(os.environ.get("SERVER_PORT") or os.environ.get("API_PORT") or 8080)
+    API_PORT = SERVER_PORT  # 레거시 코드 호환용
     DEBUG = os.environ.get("FLASK_DEBUG") == "True"
 
     # CORS 설정

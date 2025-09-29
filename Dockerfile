@@ -1,6 +1,8 @@
 # Python 3.10 slim 이미지 사용 (경량화)
 FROM python:3.10-slim
 
+ARG SERVER_PORT=8080
+
 # 작업 디렉토리 설정
 WORKDIR /app
 
@@ -29,13 +31,14 @@ USER mixby
 # 환경 변수 설정
 ENV FLASK_ENV=production
 ENV PYTHONPATH=/app
+ENV SERVER_PORT=${SERVER_PORT}
 
 # 포트 노출
-EXPOSE 8080
+EXPOSE ${SERVER_PORT}
 
 # 헬스체크 추가
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:8080/health || exit 1
+    CMD curl -f http://localhost:${SERVER_PORT:-8080}/health || exit 1
 
 # 애플리케이션 실행
 ENTRYPOINT ["docker-entrypoint.sh"]
