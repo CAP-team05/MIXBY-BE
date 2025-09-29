@@ -1,5 +1,5 @@
 # Mixby
-Mixby로 자신의 퍼스널라이징 바텐더를 만들어보세요!!
+Mixby로 자신의 퍼스널라이징 바텐더를 만들어보세요!
 
 ![image](https://github.com/user-attachments/assets/747107a7-f835-4cd7-a6db-80dd297e0a8a)
 
