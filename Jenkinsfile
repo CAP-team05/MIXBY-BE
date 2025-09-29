@@ -1,7 +1,8 @@
 pipeline {
     agent any
-    environment {
-        DOTENV_CREDENTIALS_ID = 'mixby-dotenv'
+    parameters {
+        string(name: 'API_PORT', defaultValue: '', description: 'Optional override when .env is not present')
+        string(name: 'DOTENV_CREDENTIALS_ID', defaultValue: '', description: 'Secret file credential ID that contains .env')
     }
     stages {
         stage('Checkout') {
@@ -18,29 +19,37 @@ pipeline {
             steps {
                 script {
                     if (!fileExists('.env')) {
-                        if (env.DOTENV_CREDENTIALS_ID?.trim()) {
-                            withCredentials([file(credentialsId: env.DOTENV_CREDENTIALS_ID, variable: 'DOTENV_FILE')]) {
+                        def credentialId = (params.DOTENV_CREDENTIALS_ID ?: env.DOTENV_CREDENTIALS_ID)?.trim()
+                        if (credentialId) {
+                            withCredentials([file(credentialsId: credentialId, variable: 'DOTENV_FILE')]) {
                                 sh 'cp "$DOTENV_FILE" .env'
                             }
                         } else {
-                            error '.env file is missing and DOTENV_CREDENTIALS_ID is not configured. Provide a .env file for Jenkins.'
+                            echo '.env file not found; continuing with Jenkins-provided environment variables only.'
                         }
                     }
 
-                    readFile('.env')
-                        .split("\r?\n")
-                        .each { line ->
-                            def trimmed = line.trim()
-                            if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
-                                def parts = trimmed.split('=', 2)
-                                env[parts[0]] = parts[1]
+                    if (fileExists('.env')) {
+                        readFile('.env')
+                            .split("\r?\n")
+                            .each { line ->
+                                def trimmed = line.trim()
+                                if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
+                                    def parts = trimmed.split('=', 2)
+                                    env[parts[0]] = parts[1]
+                                }
                             }
-                        }
+                    }
+
+                    if (params.API_PORT?.trim()) {
+                        env.API_PORT = params.API_PORT.trim()
+                    }
 
                     if (env.API_PORT) {
                         echo "Loaded API_PORT=${env.API_PORT}"
                     } else {
-                        echo 'API_PORT not defined in .env; Makefile default (8080) will be used.'
+                        env.API_PORT = '8080'
+                        echo 'API_PORT not defined; defaulting to 8080.'
                     }
                 }
             }
