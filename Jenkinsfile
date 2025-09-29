@@ -1,9 +1,19 @@
 pipeline {
     agent any
     stages {
+        stage('Cleanup') {
+            steps {
+                deleteDir()
+            }
+        }
         stage('Checkout') {
             steps {
-                git branch: 'ahn', url: 'git@github.com:CAP-team05/MIXBY-BE.git'
+                checkout([$class: 'GitSCM',
+                    branches: [[name: '*/ahn']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [[$class: 'LocalBranch', localBranch: 'ahn']],
+                    userRemoteConfigs: [[url: 'git@github.com:CAP-team05/MIXBY-BE.git']]
+                ])
             }
         }
         stage('Build & Deploy') {
