@@ -1,29 +1,40 @@
 # Docker 관련 명령어들
 .PHONY: help build run stop clean dev test docker-test
 
+# .env 파일에서 환경 변수를 로드합니다
+ifneq (,$(wildcard .env))
+include .env
+export $(shell sed -n 's/^\([A-Za-z_][A-Za-z0-9_]*\)=.*/\1/p' .env)
+endif
+
 # 기본 변수
 IMAGE_NAME = mixby-api
 TAG = latest
 CONTAINER_NAME = mixby-container
+API_PORT ?= 8080
+DEV_HOST_PORT ?= 8081
+export API_PORT
+export DEV_HOST_PORT
 
 help: ## 사용 가능한 명령어들을 보여줍니다
 	@echo "사용 가능한 명령어들:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
 
 build: ## Docker 이미지를 빌드합니다
-	docker build -t $(IMAGE_NAME):$(TAG) .
+	docker build --build-arg API_PORT=$(API_PORT) -t $(IMAGE_NAME):$(TAG) .
 
 build-prod: ## 프로덕션용 Docker 이미지를 빌드합니다
-	docker build -f Dockerfile.prod -t $(IMAGE_NAME):prod .
+	docker build -f Dockerfile.prod --build-arg API_PORT=$(API_PORT) -t $(IMAGE_NAME):prod .
 
 run: ## Docker 컨테이너를 실행합니다
-	docker run -d --name $(CONTAINER_NAME) -p 8080:8080 $(IMAGE_NAME):$(TAG)
+	docker run -d --name $(CONTAINER_NAME) -p $(API_PORT):$(API_PORT) -e API_PORT=$(API_PORT) $(IMAGE_NAME):$(TAG)
 
 run-dev: ## 개발 모드로 Docker 컨테이너를 실행합니다
 	docker run -d --name $(CONTAINER_NAME)-dev \
-		-p 8081:8080 \
+		-p $(DEV_HOST_PORT):$(API_PORT) \
 		-e FLASK_ENV=development \
 		-e FLASK_DEBUG=True \
+		-e API_PORT=$(API_PORT) \
 		-v $(PWD):/app \
 		$(IMAGE_NAME):$(TAG)
 
@@ -68,7 +79,7 @@ docker-test: ## Docker 컨테이너 내에서 테스트를 실행합니다
 
 health-check: ## API 헬스체크를 수행합니다
 	@echo "헬스체크 수행 중..."
-	@curl -f http://localhost:8080/health || echo "서버가 응답하지 않습니다"
+	@curl -f http://localhost:$(API_PORT)/health || echo "서버가 응답하지 않습니다"
 
 docker-stats: ## Docker 컨테이너 리소스 사용량을 확인합니다
 	docker stats $(CONTAINER_NAME)
