@@ -72,13 +72,42 @@ class DrinkService:
         Returns:
             찾은 음료 데이터 또는 None
         """
-        if not code or not code.strip():
+        if code is None:
+            return None
+
+        if not isinstance(code, str):
+            code = str(code)
+
+        sanitized_code = code.strip()
+
+        if not sanitized_code:
             return None
 
         all_drinks = self.get_all_drinks()
 
+        # 정확히 일치하는 코드를 우선 반환
         for drink in all_drinks:
-            if code == drink.get("code"):
+            drink_code = drink.get("code")
+            if isinstance(drink_code, str) and sanitized_code == drink_code.strip():
+                return drink
+
+        # 뒤 3자리를 제외한 코드(prefix)로 재검색
+        if len(sanitized_code) <= 3:
+            return None
+
+        code_prefix = sanitized_code[:-3]
+
+        for drink in all_drinks:
+            drink_code = drink.get("code")
+            if not isinstance(drink_code, str):
+                continue
+
+            normalized_drink_code = drink_code.strip()
+
+            if len(normalized_drink_code) <= 3:
+                continue
+
+            if normalized_drink_code[:-3] == code_prefix:
                 return drink
 
         return None
