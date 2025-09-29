@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'ahn', url: 'git@github.com:ORG/REPO.git'
+                git branch: 'ahn', url: 'git@github.com:CAP-team05/MIXBY-BE.git'
             }
         }
         stage('Build & Deploy') {
