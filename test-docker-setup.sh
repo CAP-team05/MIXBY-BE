@@ -9,6 +9,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+SERVER_PORT=${SERVER_PORT:-8080}
+
 # 체크 함수
 check_file() {
     if [ -f "$1" ]; then
@@ -102,7 +104,7 @@ echo "   docker-compose up -d"
 echo ""
 echo -e "${YELLOW}3. 헬스체크:${NC}"
 echo "   make health-check"
-echo "   또는 브라우저에서 http://localhost:8080/health"
+echo "   또는 브라우저에서 http://localhost:${SERVER_PORT}/health"
 echo ""
 echo -e "${YELLOW}4. 로그 확인:${NC}"
 echo "   make logs"
