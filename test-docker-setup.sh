@@ -1,5 +1,14 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    set -a
+    . "$SCRIPT_DIR/.env"
+    set +a
+fi
+
+API_PORT=${API_PORT:-8080}
+
 echo "🐳 MIXBY Docker 설정 검증 스크립트"
 echo "=================================="
 
@@ -104,7 +113,7 @@ echo "   docker-compose up -d"
 echo ""
 echo -e "${YELLOW}3. 헬스체크:${NC}"
 echo "   make health-check"
-echo "   또는 브라우저에서 http://localhost:${SERVER_PORT}/health"
+echo "   또는 브라우저에서 http://localhost:${API_PORT}/health"
 echo ""
 echo -e "${YELLOW}4. 로그 확인:${NC}"
 echo "   make logs"

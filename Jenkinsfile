@@ -9,9 +9,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
-                    branches: [[name: '*/ahn']],
+                    branches: [[name: '*/main']],
                     doGenerateSubmoduleConfigurations: false,
-                    extensions: [[$class: 'LocalBranch', localBranch: 'ahn']],
+                    extensions: [[$class: 'LocalBranch', localBranch: 'main']],
                     userRemoteConfigs: [[url: 'git@github.com:CAP-team05/MIXBY-BE.git']]
                 ])
             }
@@ -28,9 +28,9 @@ pipeline {
 
                 echo "🚀 Starting new container..."
                 docker run -d --name mixby-container \
-                  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \
-                  -e SERVER_PORT=${SERVER_PORT:-8080} \
-                  -e API_PORT=${SERVER_PORT:-8080} \
+                  -p ${SERVER_PORT:-5050}:${SERVER_PORT:-5050} \
+                  -e SERVER_PORT=${SERVER_PORT:-5050} \
+                  -e API_PORT=${SERVER_PORT:-5050} \
                   mixby-api:latest
                 '''
             }

@@ -7,6 +7,21 @@ MIXBY API를 Docker 컨테이너로 실행하는 방법을 설명합니다.
 - Docker Desktop이 설치되어 있어야 합니다
 - Docker가 실행 중이어야 합니다
 
+## 🔌 포트 설정
+
+이 프로젝트는 애플리케이션과 Docker 노출 포트를 모두 `API_PORT` 환경 변수 하나로 제어합니다.
+기본값은 `8080`이며, 다른 포트를 사용하려면 명령을 실행하기 전에 다음과 같이 지정하세요.
+
+```bash
+export API_PORT=9090  # 원하는 포트 번호
+```
+
+또는 프로젝트 루트의 `.env` 파일에 `API_PORT=9090`을 저장하면 모든 Makefile 및 Docker Compose 명령이 자동으로 해당 값을 사용합니다.
+
+`Makefile`, Docker Compose, 헬스체크 명령 등은 위 값을 자동으로 사용합니다.
+일시적으로만 변경하려면 `API_PORT=9090 make run`처럼 명령 앞에 붙여 사용할 수도 있습니다.
+개발용 컨테이너의 호스트 포트가 필요하면 `DEV_HOST_PORT`(기본 8081)도 함께 조정할 수 있습니다.
+
 ## 🚀 빠른 시작
 
 ### 1. Docker Compose 사용 (권장)
@@ -48,15 +63,12 @@ make clean
 # 이미지 빌드
 docker build -t mixby-api:latest .
 
-# 컨테이너 실행
-docker run -d --name mixby-container \\
-  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \\
-  -e SERVER_PORT=${SERVER_PORT:-8080} \\
-  -e API_PORT=${SERVER_PORT:-8080} \\
-  mixby-api:latest
+# 컨테이너 실행 (실행 전 API_PORT를 원하는 값으로 설정)
+export API_PORT=8080   # 필요한 경우 다른 포트로 변경
+docker run -d --name mixby-container -p $API_PORT:$API_PORT -e API_PORT=$API_PORT mixby-api:latest
 
 # 헬스체크
-curl http://localhost:${SERVER_PORT:-8080}/health
+curl http://localhost:$API_PORT/health
 ```
 
 ## 📂 환경별 실행
@@ -78,11 +90,11 @@ docker-compose --profile dev up -d
 make build-prod
 
 # Gunicorn으로 실행
-docker run -d --name mixby-prod \\
-  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \\
-  -e FLASK_ENV=production \\
-  -e SERVER_PORT=${SERVER_PORT:-8080} \\
-  -e API_PORT=${SERVER_PORT:-8080} \\
+# API_PORT가 원하는 값으로 설정되어 있다고 가정합니다
+docker run -d --name mixby-prod \
+  -p $API_PORT:$API_PORT \
+  -e FLASK_ENV=production \
+  -e API_PORT=$API_PORT \
   mixby-api:prod
 ```
 
@@ -92,8 +104,7 @@ docker run -d --name mixby-prod \\
 |--------|--------|------|
 | `FLASK_ENV` | `production` | Flask 환경 설정 |
 | `API_HOST` | `0.0.0.0` | API 서버 호스트 |
-| `SERVER_PORT` | `8080` | 컨테이너 내부/외부에서 사용할 기본 포트 |
-| `API_PORT` | `8080` | API 서버 포트 (`SERVER_PORT`와 동일하게 유지 권장) |
+| `API_PORT` | `8080` | API 및 Docker 노출 포트 (단일 변수) |
 | `LOG_LEVEL` | `INFO` | 로그 레벨 |
 | `SECRET_KEY` | 자동 생성 | Flask 비밀 키 |
 | `CORS_ORIGINS` | `*` | CORS 허용 도메인 |
@@ -104,7 +115,7 @@ docker run -d --name mixby-prod \\
 
 ```bash
 # API 헬스체크
-curl http://localhost:${SERVER_PORT:-8080}/health
+curl http://localhost:$API_PORT/health
 
 # Docker 헬스체크 상태 확인
 docker ps
@@ -140,9 +151,9 @@ make docker-test
 
 ```bash
 # 기본 API 테스트
-curl http://localhost:${SERVER_PORT:-8080}/drink/all
-curl http://localhost:${SERVER_PORT:-8080}/recipe/random
-curl "http://localhost:${SERVER_PORT:-8080}/drink/name=위스키"
+curl http://localhost:$API_PORT/drink/all
+curl http://localhost:$API_PORT/recipe/random
+curl "http://localhost:$API_PORT/drink/name=위스키"
 ```
 
 ## 🔄 볼륨 마운트
@@ -153,7 +164,8 @@ curl "http://localhost:${SERVER_PORT:-8080}/drink/name=위스키"
 # 로그 디렉토리 마운트
 docker run -d \
   --name mixby-container \
-  -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} \
+  -p $API_PORT:$API_PORT \
+  -e API_PORT=$API_PORT \
   -v $(pwd)/logs:/app/logs \
   mixby-api:latest
 ```
@@ -164,10 +176,10 @@ docker run -d \
 # 코드 변경 사항 실시간 반영
 docker run -d \
   --name mixby-dev \
-  -p ${DEV_HOST_PORT:-8081}:${SERVER_PORT:-8080} \
+  -p ${DEV_HOST_PORT:-8081}:$API_PORT \
   -e FLASK_ENV=development \
-  -e SERVER_PORT=${SERVER_PORT:-8080} \
-  -e API_PORT=${SERVER_PORT:-8080} \
+  -e FLASK_DEBUG=True \
+  -e API_PORT=$API_PORT \
   -v $(pwd):/app \
   mixby-api:latest
 ```
@@ -187,12 +199,10 @@ docker exec -it mixby-container /bin/bash
 ### 포트 충돌 문제
 
 ```bash
-# 다른 포트로 실행
-docker run -d --name mixby-container \\
-  -p ${DEV_HOST_PORT:-8081}:${SERVER_PORT:-8080} \\
-  -e SERVER_PORT=${SERVER_PORT:-8080} \\
-  -e API_PORT=${SERVER_PORT:-8080} \\
-  mixby-api:latest
+# 다른 포트로 실행 (명령 앞에 API_PORT를 지정)
+API_PORT=9090 make run
+# 또는
+API_PORT=9090 docker-compose up -d
 ```
 
 ### 이미지 크기 최적화

@@ -28,17 +28,20 @@ RUN adduser --disabled-password --gecos '' --uid 1000 mixby && \
     chown -R mixby:mixby /app
 USER mixby
 
+# 기본 포트 설정 (빌드 시 덮어쓰기 가능)
+ARG API_PORT=8080
+
 # 환경 변수 설정
-ENV FLASK_ENV=production
-ENV PYTHONPATH=/app
-ENV SERVER_PORT=${SERVER_PORT}
+ENV FLASK_ENV=production \
+    PYTHONPATH=/app \
+    API_PORT=${API_PORT}
 
 # 포트 노출
-EXPOSE ${SERVER_PORT}
+EXPOSE ${API_PORT}
 
 # 헬스체크 추가
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:${SERVER_PORT:-8080}/health || exit 1
+    CMD curl -f http://localhost:${API_PORT}/health || exit 1
 
 # 애플리케이션 실행
 ENTRYPOINT ["docker-entrypoint.sh"]
