@@ -23,10 +23,10 @@ pipeline {
         }
         stage('Build & Deploy') {
             steps {
-                sh 'make stop'
-                sh 'make clean'
-                sh 'make build'
-                sh 'make run'
+                sh 'set -a && source .env && set +a && make stop'
+                sh 'set -a && source .env && set +a && make clean'
+                sh 'set -a && source .env && set +a && make build'
+                sh 'set -a && source .env && set +a && make run'
             }
         }
     }
