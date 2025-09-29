@@ -22,15 +22,24 @@ pipeline {
                     if (credentialId) {
                         withCredentials([file(credentialsId: credentialId, variable: 'DOTENV_FILE')]) {
                             def dotenvContent = readFile(env.DOTENV_FILE)
+                            def apiPortFromSecret = null
                             dotenvContent
                                 .split("\r?\n")
                                 .each { line ->
-                                    def trimmed = line.trim()
-                                    if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
-                                        def parts = trimmed.split('=', 2)
-                                        env[parts[0]] = parts[1]
+                                    if (!apiPortFromSecret) {
+                                        def trimmed = line.trim()
+                                        if (trimmed && !trimmed.startsWith('#') && trimmed.contains('=')) {
+                                            def parts = trimmed.split('=', 2)
+                                            if (parts[0] == 'API_PORT') {
+                                                apiPortFromSecret = parts[1]?.trim()
+                                            }
+                                        }
                                     }
                                 }
+
+                            if (apiPortFromSecret) {
+                                env.API_PORT = apiPortFromSecret
+                            }
                         }
                     } else {
                         echo 'DOTENV credential ID missing; continuing with Jenkins-provided environment variables only.'
