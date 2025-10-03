@@ -54,7 +54,8 @@ class ChallengeService:
         results = []
 
         for challenge in all_challenges:
-            title = challenge.get("title", "").lower()
+            # 'title' 또는 'name' 필드를 확인
+            title = challenge.get("title", challenge.get("name", "")).lower()
             if keyword.lower() in title:
                 if challenge not in results:
                     results.append(challenge)

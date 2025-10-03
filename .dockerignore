@@ -3,13 +3,21 @@
 .gitignore
 
 # Python
-__pycache__
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-.pytest_cache
+*.py[cod]
+*$py.class
+.pytest_cache/
 .coverage
-.venv
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.tox/
+.hypothesis/
+.venv/
 venv/
 env/
 

@@ -74,6 +74,14 @@ compose-logs: ## Docker Compose 로그를 확인합니다
 test: ## 로컬에서 테스트를 실행합니다
 	pytest tests/ -v
 
+test-coverage: ## 커버리지 포함 테스트를 실행합니다
+	pytest tests/ -v --cov=app --cov-report=term --cov-report=html
+	@echo "\n커버리지 리포트가 htmlcov/index.html에 생성되었습니다"
+
+test-coverage-strict: ## 커버리지 임계값(80%) 검증 포함 테스트를 실행합니다
+	pytest tests/ -v --cov=app --cov-report=term --cov-report=html --cov-fail-under=80
+	@echo "\n커버리지가 80% 이상입니다. 리포트: htmlcov/index.html"
+
 docker-test: ## Docker 컨테이너 내에서 테스트를 실행합니다
 	docker run --rm -v $(PWD):/app $(IMAGE_NAME):$(TAG) pytest tests/ -v
 
