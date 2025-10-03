@@ -61,6 +61,45 @@ class RecipeService:
 
         return None
 
+    def get_code_by_name(self, name: str) -> Optional[str]:
+        """
+        레시피 이름으로 코드를 찾습니다.
+        
+        정확히 일치하는 이름을 우선적으로 찾고, 없으면 부분 일치하는 첫 번째 레시피의 코드를 반환합니다.
+        대소문자를 구분하지 않습니다.
+        한국어 이름(korean_name)과 영어 이름(english_name) 모두에서 검색합니다.
+
+        Args:
+            name: 레시피 이름
+
+        Returns:
+            레시피 코드 또는 None (찾지 못한 경우)
+        """
+        if not name or not name.strip():
+            return None
+
+        all_recipes = self.get_all_recipes()
+        name_lower = name.strip().lower()
+        
+        # 1단계: 정확히 일치하는 이름 찾기 (대소문자 구분 없음)
+        for recipe in all_recipes:
+            korean_name = recipe.get("korean_name", "")
+            english_name = recipe.get("english_name", "")
+            
+            if korean_name.lower() == name_lower or english_name.lower() == name_lower:
+                return recipe.get("code")
+        
+        # 2단계: 부분 일치하는 첫 번째 레시피 찾기
+        for recipe in all_recipes:
+            korean_name = recipe.get("korean_name", "")
+            english_name = recipe.get("english_name", "")
+            
+            if name_lower in korean_name.lower() or name_lower in english_name.lower():
+                return recipe.get("code")
+        
+        # 찾지 못한 경우
+        return None
+
     def search_by_ingredients(self, ingredient_codes: str) -> List[Dict]:
         """
         재료 코드들로 만들 수 있는 레시피를 검색합니다.

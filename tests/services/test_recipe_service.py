@@ -98,6 +98,99 @@ class TestRecipeService:
             assert result_empty is None
             assert result_whitespace is None
 
+    def test_get_code_by_name_exact_match(self, service, sample_recipes_list):
+        """정확히 일치하는 이름으로 코드를 찾는지 테스트"""
+        # Given: 데이터 로더가 레시피 리스트를 반환하도록 모킹
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=sample_recipes_list):
+            # When: 정확한 이름으로 검색
+            result = service.get_code_by_name("진토닉")
+
+            # Then: 해당 레시피의 코드가 반환됨
+            assert result == "300600"
+
+    def test_get_code_by_name_case_insensitive(self, service):
+        """대소문자 구분 없이 코드를 찾는지 테스트"""
+        # Given: english_name 필드를 포함한 레시피 리스트
+        recipes_with_name = [
+            {
+                "english_name": "Gin Tonic",
+                "korean_name": "진토닉",
+                "code": "300600",
+                "ingredients": [{"name": "진", "code": "300"}],
+                "difficulty": "쉬움"
+            }
+        ]
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=recipes_with_name):
+            # When: 대소문자를 다르게 하여 검색
+            result_lower = service.get_code_by_name("gin tonic")
+            result_upper = service.get_code_by_name("GIN TONIC")
+            result_mixed = service.get_code_by_name("Gin Tonic")
+
+            # Then: 모두 동일한 코드가 반환됨
+            assert result_lower == "300600"
+            assert result_upper == "300600"
+            assert result_mixed == "300600"
+
+    def test_get_code_by_name_partial_match(self, service, sample_recipes_list):
+        """부분 일치하는 이름으로 코드를 찾는지 테스트"""
+        # Given: 데이터 로더가 레시피 리스트를 반환하도록 모킹
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=sample_recipes_list):
+            # When: 부분 일치하는 이름으로 검색
+            result = service.get_code_by_name("진")
+
+            # Then: 부분 일치하는 첫 번째 레시피의 코드가 반환됨
+            assert result == "300600"
+
+    def test_get_code_by_name_not_found(self, service, sample_recipes_list):
+        """존재하지 않는 이름으로 검색 시 None을 반환하는지 테스트"""
+        # Given: 데이터 로더가 레시피 리스트를 반환하도록 모킹
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=sample_recipes_list):
+            # When: 존재하지 않는 이름으로 검색
+            result = service.get_code_by_name("존재하지않는칵테일")
+
+            # Then: None이 반환됨
+            assert result is None
+
+    def test_get_code_by_name_empty_input(self, service, sample_recipes_list):
+        """빈 문자열 입력 시 None을 반환하는지 테스트"""
+        # Given: 데이터 로더가 레시피 리스트를 반환하도록 모킹
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=sample_recipes_list):
+            # When: 빈 문자열로 검색
+            result_empty = service.get_code_by_name("")
+            result_whitespace = service.get_code_by_name("   ")
+            result_none = service.get_code_by_name(None)
+
+            # Then: None이 반환됨
+            assert result_empty is None
+            assert result_whitespace is None
+            assert result_none is None
+
+    def test_get_code_by_name_exact_match_priority(self, service):
+        """정확한 일치가 부분 일치보다 우선하는지 테스트"""
+        # Given: 부분 일치와 정확한 일치가 모두 가능한 레시피 리스트
+        recipes = [
+            {
+                "name": "진토닉 스페셜",
+                "korean_name": "진토닉 스페셜",
+                "code": "300601",
+                "ingredients": [{"name": "진", "code": "300"}],
+                "difficulty": "쉬움"
+            },
+            {
+                "name": "진토닉",
+                "korean_name": "진토닉",
+                "code": "300600",
+                "ingredients": [{"name": "진", "code": "300"}],
+                "difficulty": "쉬움"
+            }
+        ]
+        with patch.object(service.data_loader, 'get_all_recipes', return_value=recipes):
+            # When: "진토닉"으로 검색
+            result = service.get_code_by_name("진토닉")
+
+            # Then: 정확히 일치하는 "진토닉"의 코드가 반환됨 (부분 일치하는 "진토닉 스페셜"이 아님)
+            assert result == "300600"
+
     def test_search_by_ingredients_valid(self, service, sample_recipes_list):
         """유효한 재료 코드로 레시피를 검색하는지 테스트"""
         # Given: 데이터 로더가 레시피 리스트를 반환하도록 모킹

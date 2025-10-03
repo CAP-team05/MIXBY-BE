@@ -11,6 +11,69 @@ import os
 recipe_bp = Blueprint("recipes", __name__, url_prefix="/recipe")
 
 
+def _send_recipe_image(code):
+    """
+    레시피 코드로 이미지 파일을 반환하는 내부 헬퍼 함수
+    
+    Args:
+        code: 레시피 코드
+        
+    Returns:
+        이미지 파일 또는 에러 응답
+    """
+    try:
+        # 입력 검증
+        if not code or not code.strip():
+            return response_helper.error_response(
+                message="레시피 코드가 필요합니다.",
+                status_code=400,
+                error_code="INVALID_INPUT"
+            )
+        
+        # 레시피 존재 여부 확인
+        recipe = recipe_service.search_by_code(code)
+        if not recipe:
+            return response_helper.error_response(
+                message=f"레시피 코드 '{code}'에 해당하는 레시피를 찾을 수 없습니다.",
+                status_code=404,
+                error_code="RECIPE_NOT_FOUND"
+            )
+        
+        # static 디렉토리 경로 가져오기
+        static_dir = current_app.static_folder
+        image_path = os.path.join(static_dir, "recipes", f"{code}.png")
+        
+        # 이미지 파일 존재 여부 확인
+        if not os.path.exists(image_path):
+            return response_helper.error_response(
+                message=f"레시피 '{code}'의 이미지 파일이 존재하지 않습니다.",
+                status_code=404,
+                error_code="IMAGE_FILE_NOT_FOUND"
+            )
+        
+        # 이미지 파일 반환
+        return send_from_directory(os.path.join(static_dir, "recipes"), f"{code}.png")
+        
+    except PermissionError as e:
+        return response_helper.error_response(
+            message="이미지 파일에 접근할 권한이 없습니다.",
+            status_code=500,
+            error_code="FILE_PERMISSION_ERROR"
+        )
+    except OSError as e:
+        return response_helper.error_response(
+            message="파일 시스템 접근 중 오류가 발생했습니다.",
+            status_code=500,
+            error_code="FILE_SYSTEM_ERROR"
+        )
+    except Exception as e:
+        return response_helper.error_response(
+            message="이미지를 가져오는 중 오류가 발생했습니다.",
+            status_code=500,
+            error_code="INTERNAL_ERROR"
+        )
+
+
 @recipe_bp.route("/all")
 def get_all_recipes():
     """모든 레시피 데이터를 반환합니다."""
@@ -23,19 +86,43 @@ def get_all_recipes():
         )
 
 
-@recipe_bp.route("/image=<code>")
-def get_recipe_image(code):
-    """레시피 이미지를 반환합니다."""
-    try:
-        static_dir = current_app.static_folder
-        image_path = os.path.join(static_dir, "recipes", f"{code}.png")
+@recipe_bp.route("/image/code=<code>")
+def get_recipe_image_by_code(code):
+    """레시피 코드로 이미지를 반환합니다."""
+    return _send_recipe_image(code)
 
-        if os.path.exists(image_path):
-            return send_from_directory(os.path.join(static_dir, "recipes"), f"{code}.png")
-        else:
-            return response_helper.not_found_response("이미지")
+
+@recipe_bp.route("/image/name=<name>")
+def get_recipe_image_by_name(name):
+    """레시피 이름으로 이미지를 반환합니다."""
+    try:
+        # 입력 검증
+        if not name or not name.strip():
+            return response_helper.error_response(
+                message="레시피 이름이 필요합니다.",
+                status_code=400,
+                error_code="INVALID_INPUT"
+            )
+        
+        # 이름으로 레시피 코드 찾기
+        code = recipe_service.get_code_by_name(name)
+        
+        # 레시피를 찾지 못한 경우
+        if not code:
+            return response_helper.error_response(
+                message=f"레시피 '{name}'을(를) 찾을 수 없습니다.",
+                status_code=404,
+                error_code="RECIPE_NOT_FOUND"
+            )
+        
+        # 코드로 이미지 반환
+        return _send_recipe_image(code)
+        
     except Exception as e:
-        return response_helper.error_response(message="이미지를 가져오는 중 오류가 발생했습니다.", status_code=500)
+        return response_helper.error_response(
+            message="이미지를 가져오는 중 오류가 발생했습니다.",
+            status_code=500
+        )
 
 
 @recipe_bp.route("/name=<name>")
