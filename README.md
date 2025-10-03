@@ -58,6 +58,47 @@ etc.
 ### .env
 api키와 같이 보안이 필요한 key 값들을 저장해두었습니다.  
 
+## Testing
+
+### 테스트 실행
+프로젝트는 pytest를 사용하여 테스트를 실행합니다.
+
+```bash
+# 기본 테스트 실행
+make test
+# 또는
+pytest tests/ -v
+
+# 커버리지 포함 테스트 실행
+make test-coverage
+# 또는
+pytest tests/ -v --cov=app --cov-report=term --cov-report=html
+
+# 커버리지 임계값(80%) 검증 포함 테스트
+make test-coverage-strict
+# 또는
+pytest tests/ -v --cov=app --cov-report=term --cov-report=html --cov-fail-under=80
+
+# Docker 환경에서 테스트
+make docker-test
+```
+
+### 커버리지 리포트
+테스트 커버리지 리포트는 다음 위치에 생성됩니다:
+- **HTML 리포트**: `htmlcov/index.html` (브라우저에서 열어서 확인)
+- **터미널 리포트**: 테스트 실행 후 콘솔에 출력
+
+### 커버리지 요구사항
+- **최소 커버리지**: 전체 코드의 80% 이상
+- **PR 제출 전**: 반드시 `make test-coverage-strict` 실행하여 커버리지 확인
+- **새로운 코드**: 테스트 없이 커버리지를 낮추는 코드는 리뷰 거부 대상
+
+### 커버리지 설정
+커버리지 설정은 `pyproject.toml`에 정의되어 있습니다:
+- `fail_under = 80.0`: 커버리지가 80% 미만이면 테스트 실패
+- `show_missing = true`: 커버되지 않은 라인 표시
+- `omit`: 테스트 파일 및 가상환경 제외
+
 ## API Endpoints
 
 ### 추천 API

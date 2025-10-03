@@ -3,13 +3,30 @@
 # ------------------------------
 .DS*
 .VS*
+.kiro
 
 # ------------------------------
 # Python bytecode & caches
 # ------------------------------
 *.pyc
+*.pyo
+*.pyd
 __pycache__/
 __cache__/
+*.py[cod]
+*$py.class
+
+# ------------------------------
+# Test coverage & pytest
+# ------------------------------
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+.hypothesis/
 
 # ------------------------------
 # Local env & secrets
