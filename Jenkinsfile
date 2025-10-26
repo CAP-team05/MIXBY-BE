@@ -8,9 +8,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
-                    branches: [[name: '*/ahn-macmini']],
+                    branches: [[name: '*/main']],
                     doGenerateSubmoduleConfigurations: false,
-                    extensions: [[$class: 'LocalBranch', localBranch: 'ahn-macmini']],
+                    extensions: [[$class: 'LocalBranch', localBranch: 'main']],
                     userRemoteConfigs: [[url: 'git@github.com:CAP-team05/MIXBY-BE.git']]
                 ])
             }
