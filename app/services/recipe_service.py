@@ -34,7 +34,11 @@ class RecipeService:
         results = []
 
         for recipe in all_recipes:
-            if keyword.lower() in recipe.get("name", "").lower():
+            english_name = recipe.get("english_name", "").lower()
+            korean_name = recipe.get("korean_name", "").lower()
+            keyword_lower = keyword.lower()
+
+            if (keyword_lower in english_name or keyword_lower in korean_name):
                 if recipe not in results:
                     results.append(recipe)
 
