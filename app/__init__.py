@@ -35,18 +35,19 @@ def create_app(config_name: str = None) -> Flask:
     # 에러 핸들러 등록
     register_error_handlers(app)
 
-    # 기본 라우트 등록
-    register_basic_routes(app)
-
     return app
 
 
 def register_blueprints(app: Flask):
     """Blueprint들을 등록합니다."""
+    from app.routes.default_routes import default_bp
+    from app.routes.health_routes import health_bp
     from app.routes.drink_routes import drink_bp
     from app.routes.recipe_routes import recipe_bp
     from app.routes.recommendation_routes import recommendation_bp
 
+    app.register_blueprint(default_bp)
+    app.register_blueprint(health_bp)
     app.register_blueprint(drink_bp)
     app.register_blueprint(recipe_bp)
     app.register_blueprint(recommendation_bp, url_prefix='/api/recommendations')
@@ -73,20 +74,3 @@ def register_error_handlers(app: Flask):
         return response_helper.error_response(message="잘못된 요청입니다.", status_code=400, error_code="BAD_REQUEST")
 
 
-def register_basic_routes(app: Flask):
-    """기본 라우트들을 등록합니다."""
-
-    @app.route("/")
-    def index():
-        """API 문서를 반환합니다."""
-        from app.utils.response_helper import response_helper
-        from app.utils.data_loader import data_loader
-        api_rules = data_loader.load_json("api_rules.json")
-        return response_helper.json_response(api_rules)
-
-    @app.route("/health")
-    def health_check():
-        """헬스 체크 엔드포인트"""
-        from app.utils.response_helper import response_helper
-
-        return response_helper.success_response(data={"status": "healthy"}, message="서버가 정상적으로 동작 중입니다.")
