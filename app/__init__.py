@@ -45,12 +45,14 @@ def register_blueprints(app: Flask):
     from app.routes.drink_routes import drink_bp
     from app.routes.recipe_routes import recipe_bp
     from app.routes.recommendation_routes import recommendation_bp
+    from app.routes.ingredient_routes import ingredient_bp
 
     app.register_blueprint(default_bp)
     app.register_blueprint(health_bp)
     app.register_blueprint(drink_bp)
     app.register_blueprint(recipe_bp)
     app.register_blueprint(recommendation_bp, url_prefix='/api/recommendations')
+    app.register_blueprint(ingredient_bp)
 
 
 def register_error_handlers(app: Flask):
