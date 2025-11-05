@@ -101,8 +101,8 @@ class RAGService:
         Returns:
             검색된 칵테일 메타데이터 리스트 (similarity_score 포함)
         """
-        # 쿼리 벡터화
-        query_embedding = self.embedding_gen.generate(query)
+        # 쿼리 벡터화 (캐싱 사용 - 자주 사용되는 쿼리 최적화)
+        query_embedding = self.embedding_gen.generate_cached(query)
 
         # 필터 조건 설정
         where = None

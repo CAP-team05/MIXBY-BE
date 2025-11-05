@@ -144,3 +144,125 @@ class TestEmbeddingGenerator:
         # Then: 상수 확인
         assert EmbeddingGenerator.MODEL == "text-embedding-3-small"
         assert EmbeddingGenerator.DIMENSION == 1536
+
+    def test_generate_cached_success(self, mocker):
+        """캐싱된 임베딩 생성 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_embedding = [0.1, 0.2, 0.3]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=mock_embedding)]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 캐싱된 임베딩 생성
+        result = generator.generate_cached("test query")
+
+        # Then: 임베딩 반환 및 캐시에 저장
+        assert result == mock_embedding
+        assert "test query" in generator._cache
+        assert generator._cache["test query"] == mock_embedding
+
+    def test_generate_cached_hit(self, mocker):
+        """캐시 히트 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_embedding = [0.1, 0.2, 0.3]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=mock_embedding)]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 동일한 쿼리를 두 번 호출
+        result1 = generator.generate_cached("test query")
+        result2 = generator.generate_cached("test query")
+
+        # Then: 두 번째 호출은 캐시에서 반환 (API 호출 1번만)
+        assert result1 == result2
+        assert mock_client.embeddings.create.call_count == 1
+
+    def test_generate_cached_invalid_input(self):
+        """generate_cached에 리스트 입력 시 에러 테스트"""
+        # Given
+        generator = EmbeddingGenerator()
+
+        # When & Then: ValueError 발생
+        with pytest.raises(ValueError, match="generate_cached\\(\\)는 문자열만 지원합니다"):
+            generator.generate_cached(["text1", "text2"])
+
+    def test_generate_cached_max_size(self, mocker):
+        """캐시 크기 제한 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator._cache_max_size = 3  # 테스트를 위해 작은 크기 설정
+
+        # When: 4개의 서로 다른 쿼리 호출
+        generator.generate_cached("query1")
+        generator.generate_cached("query2")
+        generator.generate_cached("query3")
+        generator.generate_cached("query4")
+
+        # Then: 캐시 크기는 최대 크기 유지
+        assert len(generator._cache) == 3
+        # 첫 번째 항목이 삭제됨
+        assert "query1" not in generator._cache
+        assert "query4" in generator._cache
+
+    def test_clear_cache(self, mocker):
+        """캐시 초기화 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator.generate_cached("test query")
+
+        # When: 캐시 초기화
+        generator.clear_cache()
+
+        # Then: 캐시가 비워짐
+        assert len(generator._cache) == 0
+
+    def test_get_cache_info(self, mocker):
+        """캐시 정보 조회 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator.generate_cached("query1")
+        generator.generate_cached("query2")
+
+        # When: 캐시 정보 조회
+        info = generator.get_cache_info()
+
+        # Then: 올바른 정보 반환
+        assert info["size"] == 2
+        assert info["max_size"] == 128
