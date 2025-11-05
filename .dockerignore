@@ -57,3 +57,6 @@ api_codes/
 .env
 .env.*
 env.example
+
+# RAG vector database (볼륨 마운트로 사용)
+app/data/vector_db/
