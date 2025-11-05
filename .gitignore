@@ -44,6 +44,11 @@ logs/
 # Project-specific (ignore)
 # ------------------------------
 AGENTS.md
+CLAUDE.md
+.spec/
+
+# RAG vector database files
+app/data/vector_db/
 
 # ------------------------------
 # Ctags
