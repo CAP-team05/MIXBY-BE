@@ -47,8 +47,11 @@ AGENTS.md
 CLAUDE.md
 .spec/
 
-# RAG vector database files
+# RAG vector database files (production data)
 app/data/vector_db/
+
+# Test database files (generated during test runs)
+test_db/
 
 # ------------------------------
 # Ctags
