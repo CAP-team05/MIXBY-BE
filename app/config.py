@@ -36,6 +36,12 @@ class Config:
     WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY")
     WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
+    # RAG (Retrieval-Augmented Generation) 설정
+    USE_RAG = os.environ.get("USE_RAG", "false").lower() == "true"
+    VECTOR_DB_PATH = os.environ.get("VECTOR_DB_PATH", "./app/data/vector_db")
+    EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "text-embedding-3-small")
+    RAG_TOP_K = int(os.environ.get("RAG_TOP_K", "10"))
+
     # 파일 업로드 설정
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB
     ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}

@@ -1,0 +1,268 @@
+"""
+EmbeddingGenerator 유틸리티 테스트
+"""
+
+import pytest
+from unittest.mock import Mock, MagicMock
+from app.utils.embeddings import EmbeddingGenerator
+
+
+class TestEmbeddingGenerator:
+    """EmbeddingGenerator 클래스 테스트"""
+
+    def test_init(self):
+        """초기화 테스트"""
+        # Given & When: EmbeddingGenerator 생성
+        generator = EmbeddingGenerator()
+
+        # Then: 클라이언트가 lazy initialization되어 None
+        assert generator._client is None
+
+    def test_get_client_success(self, mocker):
+        """OpenAI 클라이언트 정상 초기화 테스트"""
+        # Given: API 키 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+        mock_openai = mocker.patch("app.utils.embeddings.OpenAI")
+
+        generator = EmbeddingGenerator()
+
+        # When: 클라이언트 가져오기
+        client = generator._get_client()
+
+        # Then: OpenAI 클라이언트가 생성됨
+        mock_openai.assert_called_once_with(api_key="test-api-key")
+        assert client is not None
+
+    def test_get_client_no_api_key(self, mocker):
+        """API 키 없을 때 에러 발생 테스트"""
+        # Given: API 키 미설정
+        mocker.patch("os.getenv", return_value=None)
+
+        generator = EmbeddingGenerator()
+
+        # When & Then: ValueError 발생
+        with pytest.raises(ValueError, match="OPENAI_API_KEY가 설정되지 않았습니다"):
+            generator._get_client()
+
+    def test_generate_single_text(self, mocker):
+        """단일 텍스트 임베딩 생성 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        # OpenAI 응답 모킹
+        mock_embedding = [0.1, 0.2, 0.3]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=mock_embedding)]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 단일 텍스트 임베딩 생성
+        result = generator.generate("test text")
+
+        # Then: 임베딩 벡터 반환
+        assert result == mock_embedding
+        mock_client.embeddings.create.assert_called_once_with(
+            model=EmbeddingGenerator.MODEL, input="test text"
+        )
+
+    def test_generate_batch_texts(self, mocker):
+        """배치 텍스트 임베딩 생성 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        # OpenAI 응답 모킹
+        mock_embeddings = [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=emb) for emb in mock_embeddings]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 배치 텍스트 임베딩 생성
+        texts = ["text 1", "text 2"]
+        result = generator.generate(texts)
+
+        # Then: 임베딩 벡터 리스트 반환
+        assert result == mock_embeddings
+        mock_client.embeddings.create.assert_called_once_with(model=EmbeddingGenerator.MODEL, input=texts)
+
+    def test_generate_batch_with_batch_size(self, mocker):
+        """generate_batch 메서드 배치 크기 단위 처리 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        # OpenAI 응답 모킹 (배치마다 다른 응답)
+        def create_mock_response(texts):
+            embeddings = [[float(i)] * 3 for i in range(len(texts))]
+            mock_response = Mock()
+            mock_response.data = [Mock(embedding=emb) for emb in embeddings]
+            return mock_response
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.side_effect = lambda model, input: create_mock_response(input)
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 5개 텍스트를 batch_size=2로 처리
+        texts = ["text 0", "text 1", "text 2", "text 3", "text 4"]
+        result = generator.generate_batch(texts, batch_size=2)
+
+        # Then: 모든 텍스트에 대한 임베딩 생성
+        assert len(result) == 5
+        # 3번의 API 호출 (2+2+1)
+        assert mock_client.embeddings.create.call_count == 3
+
+    def test_generate_api_failure(self, mocker):
+        """OpenAI API 호출 실패 시 에러 전파 테스트"""
+        # Given: API 키 설정 및 API 실패 모킹
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.side_effect = Exception("API Error")
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When & Then: Exception 발생
+        with pytest.raises(Exception, match="API Error"):
+            generator.generate("test text")
+
+    def test_model_and_dimension_constants(self):
+        """모델 및 차원 상수 테스트"""
+        # Then: 상수 확인
+        assert EmbeddingGenerator.MODEL == "text-embedding-3-small"
+        assert EmbeddingGenerator.DIMENSION == 1536
+
+    def test_generate_cached_success(self, mocker):
+        """캐싱된 임베딩 생성 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_embedding = [0.1, 0.2, 0.3]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=mock_embedding)]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 캐싱된 임베딩 생성
+        result = generator.generate_cached("test query")
+
+        # Then: 임베딩 반환 및 캐시에 저장
+        assert result == mock_embedding
+        assert "test query" in generator._cache
+        assert generator._cache["test query"] == mock_embedding
+
+    def test_generate_cached_hit(self, mocker):
+        """캐시 히트 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_embedding = [0.1, 0.2, 0.3]
+        mock_response = Mock()
+        mock_response.data = [Mock(embedding=mock_embedding)]
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = mock_response
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+
+        # When: 동일한 쿼리를 두 번 호출
+        result1 = generator.generate_cached("test query")
+        result2 = generator.generate_cached("test query")
+
+        # Then: 두 번째 호출은 캐시에서 반환 (API 호출 1번만)
+        assert result1 == result2
+        assert mock_client.embeddings.create.call_count == 1
+
+    def test_generate_cached_invalid_input(self):
+        """generate_cached에 리스트 입력 시 에러 테스트"""
+        # Given
+        generator = EmbeddingGenerator()
+
+        # When & Then: ValueError 발생
+        with pytest.raises(ValueError, match="generate_cached\\(\\)는 문자열만 지원합니다"):
+            generator.generate_cached(["text1", "text2"])
+
+    def test_generate_cached_max_size(self, mocker):
+        """캐시 크기 제한 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator._cache_max_size = 3  # 테스트를 위해 작은 크기 설정
+
+        # When: 4개의 서로 다른 쿼리 호출
+        generator.generate_cached("query1")
+        generator.generate_cached("query2")
+        generator.generate_cached("query3")
+        generator.generate_cached("query4")
+
+        # Then: 캐시 크기는 최대 크기 유지
+        assert len(generator._cache) == 3
+        # 첫 번째 항목이 삭제됨
+        assert "query1" not in generator._cache
+        assert "query4" in generator._cache
+
+    def test_clear_cache(self, mocker):
+        """캐시 초기화 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator.generate_cached("test query")
+
+        # When: 캐시 초기화
+        generator.clear_cache()
+
+        # Then: 캐시가 비워짐
+        assert len(generator._cache) == 0
+
+    def test_get_cache_info(self, mocker):
+        """캐시 정보 조회 테스트"""
+        # Given: API 키 및 모킹 설정
+        mocker.patch("os.getenv", return_value="test-api-key")
+
+        mock_client = MagicMock()
+        mock_client.embeddings.create.return_value = Mock(data=[Mock(embedding=[0.1, 0.2, 0.3])])
+
+        mocker.patch("app.utils.embeddings.OpenAI", return_value=mock_client)
+
+        generator = EmbeddingGenerator()
+        generator.generate_cached("query1")
+        generator.generate_cached("query2")
+
+        # When: 캐시 정보 조회
+        info = generator.get_cache_info()
+
+        # Then: 올바른 정보 반환
+        assert info["size"] == 2
+        assert info["max_size"] == 128

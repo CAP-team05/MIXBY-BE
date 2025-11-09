@@ -15,6 +15,8 @@ __pycache__/
 __cache__/
 *.py[cod]
 *$py.class
+.python-version
+uv.lock
 
 # ------------------------------
 # Test coverage & pytest
@@ -44,9 +46,23 @@ logs/
 # Project-specific (ignore)
 # ------------------------------
 AGENTS.md
+CLAUDE.md
+.spec/
+
+# RAG vector database files (production data)
+app/data/vector_db/
+
+# Test database files (generated during test runs)
+test_db/
 
 # ------------------------------
 # Ctags
 # ------------------------------
 .ctags
 tags
+
+
+# ------------------------------
+# cache
+# ------------------------------
+__pycache__/

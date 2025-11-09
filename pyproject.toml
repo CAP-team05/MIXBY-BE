@@ -38,3 +38,8 @@ fail_under = 80.0
 
 [tool.coverage.html]
 directory = "htmlcov"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+]
