@@ -13,7 +13,7 @@ export $(shell sed -n 's/^\([A-Za-z_][A-Za-z0-9_]*\)=.*/\1/p' .env)
 endif
 
 # 기본 변수
-IMAGE_NAME = mixby-api
+IMAGE_NAME = mixby-be-mixby-api
 TAG = latest
 CONTAINER_NAME = mixby-container
 API_PORT ?= 8080
