@@ -20,16 +20,12 @@ pipeline {
                     // 마지막 성공한 빌드의 커밋 찾기
                     def lastSuccessfulBuild = currentBuild.getPreviousSuccessfulBuild()
                     if (lastSuccessfulBuild != null) {
-                        env.LAST_SUCCESSFUL_COMMIT = lastSuccessfulBuild.description?.tokenize('|')?.find { it.startsWith('commit:') }?.split(':')?.last()?.trim()
-                        if (!env.LAST_SUCCESSFUL_COMMIT) {
-                            // description에서 찾지 못했다면 빌드 환경변수에서 찾기
-                            def lastBuildEnvVars = lastSuccessfulBuild.getEnvironment()
-                            env.LAST_SUCCESSFUL_COMMIT = lastBuildEnvVars.get('GIT_COMMIT')
-                        }
-                        if (env.LAST_SUCCESSFUL_COMMIT) {
+                        def commitFromDescription = lastSuccessfulBuild.description?.tokenize('|')?.find { it.startsWith('commit:') }?.split(':')?.last()?.trim()
+                        if (commitFromDescription) {
+                            env.LAST_SUCCESSFUL_COMMIT = commitFromDescription
                             echo "Last successful commit: ${env.LAST_SUCCESSFUL_COMMIT}"
                         } else {
-                            echo "Could not determine last successful commit"
+                            echo "Could not determine last successful commit from build description"
                         }
                     } else {
                         echo "No previous successful build found"
