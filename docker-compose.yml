@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   mixby-api:
+    image: mixby-be-mixby-api:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -39,6 +40,7 @@ services:
 
   # 개발용 서비스 (필요시 주석 해제)
   mixby-dev:
+    image: mixby-be-mixby-api:latest
     build:
       context: .
       dockerfile: Dockerfile
