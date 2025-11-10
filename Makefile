@@ -13,7 +13,7 @@ export $(shell sed -n 's/^\([A-Za-z_][A-Za-z0-9_]*\)=.*/\1/p' .env)
 endif
 
 # 기본 변수
-IMAGE_NAME = mixby-api
+IMAGE_NAME = mixby-be-mixby-api
 TAG = latest
 CONTAINER_NAME = mixby-container
 API_PORT ?= 8080
@@ -61,11 +61,13 @@ run-dev: ## 개발 모드로 Docker 컨테이너를 실행합니다 (.env 파일
 		-v $(PWD)/app/data/vector_db:/app/app/data/vector_db \
 		$(IMAGE_NAME):$(TAG)
 
-stop: ## 실행 중인 컨테이너를 중지합니다
+stop: ## 실행 중인 컨테이너를 중지합니다 (모든 유형)
+	@docker-compose stop 2>/dev/null || true
 	@docker stop $(CONTAINER_NAME) 2>/dev/null || true
 	@docker stop $(CONTAINER_NAME)-dev 2>/dev/null || true
 
-clean: ## 중지된 컨테이너와 이미지를 제거합니다
+clean: ## 중지된 컨테이너와 이미지를 제거합니다 (모든 유형)
+	@docker-compose down 2>/dev/null || true
 	@docker rm $(CONTAINER_NAME) 2>/dev/null || true
 	@docker rm $(CONTAINER_NAME)-dev 2>/dev/null || true
 	@docker rmi $(IMAGE_NAME):$(TAG) 2>/dev/null || true
@@ -85,8 +87,12 @@ shell: ## 실행 중인 컨테이너에 접속합니다
 compose-up: ## Docker Compose로 서비스를 시작합니다 (.env 파일 자동 로드)
 	docker-compose --env-file .env up -d
 
-compose-down: ## Docker Compose 서비스를 중지합니다
+compose-down: ## Docker Compose 서비스를 중지합니다 (docker run 컨테이너도 함께 정리)
 	docker-compose down
+	@docker stop $(CONTAINER_NAME) 2>/dev/null || true
+	@docker rm $(CONTAINER_NAME) 2>/dev/null || true
+	@docker stop $(CONTAINER_NAME)-dev 2>/dev/null || true
+	@docker rm $(CONTAINER_NAME)-dev 2>/dev/null || true
 
 compose-dev: ## Docker Compose로 개발 환경을 시작합니다 (.env 파일 자동 로드)
 	docker-compose --env-file .env --profile dev up -d
