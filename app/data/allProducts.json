@@ -101,7 +101,7 @@
     {
         "code": "0080480301033",
         "name": "봄베이 사파이어",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "375ml",
         "alcohol": "47.0",
@@ -956,7 +956,7 @@
     {
         "code": "4901777349469",
         "name": "수이 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "40.0",
@@ -1469,7 +1469,7 @@
     {
         "code": "5000281020761",
         "name": "탠커레이 넘버텐",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "47.3",
@@ -1577,7 +1577,7 @@
     {
         "code": "5000289020701",
         "name": "고든스 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "750ml",
         "alcohol": "43.0",
@@ -1586,7 +1586,7 @@
     {
         "code": "5000291020706",
         "name": "탠커레이",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "750ml",
         "alcohol": "47.3",
@@ -1622,7 +1622,7 @@
     {
         "code": "5000299296042",
         "name": "말피 콘 리모네 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "41.0",
@@ -1631,7 +1631,7 @@
     {
         "code": "5000299296066",
         "name": "말피 로사 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "41.0",
@@ -1640,7 +1640,7 @@
     {
         "code": "5000299296080",
         "name": "말피 콘 아란치아 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "41.0",
@@ -2090,7 +2090,7 @@
     {
         "code": "5010327755014",
         "name": "헨드릭스 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "44.0",
@@ -2099,7 +2099,7 @@
     {
         "code": "5010493025775",
         "name": "넘버.3 런던 드라이 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "46.0",
@@ -2819,7 +2819,7 @@
     {
         "code": "5055807400596",
         "name": "더 보타니스트 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "46.0",
@@ -3494,7 +3494,7 @@
     {
         "code": "7640175740047",
         "name": "봄베이 사파이어진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "750ml",
         "alcohol": "47.0",
@@ -3683,7 +3683,7 @@
     {
         "code": "8716000968517",
         "name": "담락 진",
-        "baseCode": "132",
+        "baseCode": "301",
         "type": "진",
         "volume": "700ml",
         "alcohol": "40.0",
