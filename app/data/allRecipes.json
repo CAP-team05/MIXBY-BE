@@ -605,11 +605,11 @@
     {
         "english_name": "John-Collins",
         "korean_name": "존 콜린스",
-        "code": "300013040003",
+        "code": "301013040003",
         "ingredients": [
             {
                 "name": "진",
-                "code": "300",
+                "code": "301",
                 "amount": "45",
                 "unit": "ml"
             },
@@ -2436,11 +2436,11 @@
     {
         "english_name": "Vesper",
         "korean_name": "베스퍼",
-        "code": "300600237",
+        "code": "301600237",
         "ingredients": [
             {
                 "name": "진",
-                "code": "300",
+                "code": "301",
                 "amount": "60",
                 "unit": "ml"
             },
