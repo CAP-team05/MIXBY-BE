@@ -84,8 +84,101 @@ class VectorStoreService:
         Returns:
             검색 결과 딕셔너리 (ids, distances, metadatas, documents)
         """
-        results = self.collection.query(query_embeddings=[query_embedding], n_results=n_results, where=where)
+        results = self.collection.query(
+            query_embeddings=[query_embedding],
+            n_results=n_results,
+            where=where
+        )
         return results
+
+    def search_with_mmr(
+        self,
+        query_embedding: List[float],
+        n_results: int = 10,
+        where: Optional[Dict[str, Any]] = None,
+        lambda_mult: float = 0.5,
+        fetch_k: int = 20
+    ) -> Dict[str, Any]:
+        """MMR(Maximal Marginal Relevance)을 사용한 다양성 검색
+
+        Args:
+            query_embedding: 쿼리 벡터
+            n_results: 최종 반환할 결과 수
+            where: 메타데이터 필터링 조건
+            lambda_mult: 관련성과 다양성의 균형 (0=최대 다양성, 1=최대 관련성, 기본값=0.5)
+            fetch_k: 초기 검색할 문서 수 (n_results보다 커야 함)
+
+        Returns:
+            MMR 알고리즘이 적용된 검색 결과
+        """
+        import numpy as np
+
+        # 더 많은 결과를 먼저 가져옴
+        initial_results = self.collection.query(
+            query_embeddings=[query_embedding],
+            n_results=min(fetch_k, self.count()),
+            where=where,
+            include=["metadatas", "documents", "distances", "embeddings"]
+        )
+
+        if (not initial_results.get("embeddings") or
+            not initial_results["embeddings"] or
+            len(initial_results["embeddings"][0]) == 0):
+            return initial_results
+
+        # MMR 알고리즘 적용
+        embeddings = np.array(initial_results["embeddings"][0])
+        query_emb = np.array(query_embedding)
+
+        # 쿼리와의 유사도 계산 (코사인 유사도)
+        query_similarities = 1 - np.array(initial_results["distances"][0])
+
+        selected_indices = []
+        remaining_indices = list(range(len(embeddings)))
+
+        # 첫 번째 문서: 쿼리와 가장 유사한 것 선택
+        first_idx = remaining_indices[np.argmax(query_similarities)]
+        selected_indices.append(first_idx)
+        remaining_indices.remove(first_idx)
+
+        # 나머지 문서 선택
+        while len(selected_indices) < min(n_results, len(embeddings)) and remaining_indices:
+            selected_embeddings = embeddings[selected_indices]
+
+            mmr_scores = []
+            for idx in remaining_indices:
+                # 쿼리와의 관련성
+                relevance = query_similarities[idx]
+
+                # 이미 선택된 문서들과의 최대 유사도 (다양성의 역)
+                similarities_to_selected = []
+                for selected_emb in selected_embeddings:
+                    # 코사인 유사도 계산
+                    sim = np.dot(embeddings[idx], selected_emb) / (
+                        np.linalg.norm(embeddings[idx]) * np.linalg.norm(selected_emb)
+                    )
+                    similarities_to_selected.append(sim)
+
+                max_similarity = max(similarities_to_selected) if similarities_to_selected else 0
+
+                # MMR 점수 계산
+                mmr_score = lambda_mult * relevance - (1 - lambda_mult) * max_similarity
+                mmr_scores.append(mmr_score)
+
+            # 최고 MMR 점수를 가진 문서 선택
+            best_idx = remaining_indices[np.argmax(mmr_scores)]
+            selected_indices.append(best_idx)
+            remaining_indices.remove(best_idx)
+
+        # 선택된 인덱스에 해당하는 결과만 반환
+        mmr_results = {
+            "ids": [[initial_results["ids"][0][i] for i in selected_indices]],
+            "distances": [[initial_results["distances"][0][i] for i in selected_indices]],
+            "metadatas": [[initial_results["metadatas"][0][i] for i in selected_indices]],
+            "documents": [[initial_results["documents"][0][i] for i in selected_indices]]
+        }
+
+        return mmr_results
 
     def count(self) -> int:
         """저장된 문서 수 반환

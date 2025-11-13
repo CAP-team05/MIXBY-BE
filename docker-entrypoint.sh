@@ -14,15 +14,16 @@ mkdir -p /app/logs
 
 # 개발 환경인지 확인
 if [ "$FLASK_ENV" = "development" ]; then
-    echo "Starting in development mode..."
-    exec python run.py
+  echo "Starting in development mode..."
+  exec python run.py
 else
-    echo "Starting in production mode with Gunicorn..."
-    exec gunicorn --bind $API_HOST:$SERVER_PORT \
-                  --workers 4 \
-                  --timeout 120 \
-                  --access-logfile /app/logs/access.log \
-                  --error-logfile /app/logs/error.log \
-                  --log-level info \
-                  run:app
+  echo "Starting in production mode with Gunicorn..."
+  exec gunicorn --bind $API_HOST:$SERVER_PORT \
+    --workers 4 \
+    --timeout 120 \
+    --access-logfile /app/logs/access.log \
+    --error-logfile /app/logs/error.log \
+    --log-level info \
+    run:app
+
 fi
