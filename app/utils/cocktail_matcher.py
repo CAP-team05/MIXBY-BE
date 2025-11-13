@@ -9,21 +9,37 @@ from typing import Dict, Any, List
 def match_cocktail_in_json(cocktail_list: str, response_json: str) -> Dict[str, Any]:
     """
     JSON 응답에서 칵테일 이름을 실제 보유 칵테일 목록과 매칭합니다.
-    
+
     Args:
-        cocktail_list: 보유한 칵테일 목록 (쉼표로 구분된 문자열)
+        cocktail_list: 보유한 칵테일 목록 (쉼표로 구분된 문자열 또는 JSON 배열 문자열)
         response_json: AI의 JSON 응답
-        
+
     Returns:
         매칭된 칵테일 이름이 포함된 JSON
     """
     try:
         # 보유 칵테일 리스트를 파싱
-        available_cocktails = [name.strip() for name in cocktail_list.split(",")]
-        
+        available_cocktails = []
+        try:
+            # JSON 배열로 파싱 시도
+            cocktail_data = json.loads(cocktail_list)
+            if isinstance(cocktail_data, list):
+                # 각 칵테일에서 이름 추출 (korean_name, english_name, 또는 단순 문자열)
+                for item in cocktail_data:
+                    if isinstance(item, dict):
+                        if 'korean_name' in item:
+                            available_cocktails.append(item['korean_name'])
+                        if 'english_name' in item:
+                            available_cocktails.append(item['english_name'])
+                    elif isinstance(item, str):
+                        available_cocktails.append(item)
+        except (json.JSONDecodeError, TypeError):
+            # JSON 파싱 실패 시 쉼표로 구분된 문자열로 처리
+            available_cocktails = [name.strip() for name in cocktail_list.split(",")]
+
         # JSON 응답 파싱
         response_data = json.loads(response_json)
-        
+
         # 추천 목록에서 칵테일 이름 매칭
         if "recommendation" in response_data:
             recommendations = response_data["recommendation"]
@@ -33,9 +49,9 @@ def match_cocktail_in_json(cocktail_list: str, response_json: str) -> Dict[str, 
                         matched_name = find_best_match(rec["name"], available_cocktails)
                         if matched_name:
                             rec["name"] = matched_name
-        
+
         return response_data
-        
+
     except (json.JSONDecodeError, KeyError, TypeError) as e:
         print(f"Error matching cocktail names: {e}")
         return {"error": "Failed to match cocktail names"}

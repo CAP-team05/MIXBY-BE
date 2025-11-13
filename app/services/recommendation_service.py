@@ -58,6 +58,8 @@ class RecommendationService:
             if self.use_rag and self.rag_service:
                 # cocktail_list를 파싱하여 code 리스트 추출
                 cocktail_codes = self._parse_cocktail_codes(cocktail_list)
+                print(f"[DEBUG] 파싱된 칵테일 코드: {cocktail_codes}")
+                print(f"[DEBUG] 원본 cocktail_list: {cocktail_list}")
 
                 # 계절, 시간, 날씨에 대해 RAG 검색 수행
                 contexts = [season, time, weather]
@@ -73,11 +75,12 @@ class RecommendationService:
                     if relevant_cocktails:
                         context_text = f"\n[{context_names[i]}: {context}에 어울리는 칵테일]\n"
                         for cocktail in relevant_cocktails[:3]:  # 상위 3개만
-                            context_text += f"- {cocktail.get('korean_name', '')} ({cocktail.get('english_name', '')})\n"
+                            context_text += f"- {cocktail.get('english_name', '')}\n"
                         rag_contexts.append(context_text)
 
                 # RAG 검색 결과를 프롬프트에 포함
                 rag_context_text = "\n".join(rag_contexts)
+                print(f"[DEBUG] RAG 컨텍스트:\n{rag_context_text}")
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -85,7 +88,8 @@ class RecommendationService:
                     "당신은 [계절, 시간대, 날씨]를 입력 받고 각 요소에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     f"아래는 각 요소에 추천 가능한 칵테일 목록입니다:\n{rag_context_text}\n"
-                    "추천은 반드시 위 목록에 있는 칵테일 중에서만 선택하세요. 다른 칵테일을 추천하지 마세요."
+                    "추천은 반드시 위 목록에 있는 칵테일의 영어 이름만 사용하세요. 다른 칵테일을 추천하지 마세요.\n"
+                    "중요: \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요."
                 )
             else:
                 # 기존 방식 (RAG 미사용)
@@ -164,7 +168,7 @@ class RecommendationService:
                     if relevant_cocktails:
                         context = f"\n[{feeling}에 어울리는 칵테일]\n"
                         for cocktail in relevant_cocktails[:3]:  # 상위 3개만
-                            context += f"- {cocktail.get('korean_name', '')} ({cocktail.get('english_name', '')})\n"
+                            context += f"- {cocktail.get('english_name', '')}\n"
                         rag_contexts.append(context)
 
                 # RAG 검색 결과를 프롬프트에 포함
@@ -176,7 +180,8 @@ class RecommendationService:
                     "당신은 [행복, 피곤, 화남] 상황에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     f"아래는 각 감정에 추천 가능한 칵테일 목록입니다:\n{rag_context_text}\n"
-                    "추천은 반드시 위 목록에 있는 칵테일 중에서만 선택하세요. 다른 칵테일을 추천하지 마세요."
+                    "추천은 반드시 위 목록에 있는 칵테일의 영어 이름만 사용하세요. 다른 칵테일을 추천하지 마세요.\n"
+                    "중요: \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요."
                 )
             else:
                 # 기존 방식 (RAG 미사용)
@@ -228,15 +233,37 @@ class RecommendationService:
         Returns:
             칵테일 code 리스트
         """
+        from app.utils.data_loader import data_loader
+        
         codes = []
         try:
             # JSON 형식으로 파싱 시도
             cocktails = json.loads(cocktail_list)
             if isinstance(cocktails, list):
-                codes = [str(c.get("code", "")) for c in cocktails if c.get("code")]
-        except (json.JSONDecodeError, AttributeError):
-            # JSON이 아닌 경우 무시 (전체 리스트 사용)
+                # 모든 레시피 로드 (이름으로 code 찾기 위해)
+                all_recipes = data_loader.get_all_recipes()
+                
+                for item in cocktails:
+                    if isinstance(item, dict):
+                        # 딕셔너리 형태 (code 필드가 있는 경우)
+                        if item.get("code"):
+                            codes.append(str(item.get("code")))
+                    elif isinstance(item, str):
+                        # 문자열 형태 (칵테일 이름)
+                        # 한글 이름 또는 영어 이름으로 레시피 찾기
+                        for recipe in all_recipes:
+                            korean_name = recipe.get("korean_name", "").lower()
+                            english_name = recipe.get("english_name", "").lower()
+                            item_lower = item.lower()
+                            
+                            if korean_name == item_lower or english_name == item_lower:
+                                codes.append(str(recipe.get("code")))
+                                break
+        except (json.JSONDecodeError, AttributeError) as e:
+            # JSON이 아닌 경우 무시
+            print(f"칵테일 리스트 파싱 오류: {e}")
             pass
+        
         return codes
     
     def get_situation_recommendation(self, persona: str, cocktail_list: str) -> str:
@@ -271,7 +298,7 @@ class RecommendationService:
                     if relevant_cocktails:
                         context = f"\n[{situation} 상황에 어울리는 칵테일]\n"
                         for cocktail in relevant_cocktails[:3]:  # 상위 3개만
-                            context += f"- {cocktail.get('korean_name', '')} ({cocktail.get('english_name', '')})\n"
+                            context += f"- {cocktail.get('english_name', '')}\n"
                         rag_contexts.append(context)
 
                 # RAG 검색 결과를 프롬프트에 포함
@@ -283,8 +310,10 @@ class RecommendationService:
                     "당신은 [바쁨, 한가, 여행] 상황에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     f"아래는 각 상황에 추천 가능한 칵테일 목록입니다:\n{rag_context_text}\n"
-                    "추천은 반드시 위 목록에 있는 칵테일 중에서만 선택하세요. 다른 칵테일을 추천하지 마세요."
+                    "추천은 반드시 위 목록에 있는 칵테일의 영어 이름만 사용하세요. 다른 칵테일을 추천하지 마세요.\n"
+                    "중요: \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요."
                 )
+
             else:
                 # 기존 방식 (RAG 미사용)
                 system_prompt = (
