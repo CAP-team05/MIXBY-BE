@@ -87,14 +87,16 @@ MIXBY-BE/
 │   ├── routes/            # API 엔드포인트 (Blueprint)
 │   │   ├── drink_routes.py
 │   │   ├── recipe_routes.py
-│   │   └── recommendation_routes.py
+│   │   ├── recommendation_routes.py
+│   │   └── weather_routes.py
 │   ├── services/          # 비즈니스 로직 계층
 │   │   ├── persona_service.py
 │   │   ├── recommendation_service.py
 │   │   ├── recipe_service.py
 │   │   ├── drink_service.py
 │   │   ├── ingredient_service.py
-│   │   └── challenge_service.py
+│   │   ├── challenge_service.py
+│   │   └── weather_service.py
 │   ├── static/            # 정적 리소스 (이미지)
 │   │   ├── recipes/
 │   │   ├── drinks/
@@ -143,6 +145,7 @@ API 엔드포인트를 Blueprint로 구성:
 - `drink_routes.py`: 주류 정보 API (`/drink`)
 - `recipe_routes.py`: 레시피 검색 및 조회 API (`/recipe`)
 - `recommendation_routes.py`: 추천 API (`/api/recommendations`)
+- `weather_routes.py`: 날씨 정보 API (`/weather`)
 
 #### `app/services/`
 비즈니스 로직 서비스:
@@ -152,6 +155,7 @@ API 엔드포인트를 Blueprint로 구성:
 - `drink_service.py`: 주류 정보 관리
 - `ingredient_service.py`: 재료 정보 관리
 - `challenge_service.py`: 챌린지 관련 로직
+- `weather_service.py`: 날씨 정보 조회
 
 #### `app/data/`
 JSON 파일 기반 데이터 저장소:
@@ -413,6 +417,68 @@ GET /recipe/image/name=<name>
 레시피 이름으로 이미지를 반환합니다.
 
 **예시:** `GET /recipe/image/name=모히또`
+
+---
+
+### 날씨 API (`/weather`)
+
+#### 날씨 정보 조회
+현재 위치의 날씨 정보를 OpenWeatherMap API를 통해 조회합니다.
+
+```
+POST /weather
+```
+
+**Request Body:**
+```json
+{
+    "latitude": 37.5665,
+    "longitude": 126.9780
+}
+```
+
+**Parameters:**
+- `latitude` (float, 필수): 위도 (-90 ~ 90)
+- `longitude` (float, 필수): 경도 (-180 ~ 180)
+
+**응답 예시:**
+```json
+{
+    "success": true,
+    "message": "날씨 정보를 성공적으로 조회했습니다.",
+    "data": {
+        "weather_description": "sunny",
+        "weather_code": 800
+    }
+}
+```
+
+**Weather Descriptions:**
+- `sunny`: 맑음
+- `cloudy`: 흐림
+- `rainy`: 비
+- `snowy`: 눈
+- `thunderstorm`: 천둥번개
+- `drizzle`: 이슬비
+- `foggy`: 안개
+- `unknown`: 알 수 없음
+
+**Weather Codes:**
+OpenWeatherMap의 날씨 코드를 그대로 반환합니다. 자세한 내용은 [OpenWeatherMap Weather Conditions](https://openweathermap.org/weather-conditions)를 참고하세요.
+
+**에러 응답:**
+```json
+{
+    "success": false,
+    "message": "latitude와 longitude는 필수 입력값입니다.",
+    "error_code": "VALIDATION_ERROR"
+}
+```
+
+**에러 코드:**
+- `VALIDATION_ERROR`: 입력값이 유효하지 않음
+- `WEATHER_API_ERROR`: 날씨 API 호출 실패
+- `INTERNAL_ERROR`: 서버 내부 오류
 
 ---
 
