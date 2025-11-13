@@ -89,14 +89,15 @@ class RAGService:
         logger.info(f"벡터 DB 초기화 완료: {len(recipes)}개 칵테일 저장")
 
     def search_cocktails(
-        self, query: str, n_results: int = 10, cocktail_list: Optional[List[str]] = None
+        self, query: str, n_results: int = 10, cocktail_list: Optional[List[str]] = None, use_mmr: bool = True
     ) -> List[Dict[str, Any]]:
-        """유사도 기반 칵테일 검색
+        """유사도 기반 칵테일 검색 (MMR 지원)
 
         Args:
             query: 검색 쿼리 (예: "상큼하고 달콤한 여름 칵테일")
             n_results: 반환할 결과 수 (기본값: 10)
             cocktail_list: 사용자가 접근 가능한 칵테일 code 리스트 (필터링용)
+            use_mmr: MMR(다양성) 사용 여부 (기본값: True)
 
         Returns:
             검색된 칵테일 메타데이터 리스트 (similarity_score 포함)
@@ -109,8 +110,19 @@ class RAGService:
         if cocktail_list:
             where = {"code": {"$in": cocktail_list}}
 
-        # 검색
-        results = self.vector_store.search(query_embedding=query_embedding, n_results=n_results, where=where)
+        # MMR 사용 여부에 따라 검색 방식 선택
+        if use_mmr:
+            # MMR을 사용하여 다양성 있는 검색 결과 반환
+            results = self.vector_store.search_with_mmr(
+                query_embedding=query_embedding,
+                n_results=n_results,
+                where=where,
+                lambda_mult=0.5,  # 관련성과 다양성의 균형
+                fetch_k=min(n_results * 3, 20)  # 초기 검색 결과 수
+            )
+        else:
+            # 기본 유사도 검색
+            results = self.vector_store.search(query_embedding=query_embedding, n_results=n_results, where=where)
 
         # 결과 포매팅
         cocktails = []
