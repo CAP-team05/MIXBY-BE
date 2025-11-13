@@ -536,7 +536,7 @@
     {
         "english_name": "Gin-Fizz",
         "korean_name": "진 피즈",
-        "code": "301013040003",
+        "code": "3010130400031",
         "ingredients": [
             {
                 "name": "드라이 진",
@@ -605,7 +605,7 @@
     {
         "english_name": "John-Collins",
         "korean_name": "존 콜린스",
-        "code": "301013040003",
+        "code": "3010130400032",
         "ingredients": [
             {
                 "name": "진",
