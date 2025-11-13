@@ -124,7 +124,7 @@ class WeatherService:
             return {"weather_description": weather_description, "weather_code": weather_code}
 
         except requests.Timeout:
-            logger.error(f"날씨 API 요청 타임아웃: lat={latitude}, lon={longitude}")
+            logger.error("날씨 API 요청 타임아웃")
             raise requests.RequestException("날씨 API 요청 시간이 초과되었습니다.")
         except requests.RequestException as e:
             logger.error(f"날씨 API 요청 실패: {str(e)}")
