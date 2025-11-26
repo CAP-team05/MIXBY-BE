@@ -5,6 +5,8 @@
 import os
 import json
 import logging
+import random
+import time
 from typing import Dict, Any, List
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -12,6 +14,31 @@ from app.utils.cocktail_matcher import match_cocktail_in_json
 
 load_dotenv()
 logger = logging.getLogger(__name__)
+
+# 추천 다양성을 위한 관점/스타일 목록
+RECOMMENDATION_PERSPECTIVES = [
+    "새로운 맛의 발견을 위해",
+    "색다른 경험을 위해",
+    "오늘만의 특별한 선택으로",
+    "신선한 관점에서",
+    "독특한 조합으로",
+    "의외의 매력을 찾아",
+    "숨겨진 매력을 발견하며",
+    "새로운 시도로",
+    "평소와 다른 선택으로",
+    "특별한 순간을 위해",
+]
+
+RECOMMENDATION_MOODS = [
+    "편안하고 여유로운",
+    "활기차고 상쾌한",
+    "깊고 풍부한",
+    "가볍고 청량한",
+    "따뜻하고 포근한",
+    "세련되고 우아한",
+    "대담하고 강렬한",
+    "부드럽고 섬세한",
+]
 
 
 class RecommendationService:
@@ -37,6 +64,13 @@ class RecommendationService:
                 raise ValueError("OPENAI_API_KEY 환경 변수가 설정되지 않았습니다.")
             self.client = OpenAI(api_key=api_key)
         return self.client
+
+    def _get_diversity_hint(self) -> str:
+        """매 요청마다 다른 추천을 유도하기 위한 다양성 힌트를 생성합니다."""
+        perspective = random.choice(RECOMMENDATION_PERSPECTIVES)
+        mood = random.choice(RECOMMENDATION_MOODS)
+        seed = int(time.time() * 1000) % 10000
+        return f"[추천 #{seed}] 이번 추천은 '{perspective}' {mood} 느낌의 칵테일을 우선적으로 고려해주세요."
     
     def get_default_recommendation(self, persona: str, cocktail_list: str,
                                  season: str, time: str, weather: str) -> str:
@@ -83,13 +117,18 @@ class RecommendationService:
                     # 사용 가능한 칵테일이 없으면 전체 목록 사용
                     search_codes = available_codes if available_codes else cocktail_codes
 
+                    # 더 많은 후보를 가져와서 다양성 확보 (10개 검색)
                     relevant_cocktails = self.rag_service.search_cocktails(
-                        query=query, n_results=5, cocktail_list=search_codes
+                        query=query, n_results=10, cocktail_list=search_codes
                     )
 
                     if relevant_cocktails:
+                        # 랜덤으로 섞어서 매번 다른 추천이 가능하도록
+                        shuffled_cocktails = relevant_cocktails.copy()
+                        random.shuffle(shuffled_cocktails)
+
                         context_text = f"\n[{context_names[i]}: {context}에 어울리는 칵테일]\n"
-                        for cocktail in relevant_cocktails[:3]:  # 상위 3개만
+                        for cocktail in shuffled_cocktails[:10]:  # 상위 10개로 확대
                             context_text += f"- {cocktail.get('english_name', '')}\n"
                             # 첫 번째 칵테일을 선택된 것으로 표시 (다음 검색에서 제외)
                             if cocktail.get('code'):
@@ -99,6 +138,7 @@ class RecommendationService:
 
                 # RAG 검색 결과를 프롬프트에 포함
                 rag_context_text = "\n".join(rag_contexts)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -110,10 +150,12 @@ class RecommendationService:
                     "중요 규칙:\n"
                     "1. \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요.\n"
                     "2. 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
-                    "3. 첫 번째는 계절에 어울리는 칵테일, 두 번째는 시간대에 어울리는 칵테일, 세 번째는 날씨에 어울리는 칵테일을 각각 다르게 추천하세요."
+                    "3. 첫 번째는 계절에 어울리는 칵테일, 두 번째는 시간대에 어울리는 칵테일, 세 번째는 날씨에 어울리는 칵테일을 각각 다르게 추천하세요.\n"
+                    f"4. {diversity_hint}"
                 )
             else:
                 # 기존 방식 (RAG 미사용)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -121,7 +163,8 @@ class RecommendationService:
                     "당신은 [계절, 시간대, 날씨]를 입력 받고 각 요소에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     "추천은 항상 갖고 있는 칵테일에 포함된 칵테일만 작성합니다.\n"
-                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요."
+                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
+                    f"{diversity_hint}"
                 )
 
             response = client.chat.completions.create(
@@ -198,13 +241,18 @@ class RecommendationService:
                     # 사용 가능한 칵테일이 없으면 전체 목록 사용
                     search_codes = available_codes if available_codes else cocktail_codes
 
+                    # 더 많은 후보를 가져와서 다양성 확보 (10개 검색)
                     relevant_cocktails = self.rag_service.search_cocktails(
-                        query=query, n_results=5, cocktail_list=search_codes
+                        query=query, n_results=10, cocktail_list=search_codes
                     )
 
                     if relevant_cocktails:
+                        # 랜덤으로 섞어서 매번 다른 추천이 가능하도록
+                        shuffled_cocktails = relevant_cocktails.copy()
+                        random.shuffle(shuffled_cocktails)
+
                         context = f"\n[{feeling}에 어울리는 칵테일]\n"
-                        for cocktail in relevant_cocktails[:3]:  # 상위 3개만
+                        for cocktail in shuffled_cocktails[:10]:  # 상위 10개로 확대
                             context += f"- {cocktail.get('english_name', '')}\n"
                             # 첫 번째 칵테일을 선택된 것으로 표시 (다음 검색에서 제외)
                             if cocktail.get('code'):
@@ -214,6 +262,7 @@ class RecommendationService:
 
                 # RAG 검색 결과를 프롬프트에 포함
                 rag_context_text = "\n".join(rag_contexts)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -225,10 +274,12 @@ class RecommendationService:
                     "중요 규칙:\n"
                     "1. \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요.\n"
                     "2. 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
-                    "3. 첫 번째는 행복할 때, 두 번째는 피곤할 때, 세 번째는 화날 때 어울리는 칵테일을 각각 다르게 추천하세요."
+                    "3. 첫 번째는 행복할 때, 두 번째는 피곤할 때, 세 번째는 화날 때 어울리는 칵테일을 각각 다르게 추천하세요.\n"
+                    f"4. {diversity_hint}"
                 )
             else:
                 # 기존 방식 (RAG 미사용)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -236,7 +287,8 @@ class RecommendationService:
                     "당신은 [행복, 피곤, 화남] 상황에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     "추천은 항상 갖고 있는 칵테일에 포함된 칵테일만 작성합니다.\n"
-                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요."
+                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
+                    f"{diversity_hint}"
                 )
 
             response = client.chat.completions.create(
@@ -364,13 +416,18 @@ class RecommendationService:
                     # 사용 가능한 칵테일이 없으면 전체 목록 사용
                     search_codes = available_codes if available_codes else cocktail_codes
 
+                    # 더 많은 후보를 가져와서 다양성 확보 (10개 검색)
                     relevant_cocktails = self.rag_service.search_cocktails(
-                        query=query, n_results=5, cocktail_list=search_codes
+                        query=query, n_results=10, cocktail_list=search_codes
                     )
 
                     if relevant_cocktails:
+                        # 랜덤으로 섞어서 매번 다른 추천이 가능하도록
+                        shuffled_cocktails = relevant_cocktails.copy()
+                        random.shuffle(shuffled_cocktails)
+
                         context = f"\n[{situation} 상황에 어울리는 칵테일]\n"
-                        for cocktail in relevant_cocktails[:3]:  # 상위 3개만
+                        for cocktail in shuffled_cocktails[:10]:  # 상위 10개로 확대
                             context += f"- {cocktail.get('english_name', '')}\n"
                             # 첫 번째 칵테일을 선택된 것으로 표시 (다음 검색에서 제외)
                             if cocktail.get('code'):
@@ -380,6 +437,7 @@ class RecommendationService:
 
                 # RAG 검색 결과를 프롬프트에 포함
                 rag_context_text = "\n".join(rag_contexts)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -391,11 +449,13 @@ class RecommendationService:
                     "중요 규칙:\n"
                     "1. \"name\" 필드에는 반드시 위 목록의 영어 칵테일 이름만 정확히 입력하세요.\n"
                     "2. 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
-                    "3. 첫 번째는 바쁠 때, 두 번째는 한가할 때, 세 번째는 여행 중일 때 어울리는 칵테일을 각각 다르게 추천하세요."
+                    "3. 첫 번째는 바쁠 때, 두 번째는 한가할 때, 세 번째는 여행 중일 때 어울리는 칵테일을 각각 다르게 추천하세요.\n"
+                    f"4. {diversity_hint}"
                 )
 
             else:
                 # 기존 방식 (RAG 미사용)
+                diversity_hint = self._get_diversity_hint()
                 system_prompt = (
                     "당신은 전문 칵테일 소믈리에입니다. 사용자에게 가장 적합한 칵테일을 추천하기 위해 사용자의 페르소나 정보를 바탕으로 추천을 제공합니다.\n"
                     "당신은 20대 소믈리에이고 편안하고 부담없는 말투를 갖고 있습니다.\n"
@@ -403,7 +463,8 @@ class RecommendationService:
                     "당신은 [바쁨, 한가, 여행] 상황에 대해 추천하는 칵테일 1종씩 총 3종을 반드시 순서대로 추천합니다.\n"
                     "당신은 갖고 있는 칵테일 중 3종을 추천하고 그 이유를 50자 내로 설명합니다.\n"
                     "추천은 항상 갖고 있는 칵테일에 포함된 칵테일만 작성합니다.\n"
-                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요."
+                    "중요: 3개의 추천은 반드시 서로 다른 칵테일이어야 합니다. 같은 칵테일을 중복으로 추천하지 마세요.\n"
+                    f"{diversity_hint}"
                 )
 
             response = client.chat.completions.create(
