@@ -21,7 +21,7 @@ recommendation_service = RecommendationService()
 def generate_persona():
     """
     사용자 페르소나를 생성합니다.
-    
+
     Request Body:
     {
         "user_data": [{"name": "홍길동", "gender": "남성", "favoriteTaste": "단맛"}],
@@ -29,7 +29,9 @@ def generate_persona():
     }
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True)
+        if data is None:
+            return error_response("잘못된 JSON 형식입니다. JSON 문법을 확인해주세요.", 400)
         
         # 필수 필드 검증
         required_fields = ['user_data', 'tasting_data']
@@ -72,7 +74,9 @@ def get_default_recommendation():
     }
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True)
+        if data is None:
+            return error_response("잘못된 JSON 형식입니다. JSON 문법을 확인해주세요.", 400)
 
         # 필수 필드 검증
         required_fields = ['persona', 'cocktail_list', 'season', 'time', 'weather']
@@ -115,7 +119,9 @@ def get_feeling_recommendation():
     }
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True)
+        if data is None:
+            return error_response("잘못된 JSON 형식입니다. JSON 문법을 확인해주세요.", 400)
 
         # 필수 필드 검증
         required_fields = ['persona', 'cocktail_list']
@@ -153,7 +159,9 @@ def get_situation_recommendation():
     }
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True)
+        if data is None:
+            return error_response("잘못된 JSON 형식입니다. JSON 문법을 확인해주세요.", 400)
 
         # 필수 필드 검증
         required_fields = ['persona', 'cocktail_list']

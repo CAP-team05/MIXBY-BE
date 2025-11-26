@@ -113,12 +113,14 @@ class RAGService:
         # MMR 사용 여부에 따라 검색 방식 선택
         if use_mmr:
             # MMR을 사용하여 다양성 있는 검색 결과 반환
+            # lambda_mult: 0.3으로 낮춰서 다양성 증가 (0=다양성 최대, 1=관련성 최대)
+            # fetch_k: 더 많은 초기 후보에서 다양한 결과 선택
             results = self.vector_store.search_with_mmr(
                 query_embedding=query_embedding,
                 n_results=n_results,
                 where=where,
-                lambda_mult=0.5,  # 관련성과 다양성의 균형
-                fetch_k=min(n_results * 3, 20)  # 초기 검색 결과 수
+                lambda_mult=0.3,  # 다양성 강화 (기존 0.5에서 0.3으로)
+                fetch_k=min(n_results * 5, 50)  # 초기 검색 결과 확대 (기존 *3, 20에서 *5, 50으로)
             )
         else:
             # 기본 유사도 검색
